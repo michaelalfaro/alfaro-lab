@@ -1,16 +1,16 @@
 ---
-title: "Allan Lab - AOA"
+title: "Alfaro Lab - AOA"
 layout: textlay
 excerpt: "AOA"
 sitemap: false
 permalink: /aoa.html
 ---
 
-# AOA calendar
+# Lab meeting calendar
 
-The group indicated below is responsible for choosing a speaker/paper and sending out a reminder. Meetings are at 9:15 in the Gorterzaal.
+This page will be updated with lab meeting schedule....
 
-05.09.2017 Aarts
+<!-- 05.09.2017 Aarts
 
 19.09.2017 Allan
 
@@ -22,11 +22,11 @@ The group indicated below is responsible for choosing a speaker/paper and sendin
 
 28.11.2017 Oosterkamp
 
-12.12.2017 Aarts
+12.12.2017 Aarts -->
 
 
 
-## old dates
+<!-- ## old dates
 
 24-Jan-17 --
 
@@ -67,4 +67,4 @@ The group indicated below is responsible for choosing a speaker/paper and sendin
 
 7-Dec-16	Aarts
 
-21-Dec-16	Oosterkamp
+21-Dec-16	Oosterkamp -->
