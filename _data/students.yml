@@ -7,16 +7,16 @@
 #  education2:  
 #  education3: 
 #  education4:  
-- name: Ahmad Jamalzada
-  photo: rock.jpg
-  info: Master student
-  email: Jamalzada@Physics.LeidenUniv.nl
+- name: Jonathan Chang
+  photo: chang.jpg
+  info: PhD student
+  email: jchang641@gmail.com
   number_educ: 0
   education1:
 
-- name: Bert Visscher
-  photo: rock.jpg
-  info: Master student
-  email: Visscher@Physics.LeidenUniv.nl
-  number_educ: 0
-  education1:
+# - name: Bert Visscher
+#   photo: rock.jpg
+#   info: Master student
+#   email: Visscher@Physics.LeidenUniv.nl
+#   number_educ: 0
+#   education1:
