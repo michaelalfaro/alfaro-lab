@@ -1,7 +1,7 @@
 ---
-title: "Allan Lab - Team"
+title: "Alfaro Lab - Team"
 layout: gridlay
-excerpt: "Allan Lab: Team members"
+excerpt: "Alfaro Lab: Team members"
 sitemap: false
 permalink: /team/
 ---
@@ -11,7 +11,7 @@ permalink: /team/
  **We are  looking for new PhD students, Postdocs, and Master students to join the team** [(see openings)]({{ site.url }}{{ site.baseurl }}/vacancies) **!**
 
 
-Jump to [staff](#staff), [master and bachelor students](#master-and-bachelor-students), [alumni](#alumni), [administrative support](#administrative-support), [lab visitors](#lab-visitors).
+<!-- Jump to [staff](#staff), [master and bachelor students](#master-and-bachelor-students), [alumni](#alumni), [administrative support](#administrative-support), [lab visitors](#lab-visitors).
 
 ## Staff
 {% assign number_printed = 0 %}
@@ -170,18 +170,22 @@ Jump to [staff](#staff), [master and bachelor students](#master-and-bachelor-stu
     <td></td>
     <td>Daniëlle van Klink, Spring 2016</td>
   </tr>
-</table>
+</table> -->
 
 ## Administrative Support
-<a href="mailto:Rijsewijk@Physics.LeidenUniv.nl">Ellie van Rijsewijk</a> is helping us (and other groups) with administration.
+<a href="mailto:gracea@lifesci.ucla.edu">Grace Angus</a> is helping us (and other groups) with administration.
 
 ## Lab Guests
 
-[Amir Safavi-Naeini](http://stanford.edu/~safavi/) (Stanford), summer 2015
+[Mathew McGee](https://research.monash.edu/en/persons/matt-mcgee) (Monash), fall 2017
 
-[Mark H Fischer](https://people.phys.ethz.ch/~mfischer/) (Weizmann Institute of Science), fall 2015
+[Peter Cowman](https://www.coralcoe.org.au/person/peter-cowman) (ARC Centre of Excelelnce, Coral Reef Studies), fall 2017
 
-[Alexander Ako Khajetoorians](http://www.ru.nl/spm) (Radboud University), fall 2015
+[Fabio Roxo](https://scholar.google.com/citations?hl=en&user=D-sQauMAAAAJ&view_op=list_works&sortby=pubdate) (UNESP Botucatu), fall 2016
+
+[Luz Eneida Ochoa Orrego](http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000992542) () fall 2016
+
+<!-- [Alexander Ako Khajetoorians](http://www.ru.nl/spm) (Radboud University), fall 2015
 
 [Mohammad Hamidian](http://www.mhamidian.com) (Harvard->UC Davis), spring 2016
 
@@ -191,4 +195,4 @@ Jump to [staff](#staff), [master and bachelor students](#master-and-bachelor-stu
 
 [Felix Baumberger](http://dqmp.unige.ch/baumberger/) (Geneva), spring 2016
 
-[Jasper van Wezel](http://www.jvanwezel.com/) (UvA), summer 2016
+[Jasper van Wezel](http://www.jvanwezel.com/) (UvA), summer 2016 -->
