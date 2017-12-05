@@ -1,3 +1,5 @@
+---
+references:
 - id: Alfaro2017A
   type: article-journal
   author:
@@ -11,7 +13,7 @@
     given: J.
   issued:
   - year: '2017'
-- title: 'Early-branching euteleost relationships: Areas of congruence between concatenation
+  title: 'Early-branching euteleost relationships: Areas of congruence between concatenation
     and coalescent model inferences'
   title-short: Early-branching euteleost relationships
   container-title: PeerJ
@@ -47,7 +49,7 @@
     given: M.E.
   issued:
   - year: '2017'
-- title: 'Phylogenomic systematics of ostariophysan fishes: Ultraconserved elements
+  title: 'Phylogenomic systematics of ostariophysan fishes: Ultraconserved elements
     support the surprising non-monophyly of characiformes'
   title-short: Phylogenomic systematics of ostariophysan fishes
   container-title: Systematic Biology
@@ -70,7 +72,7 @@
     given: M.E.
   issued:
   - year: '2017'
-- title: 'Phylogenomic analysis of lake malawi cichlid fishes: Further evidence
+  title: 'Phylogenomic analysis of lake malawi cichlid fishes: Further evidence
     that the three-stage model of diversification does not fit'
   title-short: Phylogenomic analysis of lake malawi cichlid fishes
   container-title: Molecular Phylogenetics and Evolution
@@ -94,7 +96,7 @@
     given: P.C.
   issued:
   - year: '2017'
-- title: Phylogenomic analysis of a rapid radiation of misfit fishes (syngnathiformes)
+  title: Phylogenomic analysis of a rapid radiation of misfit fishes (syngnathiformes)
     using ultraconserved elements
   container-title: Molecular Phylogenetics and Evolution
   page: '33-48'
@@ -109,7 +111,7 @@
     given: M.E.
   issued:
   - year: '2016'
-- title: Crowdsourced geometric morphometrics enable rapid large-scale collection
+  title: Crowdsourced geometric morphometrics enable rapid large-scale collection
     and analysis of phenotypic data
   container-title: Methods in Ecology and Evolution
   page: '472-482'
@@ -127,7 +129,7 @@
     given: M.E.
   issued:
   - year: '2016'
-- title: Dietary breadth is positively correlated with venom complexity in cone snails
+  title: Dietary breadth is positively correlated with venom complexity in cone snails
   container-title: BMC Genomics
   volume: '17'
   issue: '1'
@@ -151,7 +153,7 @@
     given: H.
   issued:
   - year: '2016'
-- title: 'Diversification in vipers: Phylogenetic relationships, time of divergence
+  title: 'Diversification in vipers: Phylogenetic relationships, time of divergence
     and shifts in speciation rates'
   title-short: Diversification in vipers
   container-title: Molecular Phylogenetics and Evolution
@@ -165,7 +167,7 @@
     given: M.E.
   issued:
   - year: '2016'
-- title: 'Evolution: Bioluminescent courtship as an engine of diversity'
+  title: 'Evolution: Bioluminescent courtship as an engine of diversity'
   title-short: Evolution
   container-title: Current Biology
   page: R667-R669
@@ -191,7 +193,7 @@
     given: M.
   issued:
   - year: '2016'
-- title: Phylogenomic analysis of carangimorph fishes reveals flatfish asymmetry arose
+  title: Phylogenomic analysis of carangimorph fishes reveals flatfish asymmetry arose
     in a blink of the evolutionary eye
   container-title: BMC Evolutionary Biology
   volume: '16'
@@ -208,7 +210,7 @@
     given: M.E.
   issued:
   - year: '2016'
-- title: Phylogeny and biogeography of hogfishes and allies (bodianus, labridae)
+  title: Phylogeny and biogeography of hogfishes and allies (bodianus, labridae)
   container-title: Molecular Phylogenetics and Evolution
   page: '1-6'
   volume: '99'
@@ -232,7 +234,7 @@
     given: M.E.
   issued:
   - year: '2016'
-- title: Replicated divergence in cichlid radiations mirrors a major vertebrate innovation
+  title: Replicated divergence in cichlid radiations mirrors a major vertebrate innovation
   container-title: 'Proceedings of the Royal Society B: Biological Sciences'
   volume: '283'
   issue: '1822'
@@ -278,7 +280,7 @@
     given: I.P.
   issued:
   - year: '2015'
-- title: 'Biogeography of squirrel monkeys (genus saimiri): South-central amazon
+  title: 'Biogeography of squirrel monkeys (genus saimiri): South-central amazon
     origin and rapid pan-amazonian diversification of a lowland primate'
   title-short: Biogeography of squirrel monkeys (genus saimiri)
   container-title: Molecular Phylogenetics and Evolution
@@ -299,7 +301,7 @@
     given: M.E.
   issued:
   - year: '2015'
-- title: Biogeography of the marmosets and tamarins (callitrichidae)
+  title: Biogeography of the marmosets and tamarins (callitrichidae)
   container-title: Molecular Phylogenetics and Evolution
   page: '413-425'
   volume: '82'
@@ -324,7 +326,7 @@
     given: M.E.
   issued:
   - year: '2015'
-- title: Genome-wide ultraconserved elements exhibit higher phylogenetic informativeness
+  title: Genome-wide ultraconserved elements exhibit higher phylogenetic informativeness
     than traditional gene markers in percomorph fishes
   container-title: Molecular Phylogenetics and Evolution
   page: '140-146'
@@ -345,7 +347,7 @@
     given: D.L.
   issued:
   - year: '2015'
-- title: 'Life in the unthinking depths: Energetic constraints on encephalization
+  title: 'Life in the unthinking depths: Energetic constraints on encephalization
     in marine fishes'
   title-short: Life in the unthinking depths
   container-title: Journal of Evolutionary Biology
@@ -373,7 +375,7 @@
     given: I.P.
   issued:
   - year: '2015'
-- title: 'Spatial and temporal patterns of diversification on the amazon: A test
+  title: 'Spatial and temporal patterns of diversification on the amazon: A test
     of the riverine hypothesis for all diurnal primates of rio negro and rio branco
     in brazil'
   title-short: Spatial and temporal patterns of diversification on the amazon
@@ -407,7 +409,7 @@
     given: J.W.
   issued:
   - year: '2015'
-- title: The effects of ecology and evolutionary history on robust capuchin morphological
+  title: The effects of ecology and evolutionary history on robust capuchin morphological
     diversity
   container-title: Molecular Phylogenetics and Evolution
   page: '455-466'
@@ -429,7 +431,7 @@
     given: R.S.
   issued:
   - year: '2014'
-- title: Biting disrupts integration to spur skull evolution in eels
+  title: Biting disrupts integration to spur skull evolution in eels
   container-title: Nature Communications
   volume: '5'
 
@@ -454,7 +456,7 @@
     given: L.J.
   issued:
   - year: '2014'
-- title: 'Geiger v2.0: An expanded suite of methods for fitting macroevolutionary
+  title: 'Geiger v2.0: An expanded suite of methods for fitting macroevolutionary
     models to phylogenetic trees'
   title-short: Geiger v2.0
   container-title: Bioinformatics
@@ -477,7 +479,7 @@
     given: R.S.
   issued:
   - year: '2014'
-- title: 'Imperfect morphological convergence: Variable changes in cranial structures
+  title: 'Imperfect morphological convergence: Variable changes in cranial structures
     underlie transitions to durophagy in moray eels'
   title-short: Imperfect morphological convergence
   container-title: American Naturalist
@@ -495,7 +497,7 @@
     given: M.E.
   issued:
   - year: '2014'
-- title: The effect of habitat on modern shark diversification
+  title: The effect of habitat on modern shark diversification
   container-title: Journal of Evolutionary Biology
   page: '1536-1548'
   volume: '27'
@@ -516,7 +518,7 @@
     given: E.
   issued:
   - year: '2014'
-- title: Trait decoupling promotes evolutionary diversification of the trophic and
+  title: Trait decoupling promotes evolutionary diversification of the trophic and
     acoustic system of damselfishes
   container-title: 'Proceedings of the Royal Society B: Biological Sciences'
   volume: '281'
@@ -535,7 +537,7 @@
     given: M.E.
   issued:
   - year: '2013'
-- title: A phylogenomic perspective on the radiation of ray-finned fishes based upon
+  title: A phylogenomic perspective on the radiation of ray-finned fishes based upon
     targeted sequencing of ultraconserved elements (uces)
   container-title: PLoS ONE
   volume: '8'
@@ -558,7 +560,7 @@
     given: M.E.
   issued:
   - year: '2013'
-- title: 'A multi-locus molecular timescale for the origin and diversification of
+  title: 'A multi-locus molecular timescale for the origin and diversification of
     eels (order: Anguilliformes)'
   title-short: A multi-locus molecular timescale for the origin and diversification
     of eels (order
@@ -580,7 +582,7 @@
     given: M.E.
   issued:
   - year: '2013'
-- title: A multi-locus timetree of surgeonfishes (acanthuridae, percomorpha), with
+  title: A multi-locus timetree of surgeonfishes (acanthuridae, percomorpha), with
     revised family taxonomy
   container-title: Molecular Phylogenetics and Evolution
   page: '150-160'
@@ -602,7 +604,7 @@
     given: M.E.
   issued:
   - year: '2013'
-- title: A multilocus molecular phylogeny of boxfishes (aracanidae, ostraciidae; tetraodontiformes)
+  title: A multilocus molecular phylogeny of boxfishes (aracanidae, ostraciidae; tetraodontiformes)
   container-title: Molecular Phylogenetics and Evolution
   page: '153-160'
   volume: '66'
@@ -619,7 +621,7 @@
     given: M.E.
   issued:
   - year: '2013'
-- title: A new multi-locus timescale reveals the evolutionary basis of diversity patterns
+  title: A new multi-locus timescale reveals the evolutionary basis of diversity patterns
     in triggerfishes and filefishes (balistidae, monacanthidae; tetraodontiformes)
   container-title: Molecular Phylogenetics and Evolution
   page: '165-176'
@@ -637,7 +639,7 @@
     given: M.E.
   issued:
   - year: '2013'
-- title: A new phylogeny of tetraodontiform fishes (tetraodontiformes, acanthomorpha)
+  title: A new phylogeny of tetraodontiform fishes (tetraodontiformes, acanthomorpha)
     based on 22 loci
   container-title: Molecular Phylogenetics and Evolution
   page: '177-187'
@@ -657,7 +659,7 @@
     given: M.E.
   issued:
   - year: '2013'
-- title: Adaptive response to sociality and ecology drives the diversification of
+  title: Adaptive response to sociality and ecology drives the diversification of
     facial colour patterns in catarrhines
   container-title: Nature Communications
   volume: '4'
@@ -675,7 +677,7 @@
     given: C.J.
   issued:
   - year: '2013'
-- title: Body fineness ratio as a predictor of maximum prolonged-swimming speed in
+  title: Body fineness ratio as a predictor of maximum prolonged-swimming speed in
     coral reef fishes
   container-title: PLoS ONE
   volume: '8'
@@ -700,7 +702,7 @@
     given: M.E.
   issued:
   - year: '2013'
-- title: Do habitat shifts drive diversification in teleost fishes? An example from
+  title: Do habitat shifts drive diversification in teleost fishes? An example from
     the pufferfishes (tetraodontidae)
   container-title: Journal of Evolutionary Biology
   page: '1003-1018'
@@ -722,7 +724,7 @@
     given: M.E.
   issued:
   - year: '2013'
-- title: Iterative ecological radiation and convergence during the evolutionary history
+  title: Iterative ecological radiation and convergence during the evolutionary history
     of damselfishes (pomacentridae)
   container-title: American Naturalist
   page: '94-113'
@@ -790,7 +792,7 @@
     given: G.
   issued:
   - year: '2013'
-- title: Phylotastic! Making tree-of-life knowledge accessible, reusable and convenient
+  title: Phylotastic! Making tree-of-life knowledge accessible, reusable and convenient
   container-title: BMC Bioinformatics
   volume: '14'
 
@@ -813,7 +815,7 @@
     given: M.E.
   issued:
   - year: '2013'
-- title: Rates of speciation and morphological evolution are correlated across the
+  title: Rates of speciation and morphological evolution are correlated across the
     largest vertebrate radiation
   container-title: Nature Communications
   volume: '4'
@@ -829,7 +831,7 @@
     given: L.
   issued:
   - year: '2013'
-- title: 'Rediscovery of sagittalarva inornata n. Gen., n. Comb. (Gilbert, 1890)
+  title: 'Rediscovery of sagittalarva inornata n. Gen., n. Comb. (Gilbert, 1890)
     (perciformes: Labridae), a long-lost deepwater fish from the eastern pacific ocean:
     A case study of a forensic approach to taxonomy using dna barcoding'
   title-short: Rediscovery of sagittalarva inornata n. Gen., n. Comb. (Gilbert, 1890)
@@ -850,7 +852,7 @@
     given: M.E.
   issued:
   - year: '2012'
-- title: Adaptive evolution of facial colour patterns in neotropical primates
+  title: Adaptive evolution of facial colour patterns in neotropical primates
   container-title: 'Proceedings of the Royal Society B: Biological Sciences'
   page: '2204-2211'
   volume: '279'
@@ -889,7 +891,7 @@
     given: M.E.
   issued:
   - year: '2012'
-- title: 'Anointing variation across wild capuchin populations: A review of material
+  title: 'Anointing variation across wild capuchin populations: A review of material
     preferences, bout frequency and anointing sociality in cebus and sapajus'
   title-short: Anointing variation across wild capuchin populations
   container-title: American Journal of Primatology
@@ -912,7 +914,7 @@
     given: J.L.
   issued:
   - year: '2012'
-- title: 'Cebus phylogenetic relationships: A preliminary reassessment of the diversity
+  title: 'Cebus phylogenetic relationships: A preliminary reassessment of the diversity
     of the untufted capuchin monkeys'
   title-short: Cebus phylogenetic relationships
   container-title: American Journal of Primatology
@@ -931,7 +933,7 @@
     given: M.E.
   issued:
   - year: '2012'
-- title: Clade age and species richness are decoupled across the eukaryotic tree of
+  title: Clade age and species richness are decoupled across the eukaryotic tree of
     life
   container-title: PLoS Biology
   volume: '10'
@@ -972,7 +974,7 @@
     given: M.E.
   issued:
   - year: '2012'
-- title: Explosive pleistocene range expansion leads to widespread amazonian sympatry
+  title: Explosive pleistocene range expansion leads to widespread amazonian sympatry
     between robust and gracile capuchin monkeys
   container-title: Journal of Biogeography
   page: '272-288'
@@ -996,7 +998,7 @@
     given: M.E.
   issued:
   - year: '2012'
-- title: Fitting models of continuous trait evolution to incompletely sampled comparative
+  title: Fitting models of continuous trait evolution to incompletely sampled comparative
     data using approximate bayesian computation
   container-title: Evolution
   page: '752-762'
@@ -1014,7 +1016,7 @@
     given: M.E.
   issued:
   - year: '2012'
-- title: Integrating fossils with molecular phylogenies improves inference of trait
+  title: Integrating fossils with molecular phylogenies improves inference of trait
     evolution
   container-title: Evolution
   page: '3931-3944'
@@ -1042,7 +1044,7 @@
     given: R.P.
   issued:
   - year: '2012'
-- title: Systemic iridovirus from threespine stickleback gasterosteus aculeatus represents
+  title: Systemic iridovirus from threespine stickleback gasterosteus aculeatus represents
     a new megalocytivirus species (family iridoviridae)
   container-title: Diseases of Aquatic Organisms
   page: '41-56'
@@ -1064,7 +1066,7 @@
     given: L.J.
   issued:
   - year: '2011'
-- title: A novel comparative method for identifying shifts in the rate of character
+  title: A novel comparative method for identifying shifts in the rate of character
     evolution on trees
   container-title: Evolution
   page: '3578-3589'
@@ -1082,7 +1084,7 @@
     given: M.A.
   issued:
   - year: '2011'
-- title: Biologically inspired phylogenetic models strongly outperform the no common
+  title: Biologically inspired phylogenetic models strongly outperform the no common
     mechanism model
   container-title: Systematic Biology
   page: '225-232'
@@ -1102,7 +1104,7 @@
     given: M.E.
   issued:
   - year: '2011'
-- title: Roosting ecology and the evolution of pelage markings in bats
+  title: Roosting ecology and the evolution of pelage markings in bats
   container-title: PLoS ONE
   volume: '6'
   issue: '10'
@@ -1118,7 +1120,7 @@
     given: M.E.
   issued:
   - year: '2011'
-- title: Testing for temporal variation in diversification rates when sampling is
+  title: Testing for temporal variation in diversification rates when sampling is
     incomplete and nonrandom
   container-title: Systematic Biology
   page: '410-419'
@@ -1136,7 +1138,7 @@
     given: M.E.
   issued:
   - year: '2011'
-- title: The evolution of island gigantism and body size variation in tortoises and
+  title: The evolution of island gigantism and body size variation in tortoises and
     turtles
   container-title: Biology Letters
   page: '558-561'
@@ -1160,7 +1162,7 @@
     given: M.E.
   issued:
   - year: '2011'
-- title: 'The influence of an innovative locomotor strategy on the phenotypic diversification
+  title: 'The influence of an innovative locomotor strategy on the phenotypic diversification
     of triggerfish (family: Balistidae)'
   title-short: The influence of an innovative locomotor strategy on the phenotypic
     diversification of triggerfish (family
@@ -1182,7 +1184,7 @@
     given: M.E.
   issued:
   - year: '2010'
-- title: Diversity versus disparity and the radiation of modern cetaceans
+  title: Diversity versus disparity and the radiation of modern cetaceans
   container-title: 'Proceedings of the Royal Society B: Biological Sciences'
   page: '3097-3104'
   volume: '277'
@@ -1201,7 +1203,7 @@
     given: P.C.
   issued:
   - year: '2010'
-- title: Elongation of the body in eels
+  title: Elongation of the body in eels
   container-title: Integrative and Comparative Biology
   page: '1091-1105'
   volume: '50'
@@ -1216,7 +1218,7 @@
     given: M.E.
   issued:
   - year: '2010'
-- title: 'Evolutionary bangs and whimpers: Methodological advances and conceptual
+  title: 'Evolutionary bangs and whimpers: Methodological advances and conceptual
     frameworks for studying exceptional diversification'
   title-short: Evolutionary bangs and whimpers
   container-title: Systematic Biology
@@ -1233,7 +1235,7 @@
     given: F.
   issued:
   - year: '2010'
-- title: 'Evolutionary biology: A flourishing of fish forms'
+  title: 'Evolutionary biology: A flourishing of fish forms'
   title-short: Evolutionary biology
   container-title: Nature
   page: '840-842'
@@ -1253,7 +1255,7 @@
     given: M.E.
   issued:
   - year: '2009'
-- title: Convergence in trophic morphology and feeding performance among piscivorous
+  title: Convergence in trophic morphology and feeding performance among piscivorous
     natricine snakes
   container-title: Journal of Evolutionary Biology
   page: '1203-1211'
@@ -1273,7 +1275,7 @@
     given: M.E.
   issued:
   - year: '2009'
-- title: Did genome duplication drive the origin of teleosts? A comparative study
+  title: Did genome duplication drive the origin of teleosts? A comparative study
     of diversification in ray-finned fishes
   container-title: BMC Evolutionary Biology
   volume: '9'
@@ -1292,7 +1294,7 @@
     given: P.C.
   issued:
   - year: '2009'
-- title: Does evolutionary innovation in pharyngeal jaws lead to rapid lineage diversification
+  title: Does evolutionary innovation in pharyngeal jaws lead to rapid lineage diversification
     in labrid fishes?
   container-title: BMC Evolutionary Biology
   volume: '9'
@@ -1319,7 +1321,7 @@
     given: L.J.
   issued:
   - year: '2009'
-- title: Nine exceptional radiations plus high turnover explain species diversity
+  title: Nine exceptional radiations plus high turnover explain species diversity
     in jawed vertebrates
   container-title: Proceedings of the National Academy of Sciences of the United States
     of America
@@ -1344,7 +1346,7 @@
     given: R.P.
   issued:
   - year: '2009'
-- title: Phylogenetic relationships in the family alloherpesviridae
+  title: Phylogenetic relationships in the family alloherpesviridae
   container-title: Diseases of Aquatic Organisms
   page: '179-194'
   volume: '84'
@@ -1367,7 +1369,7 @@
     given: E.H.
   issued:
   - year: '2008'
-- title: 'A comparative study in ancestral range reconstruction methods: Retracing
+  title: 'A comparative study in ancestral range reconstruction methods: Retracing
     the uncertain histories of insular lineages'
   title-short: A comparative study in ancestral range reconstruction methods
   container-title: Systematic Biology
@@ -1386,7 +1388,7 @@
     given: M.E.
   issued:
   - year: '2008'
-- title: Integrated diversification of locomotion and feeding in labrid fishes
+  title: Integrated diversification of locomotion and feeding in labrid fishes
   container-title: Biology Letters
   page: '84-86'
   volume: '4'
@@ -1409,7 +1411,7 @@
     given: D.J.
   issued:
   - year: '2008'
-- title: 'Morphological convergence as a consequence of extreme functional demands:
+  title: 'Morphological convergence as a consequence of extreme functional demands:
     Examples from the feeding system of natricine snakes'
   title-short: Morphological convergence as a consequence of extreme functional demands
   container-title: Journal of Evolutionary Biology
@@ -1432,7 +1434,7 @@
     given: M.W.
   issued:
   - year: '2008'
-- title: Phylogenetic relationships and the evolution of regulatory gene sequences
+  title: Phylogenetic relationships and the evolution of regulatory gene sequences
     in the parrotfishes
   container-title: Molecular Phylogenetics and Evolution
   page: '136-152'
@@ -1454,7 +1456,7 @@
     given: B.L.
   issued:
   - year: '2008'
-- title: 'Phylogeny, evolutionary history, and biogeography of oriental-australian
+  title: 'Phylogeny, evolutionary history, and biogeography of oriental-australian
     rear-fanged water snakes (colubroidea: Homalopsidae) inferred from mitochondrial
     and nuclear dna sequences'
   title-short: Phylogeny, evolutionary history, and biogeography of oriental-australian
@@ -1475,7 +1477,7 @@
     given: M.E.
   issued:
   - year: '2008'
-- title: 'The influence of model averaging on clade posteriors: An example using
+  title: 'The influence of model averaging on clade posteriors: An example using
     the triggerfishes (family balistidae)'
   title-short: The influence of model averaging on clade posteriors
   container-title: Systematic Biology
@@ -1494,7 +1496,7 @@
     given: C.D.
   issued:
   - year: '2007'
-- title: Do reefs drive diversification in marine teleosts? Evidence from the pufferfish
+  title: Do reefs drive diversification in marine teleosts? Evidence from the pufferfish
     and their allies (order tetraodontiformes)
   container-title: Evolution
   page: '2104-2126'
@@ -1520,7 +1522,7 @@
     given: J.P.
   issued:
   - year: '2007'
-- title: Phylogenetic concordance analysis shows an emerging pathogen is novel and
+  title: Phylogenetic concordance analysis shows an emerging pathogen is novel and
     endemic
   container-title: Ecology Letters
   page: '1075-1083'
@@ -1536,7 +1538,7 @@
     given: J.
   issued:
   - year: '2006'
-- title: Comparative performance of bayesian and aic-based measures of phylogenetic
+  title: Comparative performance of bayesian and aic-based measures of phylogenetic
     model uncertainty
   container-title: Systematic Biology
   page: '89-96'
@@ -1552,7 +1554,7 @@
     given: M.T.
   issued:
   - year: '2006'
-- title: The posterior and the prior in bayesian phylogenetics
+  title: The posterior and the prior in bayesian phylogenetics
   container-title: Annual Review of Ecology, Evolution, and Systematics
   page: '19-42'
   volume: '37'
@@ -1568,7 +1570,7 @@
     given: P.C.
   issued:
   - year: '2005'
-- title: Evolutionary consequences of many-to-one mapping of jaw morphology to mechanics
+  title: Evolutionary consequences of many-to-one mapping of jaw morphology to mechanics
     in labrid fishes.
   container-title: The American naturalist
   volume: '165'
@@ -1595,7 +1597,7 @@
     given: L.L.
   issued:
   - year: '2005'
-- title: Local phylogenetic divergence and global evolutionary convergence of skull
+  title: Local phylogenetic divergence and global evolutionary convergence of skull
     function in reef fishes of the family labridae
   container-title: 'Proceedings of the Royal Society B: Biological Sciences'
   page: '993-1000'
@@ -1615,7 +1617,7 @@
     given: C.D.
   issued:
   - year: '2005'
-- title: 'Many-to-one mapping of form to function: A general principle in organismal
+  title: 'Many-to-one mapping of form to function: A general principle in organismal
     design?'
   title-short: Many-to-one mapping of form to function
   container-title: Integrative and Comparative Biology
@@ -1632,7 +1634,7 @@
     given: M.E.
   issued:
   - year: '2005'
-- title: Phylogenetic relationships and evolutionary history of the reef fish family
+  title: Phylogenetic relationships and evolutionary history of the reef fish family
     labridae
   container-title: Molecular Phylogenetics and Evolution
   page: '370-390'
@@ -1650,7 +1652,7 @@
     given: M.E.
   issued:
   - year: '2004'
-- title: Bayesian phylogenetic model selection using reversible jump markov chain
+  title: Bayesian phylogenetic model selection using reversible jump markov chain
     monte carlo
   container-title: Molecular Biology and Evolution
   page: '1123-1133'
@@ -1668,7 +1670,7 @@
     given: P.C.
   issued:
   - year: '2004'
-- title: 'Evolutionary dynamics of complex biomechanical systems: An example using
+  title: 'Evolutionary dynamics of complex biomechanical systems: An example using
     the four-bar mechanism'
   title-short: Evolutionary dynamics of complex biomechanical systems
   container-title: Evolution
@@ -1691,7 +1693,7 @@
     given: S.L.
   issued:
   - year: '2004'
-- title: 'Phylogeny of cerberus (serpentes: Homalopsinae) and phylogeography of
+  title: 'Phylogeny of cerberus (serpentes: Homalopsinae) and phylogeography of
     cerberus rynchops: Diversification of a coastal marine snake in southeast asia'
   title-short: Phylogeny of cerberus (serpentes
   container-title: Journal of Biogeography
@@ -1712,7 +1714,7 @@
     given: M.W.
   issued:
   - year: '2004'
-- title: Relationships of the temperate australasian labrid fish tribe odacini (perciformes;
+  title: Relationships of the temperate australasian labrid fish tribe odacini (perciformes;
     teleostei)
   container-title: Molecular Phylogenetics and Evolution
   page: '575-587'
@@ -1730,7 +1732,7 @@
     given: F.
   issued:
   - year: '2003'
-- title: Bayes or bootstrap? A simulation study comparing the performance of bayesian
+  title: Bayes or bootstrap? A simulation study comparing the performance of bayesian
     markov chain monte carlo sampling and bootstrapping in assessing phylogenetic
     confidence
   container-title: Molecular Biology and Evolution
@@ -1745,7 +1747,7 @@
     given: M.E.
   issued:
   - year: '2003'
-- title: 'Sweeping and striking: A kinematic study of the trunk during prey capture
+  title: 'Sweeping and striking: A kinematic study of the trunk during prey capture
     in three thamnophiine snakes'
   title-short: Sweeping and striking
   container-title: Journal of Experimental Biology
@@ -1768,7 +1770,7 @@
     given: S.A.
   issued:
   - year: '2002'
-- title: 'Evolutionary history of the parrotfishes: Biogeography, ecomorphology,
+  title: 'Evolutionary history of the parrotfishes: Biogeography, ecomorphology,
     and comparative diversity'
   title-short: Evolutionary history of the parrotfishes
   container-title: Evolution
@@ -1783,7 +1785,7 @@
     given: M.E.
   issued:
   - year: '2002'
-- title: Forward attack modes of aquatic feeding garter snakes
+  title: Forward attack modes of aquatic feeding garter snakes
   container-title: Functional Ecology
   page: '204-215'
   volume: '16'
@@ -1806,7 +1808,7 @@
     given: J.C.
   issued:
   - year: '2002'
-- title: 'Phylogenetic relationships of the oriental-australian rear-fanged water
+  title: 'Phylogenetic relationships of the oriental-australian rear-fanged water
     snakes (colubridae: Homalopsinae) based on mitochondrial dna sequences'
   title-short: Phylogenetic relationships of the oriental-australian rear-fanged water
     snakes (colubridae
@@ -1823,7 +1825,7 @@
     given: S.J.
   issued:
   - year: '2001'
-- title: Molecular systematics and evolution of regina and the thamnophiine snakes
+  title: Molecular systematics and evolution of regina and the thamnophiine snakes
   container-title: Molecular Phylogenetics and Evolution
   page: '408-423'
   volume: '21'
@@ -1836,7 +1838,7 @@
     given: M.E.
   issued:
   - year: '2001'
-- title: 'Motor control across trophic strategies: Muscle activity of biting and
+  title: 'Motor control across trophic strategies: Muscle activity of biting and
     suction feeding fishes'
   title-short: Motor control across trophic strategies
   container-title: American Zoologist
@@ -1853,7 +1855,7 @@
     given: M.W.
   issued:
   - year: '1999'
-- title: 'Motor patterns of herbivorous feeding: Electromyographic analysis of biting
+  title: 'Motor patterns of herbivorous feeding: Electromyographic analysis of biting
     in the parrotfishes cetoscarus bicolor and scarus iseri'
   title-short: Motor patterns of herbivorous feeding
   container-title: Brain, Behavior and Evolution
