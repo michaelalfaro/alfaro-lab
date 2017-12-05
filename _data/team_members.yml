@@ -13,37 +13,37 @@
 - name: Princess Gilbert
   photo: gilbert.jpg
   info: former PhD student
-  email:  ps.gilbert@ucla.edu
+  email: ps.gilbert@ucla.edu
   number_educ: 0
 #  education1:
 - name: Mark Phuong
   photo: phuong.jpg
   info: PhD student
-  email:  markphuong@gmail.com
+  email: markphuong@gmail.com
   number_educ: 0
 #  education1:
 - name: Tyler McCraney
   photo: maccraney.jpg
   info: PhD student
-  email:  tmccraney@ucla.edu
+  email: tmccraney@ucla.edu
   number_educ: 0
 #  education1:
 - name: Liz Karan
   photo: karan.jpg
   info: PhD student
-  email:  e.annekaran@gmail.com
+  email: e.annekaran@gmail.com
   number_educ: 0
 #  education1:
  - name: David Cerny
   photo: 
   info: undergraduate student
-  email:  david.cerny1@gmail.com
+  email: david.cerny1@gmail.com
   number_educ: 0
 #  education1:
   - name: Chris Rice
   photo: 
   info: undergraduate student
-  email:  chris.rice2@cox.net
+  email: chris.rice2@cox.net
   number_educ: 0
 #  education1:
 
