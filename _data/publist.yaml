@@ -1,0 +1,1865 @@
+---
+references:
+- id: Alfaro2017A
+  type: article-journal
+  author:
+  - family: Campbell
+    given: M.A.
+  - family: Alfaro
+    given: M.E.
+  - family: Belasco
+    given: M.
+  - family: Andrés López
+    given: J.
+  issued:
+  - year: '2017'
+  title: 'Early-branching euteleost relationships: Areas of congruence between concatenation
+    and coalescent model inferences'
+  title-short: Early-branching euteleost relationships
+  container-title: PeerJ
+  volume: '2017'
+  issue: '9'
+
+- id: Alfaro2017B
+  type: article-journal
+  author:
+  - family: Chakrabarty
+    given: P.
+  - family: Faircloth
+    given: B.C.
+  - family: Alda
+    given: F.
+  - family: Ludt
+    given: W.B.
+  - family: McMahan
+    given: C.D.
+  - family: Near
+    given: T.J.
+  - family: Dornburg
+    given: A.
+  - family: Albert
+    given: J.S.
+  - family: Arroyave
+    given: J.
+  - family: Stiassny
+    given: M.L.J.
+  - family: Sorenson
+    given: L.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2017'
+  title: 'Phylogenomic systematics of ostariophysan fishes: Ultraconserved elements
+    support the surprising non-monophyly of characiformes'
+  title-short: Phylogenomic systematics of ostariophysan fishes
+  container-title: Systematic Biology
+  page: '881-895'
+  volume: '66'
+  issue: '6'
+
+- id: Alfaro2017C
+  type: article-journal
+  author:
+  - family: Hulsey
+    given: C.D.
+  - family: Zheng
+    given: J.
+  - family: Faircloth
+    given: B.C.
+  - family: Meyer
+    given: A.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2017'
+  title: 'Phylogenomic analysis of lake malawi cichlid fishes: Further evidence
+    that the three-stage model of diversification does not fit'
+  title-short: Phylogenomic analysis of lake malawi cichlid fishes
+  container-title: Molecular Phylogenetics and Evolution
+  page: '40-48'
+  volume: '114'
+
+- id: Alfaro2017D
+  type: article-journal
+  author:
+  - family: Longo
+    given: S.J.
+  - family: Faircloth
+    given: B.C.
+  - family: Meyer
+    given: A.
+  - family: Westneat
+    given: M.W.
+  - family: Alfaro
+    given: M.E.
+  - family: Wainwright
+    given: P.C.
+  issued:
+  - year: '2017'
+  title: Phylogenomic analysis of a rapid radiation of misfit fishes (syngnathiformes)
+    using ultraconserved elements
+  container-title: Molecular Phylogenetics and Evolution
+  page: '33-48'
+  volume: '113'
+
+- id: Alfaro2016A
+  type: article-journal
+  author:
+  - family: Chang
+    given: J.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2016'
+  title: Crowdsourced geometric morphometrics enable rapid large-scale collection
+    and analysis of phenotypic data
+  container-title: Methods in Ecology and Evolution
+  page: '472-482'
+  volume: '7'
+  issue: '4'
+
+- id: Alfaro2016B
+  type: article-journal
+  author:
+  - family: Phuong
+    given: M.A.
+  - family: Mahardika
+    given: G.N.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2016'
+  title: Dietary breadth is positively correlated with venom complexity in cone snails
+  container-title: BMC Genomics
+  volume: '17'
+  issue: '1'
+
+- id: Alfaro2016C
+  type: article-journal
+  author:
+  - family: Alencar
+    given: L.R.V.
+  - family: Quental
+    given: T.B.
+  - family: Grazziotin
+    given: F.G.
+  - family: Alfaro
+    given: M.L.
+  - family: Martins
+    given: M.
+  - family: Venzon
+    given: M.
+  - family: Zaher
+    given: H.
+  issued:
+  - year: '2016'
+  title: 'Diversification in vipers: Phylogenetic relationships, time of divergence
+    and shifts in speciation rates'
+  title-short: Diversification in vipers
+  container-title: Molecular Phylogenetics and Evolution
+  page: '50-62'
+  volume: '105'
+
+- id: Alfaro2016D
+  type: article-journal
+  author:
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2016'
+  title: 'Evolution: Bioluminescent courtship as an engine of diversity'
+  title-short: Evolution
+  container-title: Current Biology
+  page: R667-R669
+  volume: '26'
+  issue: '14'
+
+- id: Alfaro2016E
+  type: article-journal
+  author:
+  - family: Harrington
+    given: R.C.
+  - family: Faircloth
+    given: B.C.
+  - family: Eytan
+    given: R.I.
+  - family: Smith
+    given: W.L.
+  - family: Near
+    given: T.J.
+  - family: Alfaro
+    given: M.E.
+  - family: Friedman
+    given: M.
+  issued:
+  - year: '2016'
+  title: Phylogenomic analysis of carangimorph fishes reveals flatfish asymmetry arose
+    in a blink of the evolutionary eye
+  container-title: BMC Evolutionary Biology
+  volume: '16'
+  issue: '1'
+
+- id: Alfaro2016F
+  type: article-journal
+  author:
+  - family: Santini
+    given: F.
+  - family: Sorenson
+    given: L.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2016'
+  title: Phylogeny and biogeography of hogfishes and allies (bodianus, labridae)
+  container-title: Molecular Phylogenetics and Evolution
+  page: '1-6'
+  volume: '99'
+
+- id: Alfaro2016G
+  type: article-journal
+  author:
+  - family: McGee
+    given: M.D.
+  - family: Faircloth
+    given: B.C.
+  - family: Borstein
+    given: S.R.
+  - family: Zheng
+    given: J.
+  - family: Hulsey
+    given: C.D.
+  - family: Wainwright
+    given: P.C.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2016'
+  title: Replicated divergence in cichlid radiations mirrors a major vertebrate innovation
+  container-title: 'Proceedings of the Royal Society B: Biological Sciences'
+  volume: '283'
+  issue: '1822'
+
+- id: Alfaro2015A
+  type: article-journal
+  author:
+  - family: Lynch Alfaro
+    given: J.W.
+  - family: Boubli
+    given: J.P.
+  - family: Paim
+    given: F.P.
+  - family: Ribas
+    given: C.C.
+  - family: Silva
+    given: M.N.F.D.
+  - family: Messias
+    given: M.R.
+  - family: Röhe
+    given: F.
+  - family: Mercês
+    given: M.P.
+  - family: Silva Júnior
+    given: J.S.
+  - family: Silva
+    given: C.R.
+  - family: Pinho
+    given: G.M.
+  - family: Koshkarian
+    given: G.
+  - family: Nguyen
+    given: M.T.T.
+  - family: Harada
+    given: M.L.
+  - family: Rabelo
+    given: R.M.
+  - family: Queiroz
+    given: H.L.
+  - family: Alfaro
+    given: M.E.
+  - family: Farias
+    given: I.P.
+  issued:
+  - year: '2015'
+  title: 'Biogeography of squirrel monkeys (genus saimiri): South-central amazon
+    origin and rapid pan-amazonian diversification of a lowland primate'
+  title-short: Biogeography of squirrel monkeys (genus saimiri)
+  container-title: Molecular Phylogenetics and Evolution
+  page: '436-454'
+  volume: '82'
+  issue: PB
+
+- id: Alfaro2015B
+  type: article-journal
+  author:
+  - family: Buckner
+    given: J.C.
+  - family: Lynch Alfaro
+    given: J.W.
+  - family: Rylands
+    given: A.B.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2015'
+  title: Biogeography of the marmosets and tamarins (callitrichidae)
+  container-title: Molecular Phylogenetics and Evolution
+  page: '413-425'
+  volume: '82'
+  issue: PB
+
+- id: Alfaro2015C
+  type: article-journal
+  author:
+  - family: Gilbert
+    given: P.S.
+  - family: Chang
+    given: J.
+  - family: Pan
+    given: C.
+  - family: Sobel
+    given: E.M.
+  - family: Sinsheimer
+    given: J.S.
+  - family: Faircloth
+    given: B.C.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2015'
+  title: Genome-wide ultraconserved elements exhibit higher phylogenetic informativeness
+    than traditional gene markers in percomorph fishes
+  container-title: Molecular Phylogenetics and Evolution
+  page: '140-146'
+  volume: '92'
+
+- id: Alfaro2015D
+  type: article-journal
+  author:
+  - family: Iglesias
+    given: T.L.
+  - family: Dornburg
+    given: A.
+  - family: Brandley
+    given: M.C.
+  - family: Alfaro
+    given: M.E.
+  - family: Warren
+    given: D.L.
+  issued:
+  - year: '2015'
+  title: 'Life in the unthinking depths: Energetic constraints on encephalization
+    in marine fishes'
+  title-short: Life in the unthinking depths
+  container-title: Journal of Evolutionary Biology
+  page: '1080-1090'
+  volume: '28'
+  issue: '5'
+
+- id: Alfaro2015E
+  type: article-journal
+  author:
+  - family: Boubli
+    given: J.P.
+  - family: Ribas
+    given: C.
+  - family: Lynch Alfaro
+    given: J.W.
+  - family: Alfaro
+    given: M.E.
+  - family: Silva
+    given: M.N.F.
+    dropping-particle: da
+  - family: Pinho
+    given: G.M.
+  - family: Farias
+    given: I.P.
+  issued:
+  - year: '2015'
+  title: 'Spatial and temporal patterns of diversification on the amazon: A test
+    of the riverine hypothesis for all diurnal primates of rio negro and rio branco
+    in brazil'
+  title-short: Spatial and temporal patterns of diversification on the amazon
+  container-title: Molecular Phylogenetics and Evolution
+  page: '400-412'
+  volume: '82'
+  issue: PB
+
+- id: Alfaro2015F
+  type: article-journal
+  author:
+  - family: Wright
+    given: K.A.
+  - family: Wright
+    given: B.W.
+  - family: Ford
+    given: S.M.
+  - family: Fragaszy
+    given: D.
+  - family: Izar
+    given: P.
+  - family: Norconk
+    given: M.
+  - family: Masterson
+    given: T.
+  - family: Hobbs
+    given: D.G.
+  - family: Alfaro
+    given: M.E.
+  - family: Lynch Alfaro
+    given: J.W.
+  issued:
+  - year: '2015'
+  title: The effects of ecology and evolutionary history on robust capuchin morphological
+    diversity
+  container-title: Molecular Phylogenetics and Evolution
+  page: '455-466'
+  volume: '82'
+  issue: PB
+
+- id: Alfaro2014A
+  type: article-journal
+  author:
+  - family: Collar
+    given: D.C.
+  - family: Wainwright
+    given: P.C.
+  - family: Alfaro
+    given: M.E.
+  - family: Revell
+    given: L.J.
+  - family: Mehta
+    given: R.S.
+  issued:
+  - year: '2014'
+  title: Biting disrupts integration to spur skull evolution in eels
+  container-title: Nature Communications
+  volume: '5'
+
+- id: Alfaro2014B
+  type: article-journal
+  author:
+  - family: Pennell
+    given: M.W.
+  - family: Eastman
+    given: J.M.
+  - family: Slater
+    given: G.J.
+  - family: Brown
+    given: J.W.
+  - family: Uyeda
+    given: J.C.
+  - family: Fitzjohn
+    given: R.G.
+  - family: Alfaro
+    given: M.E.
+  - family: Harmon
+    given: L.J.
+  issued:
+  - year: '2014'
+  title: 'Geiger v2.0: An expanded suite of methods for fitting macroevolutionary
+    models to phylogenetic trees'
+  title-short: Geiger v2.0
+  container-title: Bioinformatics
+  page: '2216-2218'
+  volume: '30'
+  issue: '15'
+
+- id: Alfaro2014C
+  type: article-journal
+  author:
+  - family: Collar
+    given: D.C.
+  - family: Reece
+    given: J.S.
+  - family: Alfaro
+    given: M.E.
+  - family: Wainwright
+    given: P.C.
+  - family: Mehta
+    given: R.S.
+  issued:
+  - year: '2014'
+  title: 'Imperfect morphological convergence: Variable changes in cranial structures
+    underlie transitions to durophagy in moray eels'
+  title-short: Imperfect morphological convergence
+  container-title: American Naturalist
+  volume: '183'
+  issue: '6'
+
+- id: Alfaro2014D
+  type: article-journal
+  author:
+  - family: Sorenson
+    given: L.
+  - family: Santini
+    given: F.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2014'
+  title: The effect of habitat on modern shark diversification
+  container-title: Journal of Evolutionary Biology
+  page: '1536-1548'
+  volume: '27'
+  issue: '8'
+
+- id: Alfaro2014E
+  type: article-journal
+  author:
+  - family: Frédérich
+    given: B.
+  - family: Olivier
+    given: D.
+  - family: Litsios
+    given: G.
+  - family: Alfaro
+    given: M.E.
+  - family: Parmentier
+    given: E.
+  issued:
+  - year: '2014'
+  title: Trait decoupling promotes evolutionary diversification of the trophic and
+    acoustic system of damselfishes
+  container-title: 'Proceedings of the Royal Society B: Biological Sciences'
+  volume: '281'
+  issue: '1789'
+
+- id: Alfaro2013A
+  type: article-journal
+  author:
+  - family: Faircloth
+    given: B.C.
+  - family: Sorenson
+    given: L.
+  - family: Santini
+    given: F.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2013'
+  title: A phylogenomic perspective on the radiation of ray-finned fishes based upon
+    targeted sequencing of ultraconserved elements (uces)
+  container-title: PLoS ONE
+  volume: '8'
+  issue: '6'
+
+- id: Alfaro2013B
+  type: article-journal
+  author:
+  - family: Santini
+    given: F.
+  - family: Kong
+    given: X.
+  - family: Sorenson
+    given: L.
+  - family: Carnevale
+    given: G.
+  - family: Mehta
+    given: R.S.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2013'
+  title: 'A multi-locus molecular timescale for the origin and diversification of
+    eels (order: Anguilliformes)'
+  title-short: A multi-locus molecular timescale for the origin and diversification
+    of eels (order
+  container-title: Molecular Phylogenetics and Evolution
+  page: '884-894'
+  volume: '69'
+  issue: '3'
+
+- id: Alfaro2013C
+  type: article-journal
+  author:
+  - family: Sorenson
+    given: L.
+  - family: Santini
+    given: F.
+  - family: Carnevale
+    given: G.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2013'
+  title: A multi-locus timetree of surgeonfishes (acanthuridae, percomorpha), with
+    revised family taxonomy
+  container-title: Molecular Phylogenetics and Evolution
+  page: '150-160'
+  volume: '68'
+  issue: '1'
+
+- id: Alfaro2013D
+  type: article-journal
+  author:
+  - family: Santini
+    given: F.
+  - family: Sorenson
+    given: L.
+  - family: Marcroft
+    given: T.
+  - family: Dornburg
+    given: A.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2013'
+  title: A multilocus molecular phylogeny of boxfishes (aracanidae, ostraciidae; tetraodontiformes)
+  container-title: Molecular Phylogenetics and Evolution
+  page: '153-160'
+  volume: '66'
+  issue: '1'
+
+- id: Alfaro2013E
+  type: article-journal
+  author:
+  - family: Santini
+    given: F.
+  - family: Sorenson
+    given: L.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2013'
+  title: A new multi-locus timescale reveals the evolutionary basis of diversity patterns
+    in triggerfishes and filefishes (balistidae, monacanthidae; tetraodontiformes)
+  container-title: Molecular Phylogenetics and Evolution
+  page: '165-176'
+  volume: '69'
+  issue: '1'
+
+- id: Alfaro2013F
+  type: article-journal
+  author:
+  - family: Santini
+    given: F.
+  - family: Sorenson
+    given: L.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2013'
+  title: A new phylogeny of tetraodontiform fishes (tetraodontiformes, acanthomorpha)
+    based on 22 loci
+  container-title: Molecular Phylogenetics and Evolution
+  page: '177-187'
+  volume: '69'
+  issue: '1'
+
+- id: Alfaro2013G
+  type: article-journal
+  author:
+  - family: Santana
+    given: S.E.
+  - family: Alfaro
+    given: J.L.
+  - family: Noonan
+    given: A.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2013'
+  title: Adaptive response to sociality and ecology drives the diversification of
+    facial colour patterns in catarrhines
+  container-title: Nature Communications
+  volume: '4'
+
+- id: Alfaro2013H
+  type: article-journal
+  author:
+  - family: Walker
+    given: J.A.
+  - family: Alfaro
+    given: M.E.
+  - family: Noble
+    given: M.M.
+  - family: Fulton
+    given: C.J.
+  issued:
+  - year: '2013'
+  title: Body fineness ratio as a predictor of maximum prolonged-swimming speed in
+    coral reef fishes
+  container-title: PLoS ONE
+  volume: '8'
+  issue: '10'
+
+- id: Alfaro2013I
+  type: article-journal
+  author:
+  - family: Santini
+    given: F.
+  - family: Nguyen
+    given: M.T.T.
+  - family: Sorenson
+    given: L.
+  - family: Waltzek
+    given: T.B.
+  - family: Lynch Alfaro
+    given: J.W.
+  - family: Eastman
+    given: J.M.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2013'
+  title: Do habitat shifts drive diversification in teleost fishes? An example from
+    the pufferfishes (tetraodontidae)
+  container-title: Journal of Evolutionary Biology
+  page: '1003-1018'
+  volume: '26'
+  issue: '5'
+
+- id: Alfaro2013J
+  type: article-journal
+  author:
+  - family: Frédérich
+    given: B.
+  - family: Sorenson
+    given: L.
+  - family: Santini
+    given: F.
+  - family: Slater
+    given: G.J.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2013'
+  title: Iterative ecological radiation and convergence during the evolutionary history
+    of damselfishes (pomacentridae)
+  container-title: American Naturalist
+  page: '94-113'
+  volume: '181'
+  issue: '1'
+
+- id: Alfaro2013K
+  type: article-journal
+  author:
+  - family: Stoltzfus
+    given: A.
+  - family: Lapp
+    given: H.
+  - family: Matasci
+    given: N.
+  - family: Deus
+    given: H.
+  - family: Sidlauskas
+    given: B.
+  - family: Zmasek
+    given: C.M.
+  - family: Vaidya
+    given: G.
+  - family: Pontelli
+    given: E.
+  - family: Cranston
+    given: K.
+  - family: Vos
+    given: R.
+  - family: Webb
+    given: C.O.
+  - family: Harmon
+    given: L.J.
+  - family: Pirrung
+    given: M.
+  - family: O’Meara
+    given: B.
+  - family: Pennell
+    given: M.W.
+  - family: Mirarab
+    given: S.
+  - family: Rosenberg
+    given: M.S.
+  - family: Balhoff
+    given: J.P.
+  - family: Bik
+    given: H.M.
+  - family: Heath
+    given: T.A.
+  - family: Midford
+    given: P.E.
+  - family: Brown
+    given: J.W.
+  - family: McTavish
+    given: E.J.
+  - family: Sukumaran
+    given: J.
+  - family: Westneat
+    given: M.
+  - family: Alfaro
+    given: M.E.
+  - family: Steele
+    given: A.
+  - family: Jordan
+    given: G.
+  issued:
+  - year: '2013'
+  title: Phylotastic! Making tree-of-life knowledge accessible, reusable and convenient
+  container-title: BMC Bioinformatics
+  volume: '14'
+
+- id: Alfaro2013L
+  type: article-journal
+  author:
+  - family: Rabosky
+    given: D.L.
+  - family: Santini
+    given: F.
+  - family: Eastman
+    given: J.
+  - family: Smith
+    given: S.A.
+  - family: Sidlauskas
+    given: B.
+  - family: Chang
+    given: J.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2013'
+  title: Rates of speciation and morphological evolution are correlated across the
+    largest vertebrate radiation
+  container-title: Nature Communications
+  volume: '4'
+
+- id: Alfaro2013M
+  type: article-journal
+  author:
+  - family: Victor
+    given: B.C.
+  - family: Alfaro
+    given: M.E.
+  - family: Sorenson
+    given: L.
+  issued:
+  - year: '2013'
+  title: 'Rediscovery of sagittalarva inornata n. Gen., n. Comb. (Gilbert, 1890)
+    (perciformes: Labridae), a long-lost deepwater fish from the eastern pacific ocean:
+    A case study of a forensic approach to taxonomy using dna barcoding'
+  title-short: Rediscovery of sagittalarva inornata n. Gen., n. Comb. (Gilbert, 1890)
+    (perciformes
+  container-title: Zootaxa
+  page: '551-570'
+  volume: '3669'
+  issue: '4'
+
+- id: Alfaro2012A
+  type: article-journal
+  author:
+  - family: Santana
+    given: S.E.
+  - family: Alfaro
+    given: J.L.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2012'
+  title: Adaptive evolution of facial colour patterns in neotropical primates
+  container-title: 'Proceedings of the Royal Society B: Biological Sciences'
+  page: '2204-2211'
+  volume: '279'
+  issue: '1736'
+
+- id: Alfaro2012B
+  type: article-journal
+  author:
+  - family: Alfaro
+    given: J.W.L.
+  - family: Matthews
+    given: L.
+  - family: Boyette
+    given: A.H.
+  - family: MacFarlan
+    given: S.J.
+  - family: Phillips
+    given: K.A.
+  - family: Falótico
+    given: T.
+  - family: Ottoni
+    given: E.
+  - family: Verderane
+    given: M.
+  - family: Izar
+    given: P.
+  - family: Schulte
+    given: M.
+  - family: Melin
+    given: A.
+  - family: Fedigan
+    given: L.
+  - family: Janson
+    given: C.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2012'
+  title: 'Anointing variation across wild capuchin populations: A review of material
+    preferences, bout frequency and anointing sociality in cebus and sapajus'
+  title-short: Anointing variation across wild capuchin populations
+  container-title: American Journal of Primatology
+  page: '299-314'
+  volume: '74'
+  issue: '4'
+
+- id: Alfaro2012C
+  type: article-journal
+  author:
+  - family: Boubli
+    given: J.P.
+  - family: Rylands
+    given: A.B.
+  - family: Farias
+    given: I.P.
+  - family: Alfaro
+    given: M.E.
+  - family: Alfaro
+    given: J.L.
+  issued:
+  - year: '2012'
+  title: 'Cebus phylogenetic relationships: A preliminary reassessment of the diversity
+    of the untufted capuchin monkeys'
+  title-short: Cebus phylogenetic relationships
+  container-title: American Journal of Primatology
+  page: '381-393'
+  volume: '74'
+  issue: '4'
+
+- id: Alfaro2012D
+  type: article-journal
+  author:
+  - family: Rabosky
+    given: D.L.
+  - family: Slater
+    given: G.J.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2012'
+  title: Clade age and species richness are decoupled across the eukaryotic tree of
+    life
+  container-title: PLoS Biology
+  volume: '10'
+  issue: '8'
+
+- id: Alfaro2012E
+  type: article-journal
+  author:
+  - family: Lynch Alfaro
+    given: J.W.
+  - family: Boubli
+    given: J.P.
+  - family: Olson
+    given: L.E.
+  - family: Di Fiore
+    given: A.
+  - family: Wilson
+    given: B.
+  - family: Gutiérrez-Espeleta
+    given: G.A.
+  - family: Chiou
+    given: K.L.
+  - family: Schulte
+    given: M.
+  - family: Neitzel
+    given: S.
+  - family: Ross
+    given: V.
+  - family: Schwochow
+    given: D.
+  - family: Nguyen
+    given: M.T.T.
+  - family: Farias
+    given: I.
+  - family: Janson
+    given: C.H.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2012'
+  title: Explosive pleistocene range expansion leads to widespread amazonian sympatry
+    between robust and gracile capuchin monkeys
+  container-title: Journal of Biogeography
+  page: '272-288'
+  volume: '39'
+  issue: '2'
+
+- id: Alfaro2012F
+  type: article-journal
+  author:
+  - family: Slater
+    given: G.J.
+  - family: Harmon
+    given: L.J.
+  - family: Wegmann
+    given: D.
+  - family: Joyce
+    given: P.
+  - family: Revell
+    given: L.J.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2012'
+  title: Fitting models of continuous trait evolution to incompletely sampled comparative
+    data using approximate bayesian computation
+  container-title: Evolution
+  page: '752-762'
+  volume: '66'
+  issue: '3'
+
+- id: Alfaro2012G
+  type: article-journal
+  author:
+  - family: Slater
+    given: G.J.
+  - family: Harmon
+    given: L.J.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2012'
+  title: Integrating fossils with molecular phylogenies improves inference of trait
+    evolution
+  container-title: Evolution
+  page: '3931-3944'
+  volume: '66'
+  issue: '12'
+
+- id: Alfaro2012H
+  type: article-journal
+  author:
+  - family: Waltzek
+    given: T.B.
+  - family: Marty
+    given: G.D.
+  - family: Alfaro
+    given: M.E.
+  - family: Bennett
+    given: W.R.
+  - family: Garver
+    given: K.A.
+  - family: Haulena
+    given: M.
+  - family: Weber III
+    given: E.S.
+  - family: Hedrick
+    given: R.P.
+  issued:
+  - year: '2012'
+  title: Systemic iridovirus from threespine stickleback gasterosteus aculeatus represents
+    a new megalocytivirus species (family iridoviridae)
+  container-title: Diseases of Aquatic Organisms
+  page: '41-56'
+  volume: '98'
+  issue: '1'
+
+- id: Alfaro2011A
+  type: article-journal
+  author:
+  - family: Eastman
+    given: J.M.
+  - family: Alfaro
+    given: M.E.
+  - family: Joyce
+    given: P.
+  - family: Hipp
+    given: A.L.
+  - family: Harmon
+    given: L.J.
+  issued:
+  - year: '2011'
+  title: A novel comparative method for identifying shifts in the rate of character
+    evolution on trees
+  container-title: Evolution
+  page: '3578-3589'
+  volume: '65'
+  issue: '12'
+
+- id: Alfaro2011B
+  type: article-journal
+  author:
+  - family: Huelsenbeck
+    given: J.P.
+  - family: Alfaro
+    given: M.E.
+  - family: Suchard
+    given: M.A.
+  issued:
+  - year: '2011'
+  title: Biologically inspired phylogenetic models strongly outperform the no common
+    mechanism model
+  container-title: Systematic Biology
+  page: '225-232'
+  volume: '60'
+  issue: '2'
+
+- id: Alfaro2011C
+  type: article-journal
+  author:
+  - family: Santana
+    given: S.E.
+  - family: Dial
+    given: T.O.
+  - family: Eiting
+    given: T.P.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2011'
+  title: Roosting ecology and the evolution of pelage markings in bats
+  container-title: PLoS ONE
+  volume: '6'
+  issue: '10'
+
+- id: Alfaro2011D
+  type: article-journal
+  author:
+  - family: Brock
+    given: C.D.
+  - family: Harmon
+    given: L.J.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2011'
+  title: Testing for temporal variation in diversification rates when sampling is
+    incomplete and nonrandom
+  container-title: Systematic Biology
+  page: '410-419'
+  volume: '60'
+  issue: '4'
+
+- id: Alfaro2011E
+  type: article-journal
+  author:
+  - family: Jaffe
+    given: A.L.
+  - family: Slater
+    given: G.J.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2011'
+  title: The evolution of island gigantism and body size variation in tortoises and
+    turtles
+  container-title: Biology Letters
+  page: '558-561'
+  volume: '7'
+  issue: '4'
+
+- id: Alfaro2011F
+  type: article-journal
+  author:
+  - family: Dornburg
+    given: A.
+  - family: Sidlauskas
+    given: B.
+  - family: Santini
+    given: F.
+  - family: Sorenson
+    given: L.
+  - family: Near
+    given: T.J.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2011'
+  title: 'The influence of an innovative locomotor strategy on the phenotypic diversification
+    of triggerfish (family: Balistidae)'
+  title-short: The influence of an innovative locomotor strategy on the phenotypic
+    diversification of triggerfish (family
+  container-title: Evolution
+  page: '1912-1926'
+  volume: '65'
+  issue: '7'
+
+- id: Alfaro2010A
+  type: article-journal
+  author:
+  - family: Slater
+    given: G.J.
+  - family: Price
+    given: S.A.
+  - family: Santini
+    given: F.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2010'
+  title: Diversity versus disparity and the radiation of modern cetaceans
+  container-title: 'Proceedings of the Royal Society B: Biological Sciences'
+  page: '3097-3104'
+  volume: '277'
+  issue: '1697'
+
+- id: Alfaro2010B
+  type: article-journal
+  author:
+  - family: Mehta
+    given: R.S.
+  - family: Ward
+    given: A.B.
+  - family: Alfaro
+    given: M.E.
+  - family: Wainwright
+    given: P.C.
+  issued:
+  - year: '2010'
+  title: Elongation of the body in eels
+  container-title: Integrative and Comparative Biology
+  page: '1091-1105'
+  volume: '50'
+  issue: '6'
+
+- id: Alfaro2010C
+  type: article-journal
+  author:
+  - family: Rabosky
+    given: D.L.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2010'
+  title: 'Evolutionary bangs and whimpers: Methodological advances and conceptual
+    frameworks for studying exceptional diversification'
+  title-short: Evolutionary bangs and whimpers
+  container-title: Systematic Biology
+  page: '615-618'
+  volume: '59'
+  issue: '6'
+
+- id: Alfaro2010D
+  type: article-journal
+  author:
+  - family: Alfaro
+    given: M.
+  - family: Santini
+    given: F.
+  issued:
+  - year: '2010'
+  title: 'Evolutionary biology: A flourishing of fish forms'
+  title-short: Evolutionary biology
+  container-title: Nature
+  page: '840-842'
+  volume: '464'
+  issue: '7290'
+
+- id: Alfaro2009A
+  type: article-journal
+  author:
+  - family: Vincent
+    given: S.E.
+  - family: Brandley
+    given: M.C.
+  - family: Herrel
+    given: A.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2009'
+  title: Convergence in trophic morphology and feeding performance among piscivorous
+    natricine snakes
+  container-title: Journal of Evolutionary Biology
+  page: '1203-1211'
+  volume: '22'
+  issue: '6'
+
+- id: Alfaro2009B
+  type: article-journal
+  author:
+  - family: Santini
+    given: F.
+  - family: Harmon
+    given: L.J.
+  - family: Carnevale
+    given: G.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2009'
+  title: Did genome duplication drive the origin of teleosts? A comparative study
+    of diversification in ray-finned fishes
+  container-title: BMC Evolutionary Biology
+  volume: '9'
+  issue: '1'
+
+- id: Alfaro2009C
+  type: article-journal
+  author:
+  - family: Alfaro
+    given: M.E.
+  - family: Brock
+    given: C.D.
+  - family: Banbury
+    given: B.L.
+  - family: Wainwright
+    given: P.C.
+  issued:
+  - year: '2009'
+  title: Does evolutionary innovation in pharyngeal jaws lead to rapid lineage diversification
+    in labrid fishes?
+  container-title: BMC Evolutionary Biology
+  volume: '9'
+  issue: '1'
+
+- id: Alfaro2009D
+  type: article-journal
+  author:
+  - family: Alfaro
+    given: M.E.
+  - family: Santini
+    given: F.
+  - family: Brock
+    given: C.
+  - family: Alamillo
+    given: H.
+  - family: Dornburg
+    given: A.
+  - family: Rabosky
+    given: D.L.
+  - family: Carnevale
+    given: G.
+  - family: Harmon
+    given: L.J.
+  issued:
+  - year: '2009'
+  title: Nine exceptional radiations plus high turnover explain species diversity
+    in jawed vertebrates
+  container-title: Proceedings of the National Academy of Sciences of the United States
+    of America
+  page: '13410-13414'
+  volume: '106'
+  issue: '32'
+
+- id: Alfaro2009E
+  type: article-journal
+  author:
+  - family: Waltzek
+    given: T.B.
+  - family: Kelley
+    given: G.O.
+  - family: Alfaro
+    given: M.E.
+  - family: Kurobe
+    given: T.
+  - family: Davison
+    given: A.J.
+  - family: Hedrick
+    given: R.P.
+  issued:
+  - year: '2009'
+  title: Phylogenetic relationships in the family alloherpesviridae
+  container-title: Diseases of Aquatic Organisms
+  page: '179-194'
+  volume: '84'
+  issue: '3'
+
+- id: Alfaro2008A
+  type: article-journal
+  author:
+  - family: Clark
+    given: J.R.
+  - family: Ree
+    given: R.H.
+  - family: Alfaro
+    given: M.E.
+  - family: King
+    given: M.G.
+  - family: Wagner
+    given: W.L.
+  - family: Roalson
+    given: E.H.
+  issued:
+  - year: '2008'
+  title: 'A comparative study in ancestral range reconstruction methods: Retracing
+    the uncertain histories of insular lineages'
+  title-short: A comparative study in ancestral range reconstruction methods
+  container-title: Systematic Biology
+  page: '693-707'
+  volume: '57'
+  issue: '5'
+
+- id: Alfaro2008B
+  type: article-journal
+  author:
+  - family: Collar
+    given: D.C.
+  - family: Wainwright
+    given: P.C.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2008'
+  title: Integrated diversification of locomotion and feeding in labrid fishes
+  container-title: Biology Letters
+  page: '84-86'
+  volume: '4'
+  issue: '1'
+
+- id: Alfaro2008C
+  type: article-journal
+  author:
+  - family: Herrel
+    given: A.
+  - family: Vincent
+    given: S.E.
+  - family: Alfaro
+    given: M.E.
+  - family: Van Wassenbergh
+    given: S.
+  - family: Vanhooydonck
+    given: B.
+  - family: Irschick
+    given: D.J.
+  issued:
+  - year: '2008'
+  title: 'Morphological convergence as a consequence of extreme functional demands:
+    Examples from the feeding system of natricine snakes'
+  title-short: Morphological convergence as a consequence of extreme functional demands
+  container-title: Journal of Evolutionary Biology
+  page: '1438-1448'
+  volume: '21'
+  issue: '5'
+
+- id: Alfaro2008D
+  type: article-journal
+  author:
+  - family: Smith
+    given: L.L.
+  - family: Fessler
+    given: J.L.
+  - family: Alfaro
+    given: M.E.
+  - family: Streelman
+    given: J.T.
+  - family: Westneat
+    given: M.W.
+  issued:
+  - year: '2008'
+  title: Phylogenetic relationships and the evolution of regulatory gene sequences
+    in the parrotfishes
+  container-title: Molecular Phylogenetics and Evolution
+  page: '136-152'
+  volume: '49'
+  issue: '1'
+
+- id: Alfaro2008E
+  type: article-journal
+  author:
+  - family: Alfaro
+    given: M.E.
+  - family: Karns
+    given: D.R.
+  - family: Voris
+    given: H.K.
+  - family: Brock
+    given: C.D.
+  - family: Stuart
+    given: B.L.
+  issued:
+  - year: '2008'
+  title: 'Phylogeny, evolutionary history, and biogeography of oriental-australian
+    rear-fanged water snakes (colubroidea: Homalopsidae) inferred from mitochondrial
+    and nuclear dna sequences'
+  title-short: Phylogeny, evolutionary history, and biogeography of oriental-australian
+    rear-fanged water snakes (colubroidea
+  container-title: Molecular Phylogenetics and Evolution
+  page: '576-593'
+  volume: '46'
+  issue: '2'
+
+- id: Alfaro2008F
+  type: article-journal
+  author:
+  - family: Dornburg
+    given: A.
+  - family: Santini
+    given: F.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2008'
+  title: 'The influence of model averaging on clade posteriors: An example using
+    the triggerfishes (family balistidae)'
+  title-short: The influence of model averaging on clade posteriors
+  container-title: Systematic Biology
+  page: '905-919'
+  volume: '57'
+  issue: '6'
+
+- id: Alfaro2007A
+  type: article-journal
+  author:
+  - family: Alfaro
+    given: M.E.
+  - family: Santini
+    given: F.
+  - family: Brock
+    given: C.D.
+  issued:
+  - year: '2007'
+  title: Do reefs drive diversification in marine teleosts? Evidence from the pufferfish
+    and their allies (order tetraodontiformes)
+  container-title: Evolution
+  page: '2104-2126'
+  volume: '61'
+  issue: '9'
+
+- id: Alfaro2007B
+  type: article-journal
+  author:
+  - family: Storfer
+    given: A.
+  - family: Alfaro
+    given: M.E.
+  - family: Ridenhour
+    given: B.J.
+  - family: Jancovich
+    given: J.K.
+  - family: Mech
+    given: S.G.
+  - family: Parris
+    given: M.J.
+  - family: Collins
+    given: J.P.
+  issued:
+  - year: '2007'
+  title: Phylogenetic concordance analysis shows an emerging pathogen is novel and
+    endemic
+  container-title: Ecology Letters
+  page: '1075-1083'
+  volume: '10'
+  issue: '11'
+
+- id: Alfaro2006A
+  type: article-journal
+  author:
+  - family: Alfaro
+    given: M.
+  - family: Huelsenbeck
+    given: J.
+  issued:
+  - year: '2006'
+  title: Comparative performance of bayesian and aic-based measures of phylogenetic
+    model uncertainty
+  container-title: Systematic Biology
+  page: '89-96'
+  volume: '55'
+  issue: '1'
+
+- id: Alfaro2006B
+  type: article-journal
+  author:
+  - family: Alfaro
+    given: M.E.
+  - family: Holder
+    given: M.T.
+  issued:
+  - year: '2006'
+  title: The posterior and the prior in bayesian phylogenetics
+  container-title: Annual Review of Ecology, Evolution, and Systematics
+  page: '19-42'
+  volume: '37'
+
+- id: Alfaro2005A
+  type: article-journal
+  author:
+  - family: Alfaro
+    given: M.E.
+  - family: Bolnick
+    given: D.I.
+  - family: Wainwright
+    given: P.C.
+  issued:
+  - year: '2005'
+  title: Evolutionary consequences of many-to-one mapping of jaw morphology to mechanics
+    in labrid fishes.
+  container-title: The American naturalist
+  volume: '165'
+  issue: '6'
+
+- id: Alfaro2005B
+  type: article-journal
+  author:
+  - family: Westneat
+    given: M.W.
+  - family: Alfaro
+    given: M.E.
+  - family: Wainwright
+    given: P.C.
+  - family: Bellwood
+    given: D.R.
+  - family: Grubich
+    given: J.R.
+  - family: Fessler
+    given: J.L.
+  - family: Clements
+    given: K.D.
+  - family: Smith
+    given: L.L.
+  issued:
+  - year: '2005'
+  title: Local phylogenetic divergence and global evolutionary convergence of skull
+    function in reef fishes of the family labridae
+  container-title: 'Proceedings of the Royal Society B: Biological Sciences'
+  page: '993-1000'
+  volume: '272'
+  issue: '1567'
+
+- id: Alfaro2005C
+  type: article-journal
+  author:
+  - family: Wainwright
+    given: P.C.
+  - family: Alfaro
+    given: M.E.
+  - family: Bolnick
+    given: D.I.
+  - family: Hulsey
+    given: C.D.
+  issued:
+  - year: '2005'
+  title: 'Many-to-one mapping of form to function: A general principle in organismal
+    design?'
+  title-short: Many-to-one mapping of form to function
+  container-title: Integrative and Comparative Biology
+  page: '256-262'
+  volume: '45'
+  issue: '2'
+
+- id: Alfaro2005D
+  type: article-journal
+  author:
+  - family: Westneat
+    given: M.W.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2005'
+  title: Phylogenetic relationships and evolutionary history of the reef fish family
+    labridae
+  container-title: Molecular Phylogenetics and Evolution
+  page: '370-390'
+  volume: '36'
+  issue: '2'
+
+- id: Alfaro2004A
+  type: article-journal
+  author:
+  - family: Huelsenbeck
+    given: J.P.
+  - family: Larget
+    given: B.
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2004'
+  title: Bayesian phylogenetic model selection using reversible jump markov chain
+    monte carlo
+  container-title: Molecular Biology and Evolution
+  page: '1123-1133'
+  volume: '21'
+  issue: '6'
+
+- id: Alfaro2004B
+  type: article-journal
+  author:
+  - family: Alfaro
+    given: M.E.
+  - family: Bolnick
+    given: D.I.
+  - family: Wainwright
+    given: P.C.
+  issued:
+  - year: '2004'
+  title: 'Evolutionary dynamics of complex biomechanical systems: An example using
+    the four-bar mechanism'
+  title-short: Evolutionary dynamics of complex biomechanical systems
+  container-title: Evolution
+  page: '495-503'
+  volume: '58'
+  issue: '3'
+
+- id: Alfaro2004C
+  type: article-journal
+  author:
+  - family: Alfaro
+    given: M.E.
+  - family: Karns
+    given: D.R.
+  - family: Voris
+    given: H.K.
+  - family: Abernathy
+    given: E.
+  - family: Sellins
+    given: S.L.
+  issued:
+  - year: '2004'
+  title: 'Phylogeny of cerberus (serpentes: Homalopsinae) and phylogeography of
+    cerberus rynchops: Diversification of a coastal marine snake in southeast asia'
+  title-short: Phylogeny of cerberus (serpentes
+  container-title: Journal of Biogeography
+  page: '1277-1292'
+  volume: '31'
+  issue: '8'
+
+- id: Alfaro2004D
+  type: article-journal
+  author:
+  - family: Clements
+    given: K.D.
+  - family: Alfaro
+    given: M.E.
+  - family: Fessler
+    given: J.L.
+  - family: Westneat
+    given: M.W.
+  issued:
+  - year: '2004'
+  title: Relationships of the temperate australasian labrid fish tribe odacini (perciformes;
+    teleostei)
+  container-title: Molecular Phylogenetics and Evolution
+  page: '575-587'
+  volume: '32'
+  issue: '2'
+
+- id: Alfaro2003A
+  type: article-journal
+  author:
+  - family: Alfaro
+    given: M.E.
+  - family: Zoller
+    given: S.
+  - family: Lutzoni
+    given: F.
+  issued:
+  - year: '2003'
+  title: Bayes or bootstrap? A simulation study comparing the performance of bayesian
+    markov chain monte carlo sampling and bootstrapping in assessing phylogenetic
+    confidence
+  container-title: Molecular Biology and Evolution
+  page: '255-266'
+  volume: '20'
+  issue: '2'
+
+- id: Alfaro2003B
+  type: article-journal
+  author:
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2003'
+  title: 'Sweeping and striking: A kinematic study of the trunk during prey capture
+    in three thamnophiine snakes'
+  title-short: Sweeping and striking
+  container-title: Journal of Experimental Biology
+  page: '2381-2392'
+  volume: '206'
+  issue: '14'
+
+- id: Alfaro2002A
+  type: article-journal
+  author:
+  - family: Streelman
+    given: J.T.
+  - family: Alfaro
+    given: M.
+  - family: Westneat
+    given: M.W.
+  - family: Bellwood
+    given: D.R.
+  - family: Karl
+    given: S.A.
+  issued:
+  - year: '2002'
+  title: 'Evolutionary history of the parrotfishes: Biogeography, ecomorphology,
+    and comparative diversity'
+  title-short: Evolutionary history of the parrotfishes
+  container-title: Evolution
+  page: '961-971'
+  volume: '56'
+  issue: '5'
+
+- id: Alfaro2002B
+  type: article-journal
+  author:
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2002'
+  title: Forward attack modes of aquatic feeding garter snakes
+  container-title: Functional Ecology
+  page: '204-215'
+  volume: '16'
+  issue: '2'
+
+- id: Alfaro2002C
+  type: article-journal
+  author:
+  - family: Voris
+    given: H.K.
+  - family: Alfaro
+    given: M.E.
+  - family: Karns
+    given: D.R.
+  - family: Starnes
+    given: G.L.
+  - family: Thompson
+    given: E.
+  - family: Murphy
+    given: J.C.
+  issued:
+  - year: '2002'
+  title: 'Phylogenetic relationships of the oriental-australian rear-fanged water
+    snakes (colubridae: Homalopsinae) based on mitochondrial dna sequences'
+  title-short: Phylogenetic relationships of the oriental-australian rear-fanged water
+    snakes (colubridae
+  container-title: Copeia
+  page: '906-915'
+  issue: '4'
+
+- id: Alfaro2001A
+  type: article-journal
+  author:
+  - family: Alfaro
+    given: M.E.
+  - family: Arnold
+    given: S.J.
+  issued:
+  - year: '2001'
+  title: Molecular systematics and evolution of regina and the thamnophiine snakes
+  container-title: Molecular Phylogenetics and Evolution
+  page: '408-423'
+  volume: '21'
+  issue: '3'
+
+- id: Alfaro2001B
+  type: article-journal
+  author:
+  - family: Alfaro
+    given: M.E.
+  issued:
+  - year: '2001'
+  title: 'Motor control across trophic strategies: Muscle activity of biting and
+    suction feeding fishes'
+  title-short: Motor control across trophic strategies
+  container-title: American Zoologist
+  page: '1266-1279'
+  volume: '41'
+  issue: '6'
+
+- id: Alfaro1999
+  type: article-journal
+  author:
+  - family: Alfaro
+    given: M.
+  - family: Westneat
+    given: M.W.
+  issued:
+  - year: '1999'
+  title: 'Motor patterns of herbivorous feeding: Electromyographic analysis of biting
+    in the parrotfishes cetoscarus bicolor and scarus iseri'
+  title-short: Motor patterns of herbivorous feeding
+  container-title: Brain, Behavior and Evolution
+  page: '205-222'
+  volume: '54'
+  issue: '4'
+...

@@ -10,6 +10,8 @@ permalink: /aoa.html
 
 This page will be updated with lab meeting schedule....
 
+12-7-2017 Juhn
+
 <!-- 05.09.2017 Aarts
 
 19.09.2017 Allan

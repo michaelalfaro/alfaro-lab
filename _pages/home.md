@@ -6,7 +6,7 @@ sitemap: false
 permalink: /
 ---
 
-We are a small, dynamic group at the [Leiden Institute of Physics](http://www.physics.leidenuniv.nl). Our aim is to explore and understand [quantum materials](http://condensedconcepts.blogspot.nl/2013/05/what-is-quantum-matter.html), including strange metals, high-temperature superconductors, and quantum critical electron matter. 
+The Alfaro lab in [Ecology and Evolutionary Biology](https://www.eeb.ucla.edu/) at [UCLA](http://www.ucla.edu/) studies macroevolution and biodiversity. We seek to reconstruct the Tree of Life for fishes and other organisms and investigate the causes of diversification.
  
 
 <div markdown="0" id="carousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="hover" >
@@ -51,20 +51,20 @@ We are a small, dynamic group at the [Leiden Institute of Physics](http://www.ph
 
 
 
-To this end, we develop novel spectroscopic-imaging scanning tunneling microscopy (SI-STM) tools to visualize the relevant quantum mechanical degrees of freedom. We want do be able to build the perfect instruments to answer the  scientific questions we deem most important (see [Research](research)).
+We use develop and apply phylogenomic approaches such as sequence capture of [UCEs](http://ultraconserved.org/) as well as phyloinformatics to build massive comparative frameworks for evolutionary inference(see [Research](research)).
 
-We are located at Leiden University, the birthplace of superconductivity and home to Kamerlingh Onnes, Lorentz, Huygens, Einstein, de Sitter, and others (see e.g. [the wall of signatures from Ehrenfest lecturers](https://www.lorentz.leidenuniv.nl/history/colloquium/muur_heel.html)). We exchange ideas and work with our neighbors from [Quantum Matter & Optics](http://www.physics.leidenuniv.nl/qo-home), as well as with the colleagues from our [world-class theory section](https://www.lorentz.leidenuniv.nl).
+We are located at the University of California, Los Angeles and work closely with a network of macroevolutionary biologists including the [Faircloth](http://faircloth-lab.org/) lab at LSU, the [Rabosky](http://www.raboskylab.org/) and [Friedman](https://lsa.umich.edu/earth/people/faculty/matt-friedman.html) labs at the University of Michigan, the [Sallan](http://www.laurensallan.com/home) lab at Penn, the [Near](http://nearlab.yale.edu/) lab at Yale, the [Oliveira](http://www2.ibb.unesp.br/departamentos/Morfologia/lab_pesq_biologia_e_genetica_de_peixes.php) lab at UNESP, and the [Quental](https://labmeme.github.io/) lab at USP.
 
- **We are  looking for passionate new PhD students, Postdocs, and Master students to join the team** [(more info)]({{ site.url }}{{ site.baseurl }}/vacancies) **!**
+ **We are always looking for excited and motivated people to join our team!** [(more info)]({{ site.url }}{{ site.baseurl }}/vacancies) **!**
  
  
 We are grateful for funding from Leiden University, [NWO](www.nwo.nl) ([Vidi talent scheme](http://www.nwo.nl/en/research-and-results/programmes/Talent+Scheme) and the [Frontiers in Nanoscience program](https://www.universiteitleiden.nl/en/research/research-projects/science/frontiers-of-nanoscience-nanofront)), and from an [ERC starting grant](https://erc.europa.eu/funding/starting-grants).
 
 <figure class="fourth">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/Logo_Leiden.jpg" style="width: 210px">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/Logo_Nanofront.jpg" style="width: 110px">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/Logo_NWO.jpg" style="width: 120px">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/Logo_ERC.jpg" style="width: 110px">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/Logo_UCLA.jpg" style="width: 210px">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/Logo_NSF.png" style="width: 110px">
+<!--   <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/Logo_NWO.jpg" style="width: 120px">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/Logo_ERC.jpg" style="width: 110px"> -->
 </figure>
 
 
