@@ -34,13 +34,13 @@
   email: e.annekaran@gmail.com
   number_educ: 0
 #  education1:
- - name: David Cerny
+- name: David Cerny
   photo: 
   info: undergraduate student
   email: david.cerny1@gmail.com
   number_educ: 0
 #  education1:
-  - name: Chris Rice
+- name: Chris Rice
   photo: 
   info: undergraduate student
   email: chris.rice2@cox.net
