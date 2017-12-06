@@ -7,6 +7,8 @@ permalink: /publications/
 ---
 
 
+{% bibliography %}
+
 <!-- # Publications
 
 ## Highlights
