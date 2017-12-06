@@ -8,5 +8,4 @@ title: My References
 The default Bibliography
 ------------------------
 
-{% bibliography %}
 
