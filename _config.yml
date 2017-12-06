@@ -65,3 +65,10 @@ scholar:
 
   query: "@*"
 
+# plugins
+plugins: ['jekyll/scholar']
+
+
+
+
+
