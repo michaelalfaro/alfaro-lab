@@ -11,9 +11,9 @@ permalink: /team/
  **We are  looking for new PhD students, Postdocs, and Master students to join the team** [(see openings)]({{ site.url }}{{ site.baseurl }}/vacancies) **!**
 
 
-<!-- Jump to [staff](#staff), [master and bachelor students](#master-and-bachelor-students), [alumni](#alumni), [administrative support](#administrative-support), [lab visitors](#lab-visitors).
+<!-- Jump to [graduate students](#students), [alumni](#alumni), [administrative support](#administrative-support), [lab visitors](#lab-visitors). -->
 
-## Staff
+## Students
 {% assign number_printed = 0 %}
 {% for member in site.data.team_members %}
 
@@ -70,7 +70,7 @@ permalink: /team/
 
 
 
-## Master and Bachelor Students 
+<!-- ## Master and Bachelor Students 
 {% assign number_printed = 0 %}
 {% for member in site.data.students %}
 
@@ -122,55 +122,26 @@ permalink: /team/
 {% if even_odd == 1 %}
 </div>
 {% endif %}
-
+ -->
 
 ## Alumni
 <table align="center" style="width:100%">
-<tr><th>Visitors</th>
-    <th>Master Students</th> 
-    <th>Bachelor Students</th>
+<tr><th>Graduate Students</th>
+    <th>Bacheler Students</th> 
+    <th>Visitors</th>
   </tr>
   <tr>
-    <td>Nikolaos Iliopoulos, Spring 2016</td>
-    <td>Tjerk Benschop, Summer 2017</td>
-    <td>Vishnu Saj, Spring 2017</td>
+    <td>Laurie Sorenson, 2015</td>
+    <td>Jimmy Zheng, Spring 2016</td>
+    <td>Zach Herbst, 2014</td>
   </tr>
   <tr>
-    <td>Vitaly Fedoseev, all of 2016</td>
-    <td>Oliver Ostojic, Spring 2016</td>
-    <td>Joey Braspenning, Spring 2017</td>
+    <td>Tina Marcroft, 2015</td>
+    <td>Mercien Venzon, Spring 2016</td>
+    <td>Alexander Jaffe 2013</td>
   </tr>
-  <tr>
-    <td></td>
-    <td>Farshaad Hoeseni, Fall 2015</td>
-    <td>Margot Leemker, Spring 2017</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td>Sietske Lensen, Spring 2017</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td>Alexander Vanstone, Spring 2016</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td>Tjerk Benschop, Spring 2016</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td>Arjo Andringa, Spring 2016</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td>Daniëlle van Klink, Spring 2016</td>
-  </tr>
-</table> -->
+  
+</table>
 
 ## Administrative Support
 <a href="mailto:gracea@lifesci.ucla.edu">Grace Angus</a> is helping us (and other groups) with administration.
@@ -179,7 +150,7 @@ permalink: /team/
 
 [Mathew McGee](https://research.monash.edu/en/persons/matt-mcgee) (Monash), fall 2017
 
-[Peter Cowman](https://www.coralcoe.org.au/person/peter-cowman) (ARC Centre of Excelelnce, Coral Reef Studies), fall 2017
+[Peter Cowman](https://www.coralcoe.org.au/person/peter-cowman) (ARC Centre of Excellence, Coral Reef Studies), fall 2017
 
 [Fabio Roxo](https://scholar.google.com/citations?hl=en&user=D-sQauMAAAAJ&view_op=list_works&sortby=pubdate) (UNESP Botucatu), fall 2016
 

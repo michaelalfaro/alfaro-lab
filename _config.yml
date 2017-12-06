@@ -72,7 +72,9 @@ scholar:
 # plugins
 plugins_dir: [jekyll-scholar]
 
-#gems
+#jekyll-orcid https://github.com/mfenner/jekyll-orcid
+author:
+  orcid: 0000-0002-8898-8230
 
 
 

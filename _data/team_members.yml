@@ -1,14 +1,15 @@
+
+- name: Janet Buckner
+  photo: buckner.jpg
+  info: PhD student
+  email: jcharrayb@ucla.edu
+  number_educ: 0
 - name: Jonathan Chang
   photo: chang.jpg
   info: PhD student
   email: jchang641@gmail.com
   number_educ: 0
 #  education1:
-- name: Janet Buckner
-  photo: buckner.jpg
-  info: PhD student
-  email: jcharrayb@ucla.edu
-  number_educ: 0
 #  education1:
 - name: Princess Gilbert
   photo: gilbert.jpg
@@ -16,22 +17,22 @@
   email: ps.gilbert@ucla.edu
   number_educ: 0
 #  education1:
-- name: Mark Phuong
-  photo: phuong.jpg
-  info: PhD student
-  email: markphuong@gmail.com
-  number_educ: 0
-#  education1:
-- name: Tyler McCraney
-  photo: maccraney.jpg
-  info: PhD student
-  email: tmccraney@ucla.edu
-  number_educ: 0
-#  education1:
 - name: Liz Karan
   photo: karan.jpg
   info: PhD student
   email: e.annekaran@gmail.com
+  number_educ: 0
+#  education1:
+- name: Tyler McCraney
+  photo: mccraney.jpg
+  info: PhD student
+  email: tmccraney@ucla.edu
+  number_educ: 0
+#  education1:
+- name: Mark Phuong
+  photo: phuong.jpg
+  info: PhD student
+  email: markphuong@gmail.com
   number_educ: 0
 #  education1:
 - name: David Cerny
