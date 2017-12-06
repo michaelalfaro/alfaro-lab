@@ -8,5 +8,4 @@ The default Bibliography
 ------------------------
 
 
-{% bibliography %}
 
