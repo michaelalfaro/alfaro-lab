@@ -127,7 +127,7 @@ permalink: /team/
 ## Alumni
 <table align="center" style="width:100%">
 <tr><th>Graduate Students</th>
-    <th>Bacheler Students</th> 
+    <th>Bachelor Students</th> 
     <th>Visitors</th>
   </tr>
   <tr>
