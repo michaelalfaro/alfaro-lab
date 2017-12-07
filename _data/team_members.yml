@@ -35,6 +35,11 @@
   info: PhD student
   email: markphuong@gmail.com
   number_educ: 0
+- name: Max Tolkoff
+  photo: tolkoff.jpg
+  info: PhD student (biostatistics)
+  email: mtolkoff@g.ucla.edu
+  number_educ: 0 
 #  education1:
 - name: David Cerny
   photo: cerny.jpg
