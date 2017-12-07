@@ -12,7 +12,7 @@ We seek to understand how biodiveristy has evolved across the tree of life and w
 
 ![]({{ site.url }}{{ site.baseurl }}/images/respic/cichlid.jpg){: style="width: 300px; float: left; border: 10px"}
 
-Our lab applies a range of approaches including sequence capture of DNA UltraConserved elements, megaphylogeny construction, crowd-sourced high-throughput phenoscaping, comparative phylogenetic analyses, and simlated evolution.
+Our lab applies a range of approaches including sequence capture of DNA UltraConserved elements, megaphylogeny construction, crowd-sourced high-throughput phenoscaping, comparative phylogenetic analyses, and simlated evolution. We are especially interested in understanding factors that have shaped diversification in ray-finned fishes.
 
 
 
