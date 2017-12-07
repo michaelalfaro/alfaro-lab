@@ -1,13 +1,28 @@
 language: ruby
+# only run CI-builds on master branch
+branches:
+  only:
+  - master
+rvm:
+- 2.2.3
+# set execution permission on our build script
+before_script:
+ - chmod +x ./script/cibuild.sh
+# path to our build script. 
+# Travis will run `bundle install` by default before running our script
+script: ./script/cibuild.sh
+exclude: [vendor]
+sudo: false
+# language: ruby
 
 
-script:
-    - bundle exec jekyll build 
+# script:
+#     - bundle exec jekyll build 
 
-deploy:
-    provider: pages
-    skip_cleanup: true
-    github_token: $GITHUB_TOKEN
-    local_dir: _site
-    on:
-        branch: master
+# deploy:
+#     provider: pages
+#     skip_cleanup: true
+#     github_token: $GITHUB_TOKEN
+#     local_dir: _site
+#     on:
+#         branch: master
