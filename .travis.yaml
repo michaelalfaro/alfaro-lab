@@ -1,0 +1,21 @@
+language: ruby
+dist: trusty
+rvm:
+    - 2.4.1
+
+
+
+
+
+before_install:
+
+
+script:
+    - bundle exec jekyll build 
+deploy:
+    provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    local_dir: _site
+    on:
+        branch: master
