@@ -3,11 +3,13 @@
   photo: buckner.jpg
   info: PhD student
   email: jcharrayb@ucla.edu
+  website: http://black2nature.weebly.com
   number_educ: 0
 - name: Jonathan Chang
   photo: chang.jpg
   info: PhD student
   email: jchang641@gmail.com
+  website: https://jonathanchang.org/
   number_educ: 0
 #  education1:
 #  education1:
@@ -15,42 +17,54 @@
   photo: gilbert.jpg
   info: former PhD student
   email: ps.gilbert@ucla.edu
+  website: https://www.eeb.ucla.edu/studentpage.php?id=219
   number_educ: 0
 #  education1:
 - name: Liz Karan
   photo: lkaran.jpg
   info: PhD student
-  website: https://eakaran.github.io/
   email: e.annekaran@gmail.com
+  website: https://eakaran.github.io/
   number_educ: 0
 #  education1:
 - name: Tyler McCraney
   photo: mccraney.jpg
   info: PhD student
   email: tmccraney@ucla.edu
+  website: https://www.eeb.ucla.edu/studentpage.php?id=303
   number_educ: 0
 #  education1:
 - name: Mark Phuong
   photo: phuong.jpg
   info: PhD student
   email: markphuong@gmail.com
+  website: http://www.markphuong.com/
   number_educ: 0
+- name: Mark Juhn
+  photo: juhn.jpg
+  info: PhD student (biostatistics)
+  email: markjuhn@ucla.edu
+  website: https://www.eeb.ucla.edu/grad_students.php?a=1#
+  number_educ: 0 
 - name: Max Tolkoff
   photo: tolkoff.jpg
   info: PhD student (biostatistics)
   email: mtolkoff@g.ucla.edu
+  website: 
   number_educ: 0 
 #  education1:
 - name: David Cerny
   photo: cerny.jpg
   info: undergraduate student
   email: david.cerny1@gmail.com
+  website: 
   number_educ: 0
 #  education1:
 - name: Chris Rice
   photo: 
   info: undergraduate student
   email: chris.rice2@cox.net
+  website: 
   number_educ: 0
 #  education1:
 
