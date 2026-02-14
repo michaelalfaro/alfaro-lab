@@ -10,10 +10,21 @@ permalink: /team/
 
  **We are  looking for new PhD students, Postdocs, and Master students to join the team** [(see openings)]({{ site.url }}{{ site.baseurl }}/vacancies) **!**
 
+## Principal Investigator
 
-<!-- Jump to [graduate students](#students), [alumni](#alumni), [administrative support](#administrative-support), [lab visitors](#lab-visitors). -->
+<div class="row">
+<div class="col-sm-6 clearfix">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/alfaro.jpg" class="img-responsive" width="25%" style="float: left" />
+  <h4>Michael Alfaro</h4>
+  <i>Professor and Chair, Ecology & Evolutionary Biology<br>
+  email: <michaelalfaro@ucla.edu><br>
+  [UCLA faculty page](https://www.eeb.ucla.edu/indivfaculty/?faculty=Alfaro)</i>
+  <br>
+  <a href="{{ site.url }}{{ site.baseurl }}/assets/AlfaroCV.pdf" class="btn btn-primary btn-sm" style="background-color: #004B87; border-color: #004B87; margin-top: 8px;"><i class="glyphicon glyphicon-download-alt"></i> Download CV</a>
+</div>
+</div>
 
-## Students
+## Graduate Students
 {% assign number_printed = 0 %}
 {% for member in site.data.team_members %}
 
@@ -26,7 +37,7 @@ permalink: /team/
 <div class="col-sm-6 clearfix">
   <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
   <h4>{{ member.name }}</h4>
-  <i markdown="1">{{ member.info }}<br>email: <{{ member.email }}><br>[website]({{member.website}})
+  <i markdown="1">{{ member.info }}{% if member.email != "" %}<br>email: <{{ member.email }}>{% endif %}{% if member.website != "" %}<br>[website]({{member.website}}){% endif %}
   </i>
 
 
@@ -71,85 +82,60 @@ permalink: /team/
 {% endif %}
 
 
-
-
-<!-- ## Master and Bachelor Students 
-{% assign number_printed = 0 %}
-{% for member in site.data.students %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-
-{% if even_odd == 0 %}
-<div class="row">
-{% endif %}
-
-<div class="col-sm-6 clearfix">
-  <h4>{{ member.name }}</h4>
-  <i>{{ member.info }}<br>email: <{{ member.email }}></i>
-  <ul style="overflow: hidden">
-  
-  {% if member.number_educ == 1 %}
-  <li> {{ member.education1 }} </li>
-  {% endif %}
-  
-  {% if member.number_educ == 2 %}
-  <li> {{ member.education1 }} </li>
-  <li> {{ member.education2 }} </li>
-  {% endif %}
-  
-  {% if member.number_educ == 3 %}
-  <li> {{ member.education1 }} </li>
-  <li> {{ member.education2 }} </li>
-  <li> {{ member.education3 }} </li>
-  {% endif %}
-  
-  {% if member.number_educ == 4 %}
-  <li> {{ member.education1 }} </li>
-  <li> {{ member.education2 }} </li>
-  <li> {{ member.education3 }} </li>
-  <li> {{ member.education4 }} </li>
-  {% endif %}
-  
-  </ul>
-</div>
-
-{% assign number_printed = number_printed | plus: 1 %}
-
-{% if even_odd == 1 %}
-</div>
-{% endif %}
-
-{% endfor %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-{% if even_odd == 1 %}
-</div>
-{% endif %}
- -->
-
 ## Alumni
 <table align="center" style="width:100%">
 <tr><th>Graduate Students</th>
-    <th>Bachelor Students</th> 
-    <th>Visitors</th>
-  </tr>
-  <tr>
-    <td>Laurie Sorenson, 2015</td>
-    <td>Jimmy Zheng, Spring 2016</td>
-    <td>Zach Herbst, 2014</td>
+    <th>Postdocs</th> 
+    <th>Undergraduates</th>
   </tr>
   <tr>
-    <td>Tina Marcroft, 2015</td>
-    <td>Mercien Venzon, Spring 2016</td>
-    <td>Alexander Jaffe 2013</td>
+    <td>Tyler McCraney, PhD 2025</td>
+    <td>Janet Buckner</td>
+    <td>David Cerny</td>
   </tr>
-  
+  <tr>
+    <td>Mark Juhn, PhD</td>
+    <td></td>
+    <td>Chris Rice</td>
+  </tr>
+  <tr>
+    <td>Mark Phuong, PhD</td>
+    <td></td>
+    <td>Jimmy Zheng</td>
+  </tr>
+  <tr>
+    <td>Max Tolkoff, PhD (Biostatistics)</td>
+    <td></td>
+    <td>Mercien Venzon</td>
+  </tr>
+  <tr>
+    <td>Princess Gilbert, PhD 2015</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Jonathan Chang, PhD</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Liz Karan, PhD</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Laurie Sorenson, PhD 2015</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Tina Marcroft, PhD 2015</td>
+    <td></td>
+    <td></td>
+  </tr>
 </table>
 
-## Administrative Support
-<a href="mailto:gracea@lifesci.ucla.edu">Grace Angus</a> is helping us (and other groups) with administration.
-
-## Lab Guests
+## Lab Visitors
 
 [Mathew McGee](https://research.monash.edu/en/persons/matt-mcgee) (Monash), fall 2017
 
@@ -157,16 +143,4 @@ permalink: /team/
 
 [Fabio Roxo](https://scholar.google.com/citations?hl=en&user=D-sQauMAAAAJ&view_op=list_works&sortby=pubdate) (UNESP Botucatu), fall 2016
 
-[Luz Eneida Ochoa Orrego](http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000992542) () fall 2016
-
-<!-- [Alexander Ako Khajetoorians](http://www.ru.nl/spm) (Radboud University), fall 2015
-
-[Mohammad Hamidian](http://www.mhamidian.com) (Harvard->UC Davis), spring 2016
-
-[Ivan Bozovic](https://www.bnl.gov/cmpmsd/mbe/default.asp) (BNL / Yale), spring 2016
-
-[Freek Massee](http://www.fmassee.nl) (Paris), spring 2016
-
-[Felix Baumberger](http://dqmp.unige.ch/baumberger/) (Geneva), spring 2016
-
-[Jasper van Wezel](http://www.jvanwezel.com/) (UvA), summer 2016 -->
+[Luz Eneida Ochoa Orrego](http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000992542) fall 2016
