@@ -7,6 +7,8 @@ permalink: /
 ---
 
 The Alfaro lab in [Ecology and Evolutionary Biology](https://www.eeb.ucla.edu/) at [UCLA](http://www.ucla.edu/) studies macroevolution and biodiversity. We seek to reconstruct the Tree of Life for fishes and other organisms and investigate the causes of diversification.
+
+<a href="{{ site.url }}{{ site.baseurl }}/assets/AlfaroCV.pdf" class="btn btn-primary btn-sm" style="background-color: #004B87; border-color: #004B87; margin-top: 5px;"><i class="glyphicon glyphicon-download-alt"></i> Download CV (PDF)</a>
  
 
 <div markdown="0" id="carousel" class="carousel slide" data-ride="carousel" data-interval="6000" data-pause="hover" >
