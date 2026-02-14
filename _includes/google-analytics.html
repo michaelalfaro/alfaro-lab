@@ -1,87 +1,144 @@
-<!-- Google Analytics 4 -->
+<!-- Google Analytics - Supporting both UA and GA4 -->
 {% if site.google_analytics %}
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', '{{ site.google_analytics }}', {
-    // Enhanced ecommerce and engagement tracking
-    send_page_view: true,
-    allow_google_signals: true,
-    allow_ad_personalization_signals: false, // Privacy-friendly default
+{% if site.google_analytics contains 'G-' %}
+  <!-- Google Analytics 4 (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{ site.google_analytics }}', {
+      // Enhanced engagement tracking for academic sites
+      send_page_view: true,
+      allow_google_signals: true,
+      allow_ad_personalization_signals: false, // Privacy-friendly
+      
+      // Academic website specific configuration
+      custom_map: {
+        'custom_parameter_1': 'publication_type',
+        'custom_parameter_2': 'research_area'
+      }
+    });
+
+    // Academic-specific event tracking functions
+    window.trackPublication = function(title, authors, year) {
+      gtag('event', 'view_publication', {
+        'event_category': 'academic',
+        'event_label': title,
+        'value': year,
+        'custom_parameter_1': 'paper',
+        'publication_title': title,
+        'authors': authors
+      });
+    };
+
+    window.trackCV = function() {
+      gtag('event', 'view_cv', {
+        'event_category': 'engagement',
+        'event_label': 'CV Download/View'
+      });
+    };
+
+    window.trackSearch = function(searchTerm) {
+      gtag('event', 'search', {
+        'search_term': searchTerm,
+        'event_category': 'site_search'
+      });
+    };
+
+    window.trackContact = function() {
+      gtag('event', 'contact', {
+        'event_category': 'engagement',
+        'event_label': 'Contact Information Accessed'
+      });
+    };
+
+    // Enhanced engagement tracking
+    let scrollTracked = false;
+    let timeTracked = false;
     
-    // Academic website specific tracking
-    custom_map: {
-      'custom_parameter_1': 'publication_type',
-      'custom_parameter_2': 'research_area'
-    }
-  });
-
-  // Custom event tracking for academic websites
-  function trackPublication(title, authors, year) {
-    gtag('event', 'view_publication', {
-      'custom_parameter_1': 'paper',
-      'value': year,
-      'publication_title': title,
-      'authors': authors
+    // Scroll depth tracking
+    window.addEventListener('scroll', function() {
+      if (!scrollTracked && window.scrollY > document.body.scrollHeight * 0.5) {
+        gtag('event', 'scroll', {
+          'event_category': 'engagement',
+          'event_label': '50% Page Scroll',
+          'non_interaction': true
+        });
+        scrollTracked = true;
+      }
     });
-  }
 
-  function trackCV() {
-    gtag('event', 'view_cv', {
-      'event_category': 'engagement',
-      'event_label': 'CV Download/View'
+    // Time on page tracking
+    let startTime = Date.now();
+    setTimeout(function() {
+      if (!timeTracked) {
+        gtag('event', 'timing_complete', {
+          'name': 'time_on_page',
+          'value': 30,
+          'event_category': 'engagement',
+          'non_interaction': true
+        });
+        timeTracked = true;
+      }
+    }, 30000); // Track after 30 seconds
+  </script>
+
+{% else %}
+  <!-- Universal Analytics (Legacy) - UA ID detected -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', '{{ site.google_analytics }}', 'auto');
+    ga('send', 'pageview');
+
+    // Academic-specific event tracking functions (UA format)
+    window.trackPublication = function(title, authors, year) {
+      ga('send', 'event', 'academic', 'view_publication', title, year);
+    };
+
+    window.trackCV = function() {
+      ga('send', 'event', 'engagement', 'view_cv', 'CV Download/View');
+    };
+
+    window.trackSearch = function(searchTerm) {
+      ga('send', 'event', 'site_search', 'search', searchTerm);
+    };
+
+    window.trackContact = function() {
+      ga('send', 'event', 'engagement', 'contact', 'Contact Information Accessed');
+    };
+
+    // Enhanced engagement tracking for UA
+    let scrollTracked = false;
+    window.addEventListener('scroll', function() {
+      if (!scrollTracked && window.scrollY > document.body.scrollHeight * 0.5) {
+        ga('send', 'event', 'engagement', 'scroll', '50% Page Scroll', {'nonInteraction': 1});
+        scrollTracked = true;
+      }
     });
-  }
+  </script>
+  
+  <!-- Migration Notice (only visible in console for developers) -->
+  <script>
+    console.log('📊 Analytics: Using Universal Analytics ({{ site.google_analytics }}). Consider upgrading to GA4 for better insights and future-proofing.');
+  </script>
 
-  function trackSearch(searchTerm) {
-    gtag('event', 'search', {
-      'search_term': searchTerm
-    });
-  }
+{% endif %}
 
-  function trackContact() {
-    gtag('event', 'contact', {
-      'event_category': 'engagement',
-      'event_label': 'Contact Information Accessed'
-    });
-  }
-
-  // Scroll tracking for engagement
-  let scrollTracked = false;
-  window.addEventListener('scroll', function() {
-    if (!scrollTracked && window.scrollY > document.body.scrollHeight * 0.5) {
-      gtag('event', 'scroll', {
-        'event_category': 'engagement',
-        'event_label': '50% Page Scroll'
-      });
-      scrollTracked = true;
-    }
-  });
-
-  // Time on page tracking
-  let startTime = Date.now();
-  window.addEventListener('beforeunload', function() {
-    let timeOnPage = Math.round((Date.now() - startTime) / 1000);
-    if (timeOnPage > 30) { // Only track if more than 30 seconds
-      gtag('event', 'engagement_time', {
-        'event_category': 'engagement',
-        'value': timeOnPage
-      });
-    }
-  });
-</script>
-
-<!-- Privacy Notice for GDPR Compliance -->
+<!-- Privacy-friendly defaults -->
 <script>
-  // Simple cookie consent for analytics
+  // Simple consent management for academic contexts
   if (!localStorage.getItem('analytics_consent')) {
-    // You can implement a cookie banner here
-    // For now, we'll assume consent in academic contexts
+    // Auto-consent for academic/institutional websites
+    // Implement cookie banner here if GDPR compliance is needed
     localStorage.setItem('analytics_consent', 'true');
   }
 </script>
+
 {% endif %}

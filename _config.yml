@@ -17,8 +17,9 @@ url: "https://michaelalfaro.github.io/"
 # Load plugins
 plugins: ['jekyll-scholar']
 
-# Google analytics
-google_analytics:
+# Google analytics - Migrating from UA-82472331-1 to GA4
+google_analytics: "UA-82472331-1"  # Keep existing for transition
+# TODO: Add GA4 property ID when available (format: G-XXXXXXXXXX)
 
 include:
   - .htaccess
