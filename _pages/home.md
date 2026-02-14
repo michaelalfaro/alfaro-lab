@@ -23,6 +23,7 @@ The Alfaro lab in [Ecology and Evolutionary Biology](https://www.eeb.ucla.edu/) 
         <li data-target="#carousel" data-slide-to="8"></li>
         <li data-target="#carousel" data-slide-to="9"></li>
         <li data-target="#carousel" data-slide-to="10"></li>
+        <li data-target="#carousel" data-slide-to="11"></li>
     </ol>
 
     <!-- Items -->
@@ -70,6 +71,10 @@ The Alfaro lab in [Ecology and Evolutionary Biology](https://www.eeb.ucla.edu/) 
         </div>
         <div class="item">
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/mccraney2025_goby.jpg" alt="Goby fish divergence times" />
+            <div class="carousel-caption"><a class="cite-link" href="https://doi.org/10.1016/j.ympev.2025.108342">McCraney et al. 2025</a></div>
+        </div>
+        <div class="item">
+            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/mccraney2025_ga.jpg" alt="Goby fish graphical abstract" />
             <div class="carousel-caption"><a class="cite-link" href="https://doi.org/10.1016/j.ympev.2025.108342">McCraney et al. 2025</a></div>
         </div>
     </div> 
