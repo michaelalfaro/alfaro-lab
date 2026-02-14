@@ -15,7 +15,7 @@ url: "https://michaelalfaro.github.io/"
 
 
 # Load plugins
-plugins: ['jekyll_scholar']
+plugins: ['jekyll-scholar']
 
 # Google analytics
 google_analytics:
