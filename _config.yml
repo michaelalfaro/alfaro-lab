@@ -53,8 +53,8 @@ scholar:
   style: elsevier-with-titles-alphabetical
   locale: en
 
-  sort_by: none
-  order: ascending
+  sort_by: year
+  order: descending
 
   source: ./_bibliography
   bibliography: references.bib
