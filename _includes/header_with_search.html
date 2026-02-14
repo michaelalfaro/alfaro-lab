@@ -1,0 +1,64 @@
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+	<div class="navbar-header">
+	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	  </button>
+	
+    <a class="navbar-brand" href="{{ site.url }}{{ site.baseurl }}/">Alfaro Lab @ UCLA</a>
+	</div>
+	<div class="collapse navbar-collapse" id="navbar-collapse-1">
+	  <ul class="nav navbar-nav navbar-right">
+		<li><a href="{{ site.url }}{{ site.baseurl }}/">Home</a></li>
+		<li><a href="{{ site.url }}{{ site.baseurl }}/team">Team</a></li>
+		<li><a href="{{ site.url }}{{ site.baseurl }}/vacancies">Vacancies</a></li>
+		<li><a href="{{ site.url }}{{ site.baseurl }}/publications">Publications</a></li>
+		<li><a href="{{ site.url }}{{ site.baseurl }}/research">Research</a></li>
+		<li><a href="{{ site.url }}{{ site.baseurl }}/cv">CV</a></li>
+		<li><a href="{{ site.url }}{{ site.baseurl }}/pictures">(Pics)</a></li>
+		<li class="search-nav-item">
+		  <div class="navbar-search">
+		    <div class="search-container">
+		      <input type="text" id="search-input" placeholder="Search..." class="form-control search-input">
+		      <div id="live-search-results" class="search-dropdown"></div>
+		    </div>
+		    <a href="{{ site.url }}{{ site.baseurl }}/search" class="search-link" title="Advanced Search">
+		      <i class="fa fa-search"></i>
+		    </a>
+		  </div>
+		</li>
+	  </ul>
+	</div>
+  </div>
+</div>
+
+<!-- Search JavaScript and Index -->
+<script>
+  window.store = {
+    {% for post in site.posts %}
+      "{{ post.url | slugify }}": {
+        "title": "{{ post.title | xml_escape }}",
+        "author": "{{ post.author | xml_escape }}",
+        "category": "{{ post.category | xml_escape }}",
+        "content": {{ post.content | strip_html | strip_newlines | truncate: 300 | jsonify }},
+        "url": "{{ post.url | xml_escape }}",
+        "tags": "{{ post.tags | join: ', ' }}"
+      }
+      {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+    {% assign pages_list = site.pages | where_exp: "item", "item.title != nil" %}
+    {% for page in pages_list %}
+      ,"{{ page.url | slugify }}": {
+        "title": "{{ page.title | xml_escape }}",
+        "author": "",
+        "category": "page",
+        "content": {{ page.content | strip_html | strip_newlines | truncate: 300 | jsonify }},
+        "url": "{{ page.url | xml_escape }}",
+        "tags": ""
+      }
+    {% endfor %}
+  };
+</script>

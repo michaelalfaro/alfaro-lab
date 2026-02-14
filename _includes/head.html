@@ -9,7 +9,28 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl | prepend: site.url}}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-<link rel="shortcut icon" type ="image/x-icon" href="{{ site.url }}{{ site.baseurl }}/images/favicon.ico">
+  <link rel="shortcut icon" type ="image/x-icon" href="{{ site.url }}{{ site.baseurl }}/images/favicon.ico">
+  
+  <!-- Modern enhancements -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- Structured data for academic website -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ResearchOrganization",
+    "name": "{{ site.title }}",
+    "url": "{{ site.url }}{{ site.baseurl }}",
+    "description": "{{ site.description }}",
+    "sameAs": [
+      "https://scholar.google.com/citations?user=_wlHRTUAAAAJ&hl=en",
+      "https://orcid.org/0000-0002-8898-8230"
+    ]
+  }
+  </script>
 
 {% if jekyll.environment == 'production' %}
 {% include analytics.html %}

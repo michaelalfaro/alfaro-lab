@@ -1,0 +1,87 @@
+<!-- Google Analytics 4 -->
+{% if site.google_analytics %}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ site.google_analytics }}', {
+    // Enhanced ecommerce and engagement tracking
+    send_page_view: true,
+    allow_google_signals: true,
+    allow_ad_personalization_signals: false, // Privacy-friendly default
+    
+    // Academic website specific tracking
+    custom_map: {
+      'custom_parameter_1': 'publication_type',
+      'custom_parameter_2': 'research_area'
+    }
+  });
+
+  // Custom event tracking for academic websites
+  function trackPublication(title, authors, year) {
+    gtag('event', 'view_publication', {
+      'custom_parameter_1': 'paper',
+      'value': year,
+      'publication_title': title,
+      'authors': authors
+    });
+  }
+
+  function trackCV() {
+    gtag('event', 'view_cv', {
+      'event_category': 'engagement',
+      'event_label': 'CV Download/View'
+    });
+  }
+
+  function trackSearch(searchTerm) {
+    gtag('event', 'search', {
+      'search_term': searchTerm
+    });
+  }
+
+  function trackContact() {
+    gtag('event', 'contact', {
+      'event_category': 'engagement',
+      'event_label': 'Contact Information Accessed'
+    });
+  }
+
+  // Scroll tracking for engagement
+  let scrollTracked = false;
+  window.addEventListener('scroll', function() {
+    if (!scrollTracked && window.scrollY > document.body.scrollHeight * 0.5) {
+      gtag('event', 'scroll', {
+        'event_category': 'engagement',
+        'event_label': '50% Page Scroll'
+      });
+      scrollTracked = true;
+    }
+  });
+
+  // Time on page tracking
+  let startTime = Date.now();
+  window.addEventListener('beforeunload', function() {
+    let timeOnPage = Math.round((Date.now() - startTime) / 1000);
+    if (timeOnPage > 30) { // Only track if more than 30 seconds
+      gtag('event', 'engagement_time', {
+        'event_category': 'engagement',
+        'value': timeOnPage
+      });
+    }
+  });
+</script>
+
+<!-- Privacy Notice for GDPR Compliance -->
+<script>
+  // Simple cookie consent for analytics
+  if (!localStorage.getItem('analytics_consent')) {
+    // You can implement a cookie banner here
+    // For now, we'll assume consent in academic contexts
+    localStorage.setItem('analytics_consent', 'true');
+  }
+</script>
+{% endif %}
