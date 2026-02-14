@@ -91,3 +91,28 @@ firstp {
     margin-right: 30px;
 }
 
+.carousel-caption {
+    background: none;
+    text-shadow: none;
+    left: auto;
+    right: 10px;
+    bottom: 8px;
+    padding: 3px 10px;
+    text-align: right;
+    width: auto;
+}
+
+.carousel-caption .cite-link {
+    font-size: 12px;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    padding: 2px 8px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.carousel-caption .cite-link:hover {
+    background: rgba(0,0,0,0.75);
+    text-decoration: underline;
+}
+

@@ -22,70 +22,55 @@ The Alfaro lab in [Ecology and Evolutionary Biology](https://www.eeb.ucla.edu/) 
         <li data-target="#carousel" data-slide-to="7"></li>
         <li data-target="#carousel" data-slide-to="8"></li>
         <li data-target="#carousel" data-slide-to="9"></li>
+        <li data-target="#carousel" data-slide-to="10"></li>
     </ol>
 
     <!-- Items -->
     <div class="carousel-inner" markdown="0">
 
         <div class="item active">
-            <a href="https://doi.org/10.1038/s41559-018-0494-6">
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/alfaro2018_fish_phylo.jpg" alt="Explosive diversification of marine fishes" />
-            </a>
-            <div class="carousel-caption"><p>Alfaro et al. 2018, <em>Nature Ecology &amp; Evolution</em> — Explosive diversification of marine fishes at the K-Pg boundary</p></div>
+            <div class="carousel-caption"><a class="cite-link" href="https://doi.org/10.1038/s41559-018-0494-6">Alfaro et al. 2018</a></div>
         </div>
         <div class="item">
-            <a href="https://doi.org/10.1038/s41586-018-0273-1">
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/rabosky2018_latgrad.jpg" alt="Inverse latitudinal gradient in speciation rate" />
-            </a>
-            <div class="carousel-caption"><p>Rabosky et al. 2018, <em>Nature</em> — An inverse latitudinal gradient in speciation rate for marine fishes</p></div>
+            <div class="carousel-caption"><a class="cite-link" href="https://doi.org/10.1038/s41586-018-0273-1">Rabosky et al. 2018</a></div>
         </div>
         <div class="item">
-            <a href="https://doi.org/10.1038/s41586-018-0273-1">
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/rabosky2018_diversity.jpg" alt="Fish diversity patterns" />
-            </a>
-            <div class="carousel-caption"><p>Rabosky et al. 2018, <em>Nature</em> — Global patterns of fish diversity and speciation rate</p></div>
+            <div class="carousel-caption"><a class="cite-link" href="https://doi.org/10.1038/s41586-018-0273-1">Rabosky et al. 2018</a></div>
         </div>
         <div class="item">
-            <a href="https://doi.org/10.1038/s41559-018-0494-6">
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/alfaro2018_timescale.jpg" alt="Evolutionary timescale for acanthomorph fishes" />
-            </a>
-            <div class="carousel-caption"><p>Alfaro et al. 2018, <em>Nature Ecology &amp; Evolution</em> — Evolutionary timescale for acanthomorph fishes</p></div>
+            <div class="carousel-caption"><a class="cite-link" href="https://doi.org/10.1038/s41559-018-0494-6">Alfaro et al. 2018</a></div>
         </div>
         <div class="item">
-            <a href="https://doi.org/10.1038/s41559-022-01801-3">
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/ghezelayagh2022_morpho.png" alt="Prolonged morphological expansion of spiny-rayed fishes" />
-            </a>
-            <div class="carousel-caption"><p>Ghezelayagh et al. 2022, <em>Nature Ecology &amp; Evolution</em> — Prolonged morphological expansion of spiny-rayed fishes</p></div>
+            <div class="carousel-caption"><a class="cite-link" href="https://doi.org/10.1038/s41559-022-01801-3">Ghezelayagh et al. 2022</a></div>
         </div>
         <div class="item">
-            <a href="https://doi.org/10.1038/s41559-022-01801-3">
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/ghezelayagh2022_morpho2.png" alt="Morphological disparity across spiny-rayed fishes" />
-            </a>
-            <div class="carousel-caption"><p>Ghezelayagh et al. 2022, <em>Nature Ecology &amp; Evolution</em> — Morphological disparity through time</p></div>
+            <div class="carousel-caption"><a class="cite-link" href="https://doi.org/10.1038/s41559-022-01801-3">Ghezelayagh et al. 2022</a></div>
         </div>
         <div class="item">
-            <a href="https://doi.org/10.1038/s41467-018-07849-9">
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/lutzoni2018_symbiosis.jpg" alt="Contemporaneous radiations of fungi and plants" />
-            </a>
-            <div class="carousel-caption"><p>Lutzoni et al. 2018, <em>Nature Communications</em> — Contemporaneous radiations of fungi and plants linked to symbiosis</p></div>
+            <div class="carousel-caption"><a class="cite-link" href="https://doi.org/10.1038/s41467-018-07849-9">Lutzoni et al. 2018</a></div>
         </div>
         <div class="item">
-            <a href="https://doi.org/10.1038/s41598-020-59519-w">
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/ochoa2020_catfish.jpg" alt="Phylogenomics of trichomycterid catfishes" />
-            </a>
-            <div class="carousel-caption"><p>Ochoa et al. 2020, <em>Scientific Reports</em> — Phylogenomic analysis of trichomycterid catfishes</p></div>
+            <div class="carousel-caption"><a class="cite-link" href="https://doi.org/10.1038/s41598-020-59519-w">Ochoa et al. 2020</a></div>
         </div>
         <div class="item">
-            <a href="https://doi.org/10.1186/s12862-016-0786-x">
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/flatfish.gif" alt="Flatfish asymmetry evolution" />
-            </a>
-            <div class="carousel-caption"><p>Harrington et al. 2016, <em>BMC Evolutionary Biology</em> — Flatfish asymmetry arose in a blink of the evolutionary eye</p></div>
+            <div class="carousel-caption"><a class="cite-link" href="https://doi.org/10.1186/s12862-016-0786-x">Harrington et al. 2016</a></div>
         </div>
         <div class="item">
-            <a href="https://doi.org/10.1098/rspb.2015.1413">
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/cichlid-gape.jpg" alt="Replicated divergence in cichlid radiations" />
-            </a>
-            <div class="carousel-caption"><p>McGee et al. 2016, <em>Proc. R. Soc. B</em> — Replicated divergence in cichlid radiations mirrors a major vertebrate innovation</p></div>
+            <div class="carousel-caption"><a class="cite-link" href="https://doi.org/10.1098/rspb.2015.1413">McGee et al. 2016</a></div>
+        </div>
+        <div class="item">
+            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/mccraney2025_goby.jpg" alt="Goby fish divergence times" />
+            <div class="carousel-caption"><a class="cite-link" href="https://doi.org/10.1016/j.ympev.2025.108342">McCraney et al. 2025</a></div>
         </div>
     </div> 
   <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
