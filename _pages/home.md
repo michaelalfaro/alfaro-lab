@@ -103,7 +103,7 @@ The Alfaro lab in [Ecology and Evolutionary Biology](https://www.eeb.ucla.edu/) 
 
 We use develop and apply phylogenomic approaches such as sequence capture of [UCEs](http://ultraconserved.org/) as well as phyloinformatics to build massive comparative frameworks for evolutionary inference(see [Research](research)).
 
-We are located at the University of California, Los Angeles and work closely with a network of macroevolutionary biologists including the [Faircloth](http://faircloth-lab.org/) lab at LSU, the [Rabosky](http://www.raboskylab.org/) and [Friedman](https://lsa.umich.edu/earth/people/faculty/matt-friedman.html) labs at the University of Michigan, the [Sallan](http://www.laurensallan.com/home) lab at Penn, the [Near](http://nearlab.yale.edu/) lab at Yale, the [Oliveira](http://www2.ibb.unesp.br/departamentos/Morfologia/lab_pesq_biologia_e_genetica_de_peixes.php) lab at UNESP, and the [Quental](https://labmeme.github.io/) lab at USP.
+We are located at the University of California, Los Angeles and work closely with a network of macroevolutionary biologists including the [Faircloth](http://faircloth-lab.org/) lab at LSU, the [Rabosky](http://www.raboskylab.org/) and [Friedman](https://lsa.umich.edu/earth/people/faculty/matt-friedman.html) labs at the University of Michigan, the [Sallan](https://groups.oist.jp/sallan) lab at OIST, the [Near](http://nearlab.yale.edu/) lab at Yale, the [Oliveira](http://www2.ibb.unesp.br/departamentos/Morfologia/lab_pesq_biologia_e_genetica_de_peixes.php) lab at UNESP, and the [Quental](https://labmeme.github.io/) lab at USP.
 
  **We are always looking for excited and motivated people to join our team!** [(more info)]({{ site.url }}{{ site.baseurl }}/vacancies) **!**
  
