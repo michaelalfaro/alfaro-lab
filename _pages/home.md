@@ -24,6 +24,8 @@ The Alfaro lab in [Ecology and Evolutionary Biology](https://www.eeb.ucla.edu/) 
         <li data-target="#carousel" data-slide-to="9"></li>
         <li data-target="#carousel" data-slide-to="10"></li>
         <li data-target="#carousel" data-slide-to="11"></li>
+        <li data-target="#carousel" data-slide-to="12"></li>
+        <li data-target="#carousel" data-slide-to="13"></li>
     </ol>
 
     <!-- Items -->
@@ -76,6 +78,14 @@ The Alfaro lab in [Ecology and Evolutionary Biology](https://www.eeb.ucla.edu/) 
         <div class="item">
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/mccraney2025_ga.jpg" alt="Goby fish graphical abstract" />
             <div class="carousel-caption"><a class="cite-link" href="https://doi.org/10.1016/j.ympev.2025.108342">McCraney et al. 2025</a></div>
+        </div>
+        <div class="item">
+            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/butterflyfish_color_diversity.jpg" alt="Color pattern diversity in butterflyfishes" />
+            <div class="carousel-caption"><a class="cite-link" href="https://doi.org/10.1093/icb/icz119">Alfaro et al. 2019</a></div>
+        </div>
+        <div class="item">
+            <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/butterflyfish_phylo_color.jpg" alt="Phylogenetic patterns of butterflyfish color evolution" />
+            <div class="carousel-caption"><a class="cite-link" href="https://doi.org/10.1093/icb/icz119">Alfaro et al. 2019</a></div>
         </div>
     </div> 
   <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
