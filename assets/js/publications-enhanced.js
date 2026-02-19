@@ -139,13 +139,10 @@ function addCitationCounts() {
 function fetchCitationBatch(dois, doiMap) {
     var ids = dois.map(function(d) { return 'DOI:' + d; });
 
-    fetch('https://api.semanticscholar.org/graph/v1/paper/batch', {
+    fetch('https://api.semanticscholar.org/graph/v1/paper/batch?fields=citationCount,url', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            ids: ids,
-            fields: 'citationCount,url'
-        })
+        body: JSON.stringify({ ids: ids })
     })
     .then(function(response) { return response.json(); })
     .then(function(results) {
