@@ -449,6 +449,31 @@ a[href*="arxiv"] {
   }
 }
 
+// Citation count badge (Semantic Scholar)
+.citation-badge {
+  display: inline-block;
+  background-color: var(--success-green);
+  color: white !important;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.85em;
+  text-decoration: none;
+  margin-top: 6px;
+  margin-left: 4px;
+  transition: background-color 0.3s ease;
+
+  i {
+    margin-right: 4px;
+    font-size: 0.8em;
+  }
+
+  &:hover {
+    background-color: darken(#10b981, 12%);
+    text-decoration: none;
+    color: white !important;
+  }
+}
+
 // ORCID and Google Scholar profile links — clean readable style
 a[href*="orcid.org"],
 a[href*="scholar.google"] {

@@ -1,9 +1,10 @@
 // Enhanced Publications Features
-// Adds Altmetric badges, reverses numbering, and improves formatting
+// Adds Altmetric badges, citation counts, reverses numbering, and improves formatting
 
 document.addEventListener('DOMContentLoaded', function() {
     enhancePublications();
     addAltmetricBadges();
+    addCitationCounts();
 });
 
 function enhancePublications() {
@@ -28,14 +29,10 @@ function enhancePublications() {
             pub.classList.add('publication-item');
 
             // Replace the CSL-generated [N] with the reversed number.
-            // Strategy: find the first text node or span that contains [digits]
-            // at the beginning of the reference. The CSL number is always the
-            // FIRST [digits] pattern in the reference HTML.
             var newNum = startNum - index;
 
             // Target the number inside child nodes more precisely.
-            // The CSL number [N] is typically inside the first <span> or at
-            // the start of innerHTML. We look for it specifically in spans first.
+            // The CSL number [N] is typically inside the first <span>.
             var replaced = false;
             var spans = pub.querySelectorAll('span');
             for (var i = 0; i < spans.length; i++) {
@@ -106,6 +103,83 @@ function addAltmetricBadges() {
         script.src = 'https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js';
         document.body.appendChild(script);
     }
+}
+
+function addCitationCounts() {
+    // Collect all DOIs from publications and map them to their <li> elements.
+    // We use the largest bibliography list (All Publications) to avoid duplicating
+    // work on the Recent subset — both sections share the same DOI links.
+    var allLists = document.querySelectorAll('ol.bibliography');
+    var doiMap = {}; // doi -> array of <li> elements
+
+    allLists.forEach(function(ol) {
+        var items = ol.querySelectorAll('li.publication-item');
+        items.forEach(function(pub) {
+            var doiLinks = pub.querySelectorAll('a[href*="doi.org"]');
+            if (doiLinks.length === 0) return;
+            var doi = extractDOI(doiLinks[0].href);
+            if (!doi) return;
+            if (!doiMap[doi]) doiMap[doi] = [];
+            doiMap[doi].push(pub);
+        });
+    });
+
+    var dois = Object.keys(doiMap);
+    if (dois.length === 0) return;
+
+    // Semantic Scholar batch API: POST up to 500 paper IDs at a time.
+    // We request citationCount and the Semantic Scholar URL.
+    var batchSize = 500;
+    for (var i = 0; i < dois.length; i += batchSize) {
+        var batch = dois.slice(i, i + batchSize);
+        fetchCitationBatch(batch, doiMap);
+    }
+}
+
+function fetchCitationBatch(dois, doiMap) {
+    var ids = dois.map(function(d) { return 'DOI:' + d; });
+
+    fetch('https://api.semanticscholar.org/graph/v1/paper/batch', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            ids: ids,
+            fields: 'citationCount,url'
+        })
+    })
+    .then(function(response) { return response.json(); })
+    .then(function(results) {
+        results.forEach(function(paper, index) {
+            if (!paper || paper.citationCount === undefined) return;
+            var doi = dois[index];
+            var pubs = doiMap[doi];
+            if (!pubs) return;
+
+            pubs.forEach(function(pub) {
+                // Find the DOI link to insert the citation badge after it
+                var doiLink = pub.querySelector('a.doi-link');
+                if (!doiLink) {
+                    // Fallback: find any doi.org link
+                    doiLink = pub.querySelector('a[href*="doi.org"]');
+                }
+                if (!doiLink) return;
+
+                var citeBadge = document.createElement('a');
+                citeBadge.className = 'citation-badge';
+                citeBadge.href = paper.url + '#citing-papers';
+                citeBadge.target = '_blank';
+                citeBadge.rel = 'noopener';
+                citeBadge.innerHTML = '<i class="fas fa-quote-right"></i> Cited by ' + paper.citationCount;
+                citeBadge.title = 'View citing papers on Semantic Scholar';
+
+                // Insert after the DOI link
+                doiLink.parentNode.insertBefore(citeBadge, doiLink.nextSibling);
+            });
+        });
+    })
+    .catch(function(err) {
+        console.warn('Semantic Scholar citation fetch failed:', err);
+    });
 }
 
 function extractDOI(url) {
