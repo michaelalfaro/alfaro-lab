@@ -144,8 +144,14 @@ function fetchCitationBatch(dois, doiMap) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ids: ids })
     })
-    .then(function(response) { return response.json(); })
+    .then(function(response) {
+        if (!response.ok) {
+            throw new Error('Semantic Scholar API returned ' + response.status);
+        }
+        return response.json();
+    })
     .then(function(results) {
+        if (!Array.isArray(results)) return;
         results.forEach(function(paper, index) {
             if (!paper || paper.citationCount === undefined) return;
             var doi = dois[index];
@@ -153,10 +159,8 @@ function fetchCitationBatch(dois, doiMap) {
             if (!pubs) return;
 
             pubs.forEach(function(pub) {
-                // Find the DOI link to insert the citation badge after it
                 var doiLink = pub.querySelector('a.doi-link');
                 if (!doiLink) {
-                    // Fallback: find any doi.org link
                     doiLink = pub.querySelector('a[href*="doi.org"]');
                 }
                 if (!doiLink) return;
@@ -169,7 +173,6 @@ function fetchCitationBatch(dois, doiMap) {
                 citeBadge.innerHTML = '<i class="fas fa-quote-right"></i> Cited by ' + paper.citationCount;
                 citeBadge.title = 'View citing papers on Semantic Scholar';
 
-                // Insert after the DOI link
                 doiLink.parentNode.insertBefore(citeBadge, doiLink.nextSibling);
             });
         });
