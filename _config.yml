@@ -59,7 +59,11 @@ scholar:
 
   source: ./_bibliography
   bibliography: references.bib
-  bibliography_template: "{{reference}}"
+  bibliography_template: >
+    {{reference}}
+    {% if entry.doi %}
+    <a href="https://doi.org/{{entry.doi}}" class="doi-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
+    {% endif %}
 
   replace_strings: true
   join_strings:    true

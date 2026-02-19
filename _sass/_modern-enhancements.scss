@@ -418,10 +418,34 @@ a[href*="arxiv"] {
   text-decoration: none;
   margin: 2px;
   transition: background-color 0.3s ease;
-  
+
   &:hover {
     background-color: var(--primary-blue);
     text-decoration: none;
+  }
+}
+
+// DOI badge from bibliography template
+.doi-link {
+  display: inline-block;
+  background-color: var(--secondary-blue);
+  color: white !important;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.85em;
+  text-decoration: none;
+  margin-top: 6px;
+  transition: background-color 0.3s ease;
+
+  i {
+    margin-right: 4px;
+    font-size: 0.8em;
+  }
+
+  &:hover {
+    background-color: var(--primary-blue);
+    text-decoration: none;
+    color: white !important;
   }
 }
 

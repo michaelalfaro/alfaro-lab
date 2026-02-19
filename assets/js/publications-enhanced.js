@@ -28,11 +28,28 @@ function enhancePublications() {
             pub.classList.add('publication-item');
 
             // Replace the CSL-generated [N] with the reversed number.
-            // The new number counts DOWN from startNum.
-            // The [N] is inside a child <span>, so we can't anchor with ^.
-            // Match the first occurrence of [digits] in the HTML.
+            // Strategy: find the first text node or span that contains [digits]
+            // at the beginning of the reference. The CSL number is always the
+            // FIRST [digits] pattern in the reference HTML.
             var newNum = startNum - index;
-            pub.innerHTML = pub.innerHTML.replace(/\[\d+\]/, '[' + newNum + ']');
+
+            // Target the number inside child nodes more precisely.
+            // The CSL number [N] is typically inside the first <span> or at
+            // the start of innerHTML. We look for it specifically in spans first.
+            var replaced = false;
+            var spans = pub.querySelectorAll('span');
+            for (var i = 0; i < spans.length; i++) {
+                var span = spans[i];
+                if (/^\s*\[\d+\]/.test(span.textContent)) {
+                    span.innerHTML = span.innerHTML.replace(/\[\d+\]/, '[' + newNum + ']');
+                    replaced = true;
+                    break;
+                }
+            }
+            // Fallback: replace in innerHTML directly (first match only)
+            if (!replaced) {
+                pub.innerHTML = pub.innerHTML.replace(/\[\d+\]/, '[' + newNum + ']');
+            }
 
             // Highlight lab member names
             var labMembers = ['Alfaro', 'M.E. Alfaro', 'M. Alfaro'];
@@ -59,7 +76,7 @@ function addAltmetricBadges() {
     var publications = document.querySelectorAll('.bibliography li.publication-item');
 
     publications.forEach(function(pub) {
-        // Find DOI links inside this publication
+        // Find DOI links inside this publication (now injected by bibliography_template)
         var doiLinks = pub.querySelectorAll('a[href*="doi.org"]');
         if (doiLinks.length === 0) return;
 
@@ -82,10 +99,12 @@ function addAltmetricBadges() {
         pub.insertBefore(container, pub.firstChild);
     });
 
-    // Now load the Altmetric embed script AFTER we've created all the badge divs
-    var script = document.createElement('script');
-    script.src = 'https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js';
-    document.body.appendChild(script);
+    // Only load the Altmetric script if we created at least one badge
+    if (document.querySelectorAll('.altmetric-embed').length > 0) {
+        var script = document.createElement('script');
+        script.src = 'https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js';
+        document.body.appendChild(script);
+    }
 }
 
 function extractDOI(url) {
