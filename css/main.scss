@@ -61,11 +61,11 @@ firstp {
   margin: 0 !important;
   border-radius: 0 !important;
   box-shadow: none !important;
-  transform: none !important;
+  transform: scaleX(-1) !important;
   flex-shrink: 0;
 }
 .cladogram-inline:hover {
-  transform: none !important;
+  transform: scaleX(-1) !important;
 }
 
 /* Home, News */
