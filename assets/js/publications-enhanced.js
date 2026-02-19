@@ -49,23 +49,20 @@ function enhancePublications() {
                 link.setAttribute('title', 'View publication on publisher website');
             }
         });
-        
-        // Add journal impact indicators (if available)
-        const journalNames = [
-            'Nature', 'Science', 'Cell', 'PNAS', 'PLoS ONE', 'PLoS Biology',
-            'Molecular Biology and Evolution', 'Systematic Biology', 'Evolution',
-            'American Naturalist', 'Biological Journal of the Linnean Society'
-        ];
-        
-        journalNames.forEach(function(journal) {
-            if (content.toLowerCase().includes(journal.toLowerCase())) {
-                const badge = document.createElement('span');
-                badge.className = 'journal-badge';
-                badge.innerHTML = '<i class="fas fa-star"></i> High Impact';
-                badge.style.cssText = 'background: var(--success-green); color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.75em; margin-left: 10px;';
-                pub.querySelector('.pub-year, span:last-child')?.insertAdjacentElement('afterend', badge);
-            }
-        });
+    });
+
+    // Reverse numbering so oldest paper = #1, newest = highest number.
+    // The "All Publications" list has every paper; use its count as the
+    // total so the "Recent" subset starts from that same high number.
+    var allLists = document.querySelectorAll('ol.bibliography');
+    var totalPubs = 0;
+    allLists.forEach(function(ol) {
+        var count = ol.querySelectorAll('li').length;
+        if (count > totalPubs) totalPubs = count;
+    });
+    allLists.forEach(function(ol) {
+        ol.setAttribute('reversed', 'reversed');
+        ol.setAttribute('start', totalPubs);
     });
     
     // Add publication count
