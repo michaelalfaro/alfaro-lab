@@ -20,8 +20,7 @@ My publications are also listed on [Google Scholar <i class="fas fa-external-lin
 
 {% bibliography %}
 
-<!-- Altmetric badges for enhanced publication metrics -->
-<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+<!-- Altmetric badges are loaded dynamically by publications-enhanced.js -->
 <!-- {% assign number_printed = 0 %}
 {% for publi in site.data.publist %}
 
