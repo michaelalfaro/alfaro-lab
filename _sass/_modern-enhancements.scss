@@ -425,21 +425,25 @@ a[href*="arxiv"] {
   }
 }
 
-// Special styling for ORCID links
-a[href*="orcid.org"] {
-  background-color: #a6ce39;
-  
-  &:hover {
-    background-color: #8fb030;
-  }
-}
-
-// Google Scholar links
+// ORCID and Google Scholar profile links — clean readable style
+a[href*="orcid.org"],
 a[href*="scholar.google"] {
-  background-color: #4285f4;
-  
+  display: inline;
+  background-color: transparent;
+  color: var(--primary-blue) !important;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--border-light);
+  text-underline-offset: 2px;
+  margin: 0;
+
   &:hover {
-    background-color: #1a73e8;
+    background-color: transparent;
+    color: var(--secondary-blue) !important;
+    text-decoration-color: var(--secondary-blue);
   }
 }
 

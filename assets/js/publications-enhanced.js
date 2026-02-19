@@ -29,8 +29,10 @@ function enhancePublications() {
 
             // Replace the CSL-generated [N] with the reversed number.
             // The new number counts DOWN from startNum.
+            // The [N] is inside a child <span>, so we can't anchor with ^.
+            // Match the first occurrence of [digits] in the HTML.
             var newNum = startNum - index;
-            pub.innerHTML = pub.innerHTML.replace(/^\s*\[\d+\]/, '[' + newNum + ']');
+            pub.innerHTML = pub.innerHTML.replace(/\[\d+\]/, '[' + newNum + ']');
 
             // Highlight lab member names
             var labMembers = ['Alfaro', 'M.E. Alfaro', 'M. Alfaro'];
