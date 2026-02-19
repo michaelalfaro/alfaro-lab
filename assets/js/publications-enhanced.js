@@ -90,10 +90,11 @@ function addAltmetricBadges() {
         badge.setAttribute('data-badge-type', 'donut');
         badge.setAttribute('data-badge-popover', 'right');
         badge.setAttribute('data-hide-no-mentions', 'true');
+        badge.setAttribute('data-condensed', 'true');
 
         var container = document.createElement('div');
         container.className = 'altmetric-container';
-        container.style.cssText = 'float: right; margin: 0 0 10px 15px;';
+        container.style.cssText = 'float: right; margin: 0 0 5px 10px; transform: scale(0.55); transform-origin: top right;';
         container.appendChild(badge);
 
         pub.insertBefore(container, pub.firstChild);
