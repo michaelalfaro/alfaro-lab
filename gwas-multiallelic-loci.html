@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A referenced practical guide to association testing at multiallelic loci in GWAS and sequencing studies.">
+  <title>GWAS approaches for multiallelic loci</title>
+  <style>
+    :root {
+      --ink: #172019;
+      --muted: #566159;
+      --paper: #fbfaf5;
+      --card: #ffffff;
+      --green: #174f3b;
+      --green-2: #2d7558;
+      --gold: #d4a83f;
+      --gold-soft: #f7edce;
+      --rose-soft: #f8e7e2;
+      --line: #dce1da;
+      --shadow: 0 16px 40px rgba(29, 50, 38, .09);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 85% 2%, rgba(212,168,63,.16), transparent 27rem),
+        var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.62;
+    }
+
+    a { color: var(--green-2); text-underline-offset: .18em; }
+    a:hover { color: var(--green); }
+    .shell { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; }
+
+    header {
+      padding: 5.5rem 0 3.5rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .eyebrow {
+      margin: 0 0 1rem;
+      color: var(--green-2);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 { line-height: 1.14; letter-spacing: -.025em; }
+    h1 { max-width: 850px; margin: 0; font-family: Georgia, serif; font-size: clamp(2.55rem, 7vw, 5.6rem); font-weight: 500; }
+    h2 { margin: 0 0 1.15rem; font-size: clamp(1.75rem, 4vw, 2.65rem); }
+    h3 { margin: 0 0 .65rem; font-size: 1.18rem; }
+    .dek { max-width: 770px; margin: 1.4rem 0 0; color: var(--muted); font-size: 1.17rem; }
+    .meta { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: 1.65rem; }
+    .pill { padding: .35rem .65rem; border: 1px solid #cad6cd; border-radius: 999px; color: var(--green); background: rgba(255,255,255,.62); font-size: .78rem; font-weight: 700; }
+
+    .layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 3.4rem; padding: 3rem 0 5rem; }
+    nav { position: sticky; top: 1.5rem; align-self: start; }
+    nav strong { display: block; margin-bottom: .65rem; font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; }
+    nav a { display: block; padding: .36rem 0; color: var(--muted); font-size: .91rem; text-decoration: none; }
+    nav a:hover { color: var(--green); }
+    main { min-width: 0; }
+    section { margin-bottom: 4.6rem; scroll-margin-top: 1.5rem; }
+    p { margin: .75rem 0; }
+    ul, ol { padding-left: 1.35rem; }
+    li + li { margin-top: .42rem; }
+
+    .takeaway {
+      padding: 1.5rem 1.6rem;
+      border-left: 5px solid var(--gold);
+      border-radius: 0 14px 14px 0;
+      background: var(--gold-soft);
+      font-size: 1.05rem;
+    }
+    .warning { border-left-color: #b64d37; background: var(--rose-soft); }
+    .formula {
+      overflow-x: auto;
+      margin: 1.25rem 0;
+      padding: 1.3rem 1.5rem;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #f4f6f1;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.08rem;
+    }
+    .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+    .card { padding: 1.35rem; border: 1px solid var(--line); border-radius: 16px; background: var(--card); box-shadow: var(--shadow); }
+    .card p { color: var(--muted); font-size: .94rem; }
+    .tag { display: inline-block; margin-bottom: .7rem; color: var(--green-2); font-size: .7rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 15px; background: var(--card); }
+    table { width: 100%; border-collapse: collapse; font-size: .91rem; }
+    th, td { padding: .85rem .9rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: var(--green); background: #f0f4ef; font-size: .76rem; letter-spacing: .04em; text-transform: uppercase; }
+    tr:last-child td { border-bottom: 0; }
+
+    .steps { counter-reset: step; list-style: none; padding: 0; }
+    .steps li { position: relative; min-height: 3.2rem; margin: 0 0 1rem; padding: 0 0 0 3.6rem; }
+    .steps li::before { counter-increment: step; content: counter(step); position: absolute; left: 0; top: -.12rem; display: grid; width: 2.45rem; height: 2.45rem; place-items: center; border-radius: 50%; color: white; background: var(--green); font-weight: 800; }
+
+    code { padding: .12rem .32rem; border-radius: 5px; background: #edf1ec; font-size: .88em; }
+    pre { overflow-x: auto; padding: 1.2rem; border-radius: 13px; color: #e8f2ec; background: #14271e; line-height: 1.48; }
+    pre code { padding: 0; background: transparent; font-size: .82rem; }
+    .small { color: var(--muted); font-size: .86rem; }
+    .refs { padding-left: 1.4rem; }
+    .refs li { margin-bottom: .9rem; }
+    .refs span { display: block; color: var(--muted); font-size: .84rem; }
+    footer { padding: 2rem 0 3rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .82rem; }
+
+    @media (max-width: 800px) {
+      header { padding-top: 3.5rem; }
+      .layout { display: block; }
+      nav { position: static; margin-bottom: 3rem; padding: 1rem; border: 1px solid var(--line); border-radius: 12px; columns: 2; }
+      nav strong { column-span: all; }
+      .cards { grid-template-columns: 1fr; }
+    }
+    @media print {
+      body { background: white; font-size: 10.5pt; }
+      header { padding: 1.2cm 0 .7cm; }
+      .layout { display: block; padding-top: 1cm; }
+      nav { display: none; }
+      section { break-inside: avoid; margin-bottom: 1.2cm; }
+      .card { box-shadow: none; }
+      a { color: inherit; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="shell">
+      <p class="eyebrow">Methods field guide</p>
+      <h1>GWAS approaches for multiallelic loci</h1>
+      <p class="dek">How to test loci with three or more alleles without throwing away biological information—or quietly fitting the wrong model.</p>
+      <div class="meta">
+        <span class="pill">Diploid association models</span>
+        <span class="pill">SNPs · indels · HLA · STRs · CNVs</span>
+        <span class="pill">References checked 22 June 2026</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="shell layout">
+    <nav aria-label="On this page">
+      <strong>On this page</strong>
+      <a href="#answer">Short answer</a>
+      <a href="#model">Core model</a>
+      <a href="#approaches">Six approaches</a>
+      <a href="#choice">Choosing a test</a>
+      <a href="#workflow">Recommended workflow</a>
+      <a href="#software">Implementation</a>
+      <a href="#pitfalls">Pitfalls</a>
+      <a href="#references">Checked references</a>
+    </nav>
+
+    <main>
+      <section id="answer">
+        <h2>Short answer</h2>
+        <div class="takeaway"><strong>Yes.</strong> The most general solution is to represent a locus with <em>K</em> alleles by <em>K − 1</em> allele-count or dosage variables, fit them jointly, and test all <em>K − 1</em> coefficients with a site-level omnibus test. Follow that with allele-specific estimates for interpretation.</div>
+        <p>This page concerns a <strong>multiallelic genetic locus</strong>, not a multivariate phenotype and not a test aggregating many separate SNPs. Those are different problems despite the similar names.</p>
+      </section>
+
+      <section id="model">
+        <h2>The core model</h2>
+        <p>Suppose a diploid locus has alleles A<sub>0</sub>, A<sub>1</sub>, …, A<sub>K−1</sub>. Choose A<sub>0</sub> as the reference and let G<sub>ij</sub> be the number—or imputed dosage—of allele A<sub>j</sub> carried by individual <em>i</em>. Fit all non-reference alleles together:</p>
+        <div class="formula">g(E[Y<sub>i</sub>]) = α + β<sub>1</sub>G<sub>i1</sub> + … + β<sub>K−1</sub>G<sub>i,K−1</sub> + X<sub>i</sub>γ</div>
+        <p>The link <em>g</em> is identity for a quantitative trait and logit for a binary trait; survival and count links can be substituted. X contains ancestry, batch, environment, sex, or other covariates. A mixed model can add a kinship random effect.</p>
+        <div class="takeaway warning"><strong>Do not regress one alternate allele at a time while ignoring the others.</strong> At a single diploid site, allele counts sum to two. Jiang et al. showed that naïve separate regression can bias allele effects; the alleles should be modeled jointly.</div>
+        <p>The primary site-level null is H<sub>0</sub>: β<sub>1</sub> = … = β<sub>K−1</sub> = 0, tested by a Wald, likelihood-ratio, or score test with up to <em>K − 1</em> degrees of freedom. Each β<sub>j</sub> estimates the change per additional copy of A<sub>j</sub> relative to A<sub>0</sub>, conditional on the other allele dosages.</p>
+      </section>
+
+      <section id="approaches">
+        <h2>Six useful approaches</h2>
+        <div class="cards">
+          <article class="card">
+            <span class="tag">Default</span>
+            <h3>1. Joint allelic regression + omnibus test</h3>
+            <p>Fit <em>K − 1</em> allele dosages jointly. Use the omnibus P value to discover loci and the individual coefficients to describe which alleles differ. Flexible, interpretable, and appropriate when alleles may have different directions.</p>
+          </article>
+          <article class="card">
+            <span class="tag">Simple alternative</span>
+            <h3>2. Collapsed non-reference test</h3>
+            <p>Replace all alternate alleles with one “any alternate” dosage. It uses one degree of freedom and may gain power when all alternate alleles have similar effects. It loses information and can cancel or conceal heterogeneous effects.</p>
+          </article>
+          <article class="card">
+            <span class="tag">Ordered biology</span>
+            <h3>3. Length or copy-number trend</h3>
+            <p>For STRs, VNTRs, or CNVs, regress phenotype on total repeat length, mean allele length, summed copy number, or another prespecified function. This is powerful for a monotonic dose response but misses threshold, nonlinear, and allele-sequence effects.</p>
+          </article>
+          <article class="card">
+            <span class="tag">Few common genotypes</span>
+            <h3>4. Genotypic categorical test</h3>
+            <p>Treat unordered diploid genotypes as categories rather than assuming additive allele effects. This captures dominance and allele-pair interactions, but the number of genotype classes grows to K(K+1)/2 and sparse cells quickly become a problem.</p>
+          </article>
+          <article class="card">
+            <span class="tag">Structured loci</span>
+            <h3>5. Haplotype or functional-state test</h3>
+            <p>For HLA or linked multiallelic markers, test classical alleles, amino-acid residues, or inferred haplotypes with multi-df likelihood-ratio tests, then perform conditional analyses. This can map association closer to functional states than nearby biallelic tags.</p>
+          </article>
+          <article class="card">
+            <span class="tag">Rare alleles</span>
+            <h3>6. Burden / variance-component test</h3>
+            <p>For many rare alleles in a gene or region, burden tests pool effects under a shared-direction assumption; SKAT-type tests allow heterogeneous directions and magnitudes; SKAT-O adapts between them. This is a set-level question, not a substitute for a common multiallelic site test.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="choice">
+        <h2>Choosing the test</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Scientific expectation</th><th>Primary test</th><th>Useful sensitivity analysis</th><th>Main cost</th></tr></thead>
+            <tbody>
+              <tr><td>Alleles may act differently</td><td>K − 1 df joint omnibus</td><td>Allele-specific conditional estimates</td><td>More degrees of freedom</td></tr>
+              <tr><td>All alternate alleles should act similarly</td><td>Collapsed 1 df burden</td><td>Joint omnibus to check heterogeneity</td><td>Wrong if effects oppose</td></tr>
+              <tr><td>Effect should track repeat length or copy number</td><td>1 df trend</td><td>Categorical/omnibus or spline test</td><td>Misses nonlinear effects</td></tr>
+              <tr><td>Dominance or specific allele pairs matter</td><td>Genotypic categorical test</td><td>Additive joint model</td><td>Sparse genotype classes</td></tr>
+              <tr><td>Functional states/haplotypes are known</td><td>Functional-state omnibus</td><td>Conditional and haplotype analysis</td><td>Imputation/phasing error</td></tr>
+              <tr><td>Many rare alleles across a region</td><td>SKAT-O or matched burden/SKAT tests</td><td>Leave-one-variant-out analysis</td><td>Result is region-level</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="workflow">
+        <h2>A defensible analysis workflow</h2>
+        <ol class="steps">
+          <li><strong>Preserve the locus.</strong> Keep REF and every ALT allele, stable allele labels, phase if relevant, and allele-specific dosage uncertainty. Splitting a VCF record for storage is fine; forgetting that the records belong to one locus is not.</li>
+          <li><strong>Perform multiallelic QC.</strong> Inspect per-allele frequency and missingness, allele balance, read depth, batch effects, call quality, and an appropriate multiallelic exact Hardy–Weinberg test. For STRs, also inspect stutter and length-dependent call error.</li>
+          <li><strong>Control structure and relatedness.</strong> Include ancestry covariates or use a mixed model/kinship term. In ecological samples, add sampling locality, cohort, family, and major environmental design variables when justified.</li>
+          <li><strong>Choose one primary encoding in advance.</strong> Joint categorical allele effects are the safest general default. Choose a length trend or collapsed test only when biology supports its constraint.</li>
+          <li><strong>Test the locus once, then interpret alleles.</strong> Use a site-level omnibus P value for discovery. Report allele frequencies, conditional effect estimates, standard errors, confidence intervals, and the reference allele.</li>
+          <li><strong>Handle sparse alleles explicitly.</strong> Predefine a minimum allele count, pool only biologically defensible alleles, or use score/permutation/Firth or set-based methods. Label post hoc pooling as exploratory.</li>
+          <li><strong>Calibrate multiplicity.</strong> Correct over the effective family of tested loci/models. If several encodings are primary, account for them; if one is primary and others are sensitivity analyses, say so.</li>
+          <li><strong>Replicate the same contrast.</strong> Harmonize every allele—not merely “effect” and “other”—and preserve the coefficient covariance matrix for multiallelic meta-analysis.</li>
+        </ol>
+      </section>
+
+      <section id="software">
+        <h2>Implementation notes</h2>
+        <h3>PLINK 2</h3>
+        <p>Current PLINK 2 documentation states that <code>--glm</code> can use one genotype/dosage column per nonmajor allele at a multiallelic variant. Add <code>multiallelic</code> to permit such variants and <code>omit-ref</code> when ALT-based rather than nonmajor-allele coding is required.</p>
+        <pre><code>plink2 --pfile cohort \
+  --pheno traits.tsv --pheno-name trait \
+  --covar covariates.tsv --covar-name age,sex,PC1-PC10 \
+  --glm hide-covar multiallelic omit-ref firth-fallback \
+  --out trait_multiallelic</code></pre>
+        <p class="small">PLINK’s ordinary output is allele-specific. Confirm that your selected version/output provides the exact site-level joint test you need; otherwise construct the joint Wald/LRT/score test from an engine that returns the full coefficient covariance, or use dedicated software.</p>
+
+        <h3>Direct regression in R</h3>
+        <p>For a tri-allelic site A/C/T with A as reference, include both alternate-allele dosages in the same model:</p>
+        <pre><code># quantitative phenotype
+fit0 &lt;- lm(y ~ age + sex + PC1 + PC2, data = d)
+fit1 &lt;- lm(y ~ dose_C + dose_T + age + sex + PC1 + PC2, data = d)
+anova(fit0, fit1)  # partial F test for the 2-df site-level contrast
+
+# binary phenotype
+fit0 &lt;- glm(case ~ age + sex + PC1 + PC2,
+            family = binomial(), data = d)
+fit1 &lt;- glm(case ~ dose_C + dose_T + age + sex + PC1 + PC2,
+            family = binomial(), data = d)
+anova(fit0, fit1, test = "LRT")</code></pre>
+        <p>For related samples, replace these with an appropriate linear or generalized linear mixed model. For sequence-study association and meta-analysis of multiallelic sites, Jiang et al. implemented joint modeling in <strong>RVTESTS</strong> and multiallelic summary-statistic meta-analysis in <strong>RAREMETAL</strong>. For length-based tandem-repeat GWAS, <strong>associaTR</strong> provides a dedicated workflow.</p>
+      </section>
+
+      <section id="pitfalls">
+        <h2>Common failure modes</h2>
+        <ul>
+          <li><strong>Independent ALT-vs-rest regressions:</strong> they do not condition on the other alleles and can bias effects.</li>
+          <li><strong>Collapsing by convenience:</strong> “non-reference” is a modeling assumption, not a neutral data-cleaning step.</li>
+          <li><strong>Using the usual biallelic HWE test:</strong> genotype expectations and sparse-cell behavior differ at multiallelic loci; use a multiallelic procedure.</li>
+          <li><strong>Interpreting the omnibus P value as an allele effect:</strong> it only says at least one modeled contrast differs.</li>
+          <li><strong>Ignoring genotype uncertainty:</strong> hard calls can be especially damaging for rare ALT alleles, HLA imputations, and repeat lengths.</li>
+          <li><strong>Reference-allele drift across cohorts:</strong> meta-analysis requires identical allele definitions and covariance-aware joint statistics.</li>
+          <li><strong>Too many genotype categories:</strong> a fully genotypic model becomes unstable rapidly as K grows.</li>
+          <li><strong>Assuming diploidy:</strong> the K − 1 dosage framework generalizes conceptually, but polyploid genotype uncertainty, dosage, inheritance, and HWE require polyploid-aware software.</li>
+        </ul>
+      </section>
+
+      <section id="references">
+        <h2>Checked references</h2>
+        <p class="small">Links below resolve to the article, DOI record, or current official documentation. Each note states what was checked against the source.</p>
+        <ol class="refs">
+          <li><a href="https://doi.org/10.3390/genes11050586">Jiang Y. et al. Association Analysis and Meta-Analysis of Multi-Allelic Variants for Large-Scale Sequence Data. <em>Genes</em> 11:586 (2020).</a><span>Joint allele-dosage coding, bias from naïve single-allele regression, omnibus/collapsed comparisons, gene-level tests, RVTESTS and RAREMETAL.</span></li>
+          <li><a href="https://www.cog-genomics.org/plink/2.0/assoc">PLINK 2.0: Association analysis documentation.</a><span>Current <code>--glm</code> multiallelic behavior, dosage columns, <code>omit-ref</code>, and logistic/Firth modes. Documentation checked 22 June 2026.</span></li>
+          <li><a href="https://doi.org/10.1038/ng.1076">Raychaudhuri S. et al. Five amino acids in three HLA proteins explain most of the association between MHC and seropositive rheumatoid arthritis. <em>Nature Genetics</em> 44:291–296 (2012).</a><span>Classical HLA alleles, multiallelic amino-acid positions, conditional testing, and haplotype analysis as fine-mapping tools.</span></li>
+          <li><a href="https://doi.org/10.1038/ncomms6902">Kim K. et al. The HLA-DRβ1 amino acid positions 11–13–26 explain the majority of SLE–MHC associations. <em>Nature Communications</em> 5:5902 (2014).</a><span>Presence/absence dosage coding for residues at multiallelic amino-acid positions and multi-df log-likelihood ratio testing.</span></li>
+          <li><a href="https://doi.org/10.1016/j.xgen.2023.100458">Margoliash J. et al. Polymorphic short tandem repeats make widespread contributions to blood and serum traits. <em>Cell Genomics</em> 4:100458 (2024; online 2023).</a><span>Large-scale STR imputation, length-based STR association, conditional analysis, and fine-mapping.</span></li>
+          <li><a href="https://strtools.readthedocs.io/en/latest/source/associaTR.html">TRTools: associaTR documentation.</a><span>Dedicated GWAS workflow for length-based association at multiallelic tandem repeats.</span></li>
+          <li><a href="https://doi.org/10.1093/biostatistics/kxs014">Lee S. et al. Optimal tests for rare variant effects in sequencing association studies. <em>Biostatistics</em> 13:762–775 (2012).</a><span>SKAT-O’s adaptive compromise between burden and variance-component tests under different effect configurations.</span></li>
+          <li><a href="https://doi.org/10.1534/genetics.109.108977">Engels W.R. Exact Tests for Hardy–Weinberg Proportions. <em>Genetics</em> 183:1431–1441 (2009).</a><span>Exact multiallelic HWE testing and its importance when asymptotic approximations are unreliable.</span></li>
+        </ol>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="shell">Scope: methodological overview for research design and teaching. Exact model choice still depends on phenotype distribution, sampling design, ploidy, allele-frequency spectrum, and genotype uncertainty.</div>
+  </footer>
+</body>
+</html>
