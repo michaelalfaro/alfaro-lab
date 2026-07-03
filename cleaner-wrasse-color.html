@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cleaner Wrasse Coloration &amp; Reef-Fish Color Signaling — Alfaro Lab, UCLA</title>
+<style>
+  :root{
+    --ink:#0f2233;
+    --ink-soft:#33475a;
+    --muted:#5f7488;
+    --line:#dce5ec;
+    --line-soft:#e9f0f4;
+    --paper:#f7fafb;
+    --card:#ffffff;
+    --abyss:#0a3054;
+    --deep:#124b73;
+    --sea:#1f6f9e;
+    --shallow:#2f9bc4;
+    --accent:#d97a3a;        /* warm reef accent */
+    --accent-deep:#b45f27;
+    --accent-wash:#fbeee2;
+    --sea-wash:#eaf3f8;
+    --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, monospace;
+  }
+
+  *{ box-sizing:border-box; }
+
+  html{ -webkit-text-size-adjust:100%; }
+
+  body{
+    margin:0;
+    background:
+      radial-gradient(1100px 620px at 80% -8%, #eef6fa 0%, rgba(238,246,250,0) 60%),
+      linear-gradient(180deg, #f3f8fa 0%, var(--paper) 22%, var(--paper) 100%);
+    color:var(--ink);
+    font-family:var(--serif);
+    font-size:18px;
+    line-height:1.72;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  a{ color:var(--sea); text-decoration:none; }
+  a:hover{ color:var(--accent-deep); }
+
+  em{ font-style:italic; }
+
+  .wrap{
+    max-width:820px;
+    margin:0 auto;
+    padding:0 22px 90px;
+  }
+
+  /* ---------- Header ---------- */
+  header.masthead{
+    position:relative;
+    overflow:hidden;
+    color:#eaf4fa;
+    background:
+      linear-gradient(180deg, rgba(6,26,46,0) 55%, rgba(6,26,46,0.55) 100%),
+      linear-gradient(160deg, var(--abyss) 0%, var(--deep) 55%, var(--sea) 100%);
+    border-bottom:3px solid var(--accent);
+  }
+  /* faint layered "light-through-water" bands */
+  header.masthead::before{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      repeating-linear-gradient(112deg, rgba(255,255,255,0.05) 0 2px, rgba(255,255,255,0) 2px 46px),
+      radial-gradient(700px 300px at 12% -30%, rgba(120,205,235,0.35), rgba(120,205,235,0) 70%);
+    pointer-events:none;
+  }
+  .masthead-inner{
+    position:relative;
+    max-width:820px;
+    margin:0 auto;
+    padding:58px 22px 40px;
+  }
+  .eyebrow{
+    font-family:var(--sans);
+    text-transform:uppercase;
+    letter-spacing:.20em;
+    font-size:11.5px;
+    font-weight:600;
+    color:#a9d8ec;
+    margin:0 0 18px;
+  }
+  h1{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:2.35rem;
+    line-height:1.16;
+    margin:0 0 14px;
+    letter-spacing:-0.01em;
+    color:#f4fbff;
+    max-width:16ch;
+  }
+  .subtitle{
+    font-family:var(--sans);
+    font-size:1rem;
+    font-weight:400;
+    line-height:1.5;
+    color:#bfe0ef;
+    margin:0 0 22px;
+    max-width:52ch;
+  }
+  .compiled{
+    font-family:var(--sans);
+    font-size:12.5px;
+    color:#9cc6dc;
+    letter-spacing:.02em;
+    padding-top:16px;
+    border-top:1px solid rgba(170,215,235,0.22);
+    display:inline-block;
+  }
+  .compiled strong{ color:#d8ecf6; font-weight:600; }
+
+  /* ---------- Intro ---------- */
+  .intro{
+    margin:44px 0 8px;
+    font-size:1.12rem;
+    line-height:1.78;
+    color:var(--ink-soft);
+  }
+  .intro .lead-cap::first-letter{
+    /* subtle emphasis, not a drop cap */
+    font-weight:600;
+  }
+
+  /* ---------- Section scaffolding ---------- */
+  section{ margin-top:52px; }
+
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin:0 0 6px;
+    padding-bottom:12px;
+    border-bottom:1px solid var(--line);
+  }
+  .section-head .num{
+    font-family:var(--sans);
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.12em;
+    color:var(--accent);
+    padding-top:6px;
+  }
+  h2{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:1.62rem;
+    letter-spacing:-0.01em;
+    color:var(--abyss);
+    margin:0;
+    line-height:1.25;
+  }
+  .section-lede{
+    font-family:var(--sans);
+    font-size:14.5px;
+    line-height:1.6;
+    color:var(--muted);
+    margin:14px 0 26px;
+    max-width:60ch;
+  }
+
+  /* ---------- Citation cards (core) ---------- */
+  .card{
+    position:relative;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-left:4px solid var(--sea);
+    border-radius:10px;
+    padding:24px 26px 22px;
+    margin:20px 0;
+    box-shadow:0 1px 2px rgba(15,34,51,0.04), 0 10px 30px -22px rgba(15,34,51,0.35);
+    transition:box-shadow .25s ease, transform .25s ease, border-color .25s ease;
+  }
+  .card:hover{
+    box-shadow:0 1px 2px rgba(15,34,51,0.05), 0 18px 40px -24px rgba(15,34,51,0.42);
+    transform:translateY(-2px);
+    border-left-color:var(--accent);
+  }
+  .card .cnum{
+    position:absolute;
+    top:20px; right:22px;
+    font-family:var(--sans);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.08em;
+    color:#c3d3de;
+  }
+  .card h3{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:1.2rem;
+    line-height:1.34;
+    color:var(--abyss);
+    margin:0 8ch 8px 0;
+    padding-right:2ch;
+  }
+  .meta{
+    font-family:var(--sans);
+    font-size:13.5px;
+    line-height:1.55;
+    color:var(--muted);
+    margin:0 0 14px;
+  }
+  .meta .venue{ color:var(--ink-soft); font-style:normal; }
+  .meta .venue em{ font-style:italic; }
+  .summary{
+    font-size:1.02rem;
+    line-height:1.72;
+    color:var(--ink-soft);
+    margin:0 0 18px;
+  }
+  .viewlink{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-family:var(--sans);
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.02em;
+    color:var(--sea);
+    padding:7px 14px;
+    border:1px solid #cfe1ec;
+    border-radius:999px;
+    background:var(--sea-wash);
+    transition:background .2s ease, color .2s ease, border-color .2s ease;
+  }
+  .viewlink:hover{
+    background:var(--accent);
+    border-color:var(--accent);
+    color:#fff;
+  }
+  .viewlink .arw{ font-size:12px; }
+  .nodoi{
+    display:inline-block;
+    font-family:var(--sans);
+    font-size:11px;
+    letter-spacing:.04em;
+    color:var(--muted);
+    margin-left:10px;
+    vertical-align:middle;
+  }
+
+  /* ---------- Related work groups ---------- */
+  .group{ margin-top:30px; }
+  .group h4{
+    font-family:var(--sans);
+    font-size:13px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.10em;
+    color:var(--deep);
+    margin:0 0 4px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .group h4::before{
+    content:"";
+    width:22px; height:2px;
+    background:var(--accent);
+    display:inline-block;
+    flex:0 0 auto;
+  }
+  ul.reflist{
+    list-style:none;
+    margin:14px 0 0;
+    padding:0;
+  }
+  ul.reflist > li{
+    position:relative;
+    padding:16px 4px 16px 20px;
+    border-bottom:1px solid var(--line-soft);
+  }
+  ul.reflist > li:last-child{ border-bottom:none; }
+  ul.reflist > li::before{
+    content:"";
+    position:absolute;
+    left:0; top:23px;
+    width:7px; height:7px;
+    border-radius:50%;
+    background:var(--shallow);
+    box-shadow:0 0 0 3px var(--sea-wash);
+  }
+  .rl-cite{
+    font-size:0.98rem;
+    line-height:1.6;
+    color:var(--ink);
+    margin:0 0 5px;
+  }
+  .rl-cite .rl-title{ color:var(--abyss); }
+  .rl-rel{
+    font-family:var(--sans);
+    font-size:13.5px;
+    line-height:1.6;
+    color:var(--muted);
+    margin:0 0 7px;
+  }
+  .rl-doi{
+    font-family:var(--sans);
+    font-size:12.5px;
+    font-weight:600;
+    letter-spacing:.01em;
+  }
+
+  /* ---------- Callout: research directions ---------- */
+  .callout{
+    position:relative;
+    margin-top:26px;
+    border-radius:14px;
+    padding:30px 30px 12px;
+    color:#eef6fa;
+    background:
+      radial-gradient(620px 260px at 100% 0%, rgba(217,122,58,0.22), rgba(217,122,58,0) 62%),
+      linear-gradient(158deg, var(--abyss) 0%, var(--deep) 62%, #16597f 100%);
+    border:1px solid #0c3a5e;
+    box-shadow:0 24px 55px -30px rgba(10,48,84,0.85);
+    overflow:hidden;
+  }
+  .callout::before{
+    content:"";
+    position:absolute; inset:0;
+    background:repeating-linear-gradient(108deg, rgba(255,255,255,0.04) 0 2px, rgba(255,255,255,0) 2px 52px);
+    pointer-events:none;
+  }
+  .callout .callout-intro{
+    position:relative;
+    font-family:var(--sans);
+    font-size:14px;
+    line-height:1.6;
+    color:#bfe0ef;
+    margin:0 0 22px;
+    max-width:60ch;
+  }
+  ol.directions{
+    position:relative;
+    list-style:none;
+    counter-reset:dir;
+    margin:0;
+    padding:0;
+  }
+  ol.directions > li{
+    counter-increment:dir;
+    position:relative;
+    padding:0 0 24px 56px;
+    margin:0;
+  }
+  ol.directions > li::before{
+    content:counter(dir);
+    position:absolute;
+    left:0; top:2px;
+    width:38px; height:38px;
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--sans);
+    font-size:16px;
+    font-weight:700;
+    color:#fff;
+    background:linear-gradient(150deg, var(--accent) 0%, var(--accent-deep) 100%);
+    border-radius:10px;
+    box-shadow:0 6px 16px -6px rgba(217,122,58,0.7);
+  }
+  ol.directions > li:not(:last-child)::after{
+    content:"";
+    position:absolute;
+    left:18px; top:44px; bottom:8px;
+    width:2px;
+    background:linear-gradient(180deg, rgba(217,122,58,0.5), rgba(217,122,58,0.05));
+  }
+  ol.directions .d-title{
+    display:block;
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:1.1rem;
+    color:#fbe9d8;
+    margin:0 0 5px;
+    letter-spacing:.005em;
+  }
+  ol.directions .d-body{
+    font-size:1rem;
+    line-height:1.68;
+    color:#dfeef6;
+    margin:0;
+  }
+  ol.directions .d-body em{ color:#f2d9c3; font-style:italic; }
+
+  /* ---------- References ---------- */
+  ol.apa{
+    list-style:none;
+    counter-reset:apa;
+    margin:22px 0 0;
+    padding:0;
+  }
+  ol.apa > li{
+    position:relative;
+    font-family:var(--sans);
+    font-size:14px;
+    line-height:1.62;
+    color:var(--ink-soft);
+    padding:0 0 16px 30px;
+    text-indent:0;
+  }
+  ol.apa > li .apa-inner{
+    text-indent:-22px;
+    padding-left:22px;
+    display:block;
+  }
+  ol.apa > li::before{
+    counter-increment:apa;
+    content:counter(apa);
+    position:absolute;
+    left:0; top:1px;
+    font-family:var(--mono);
+    font-size:11px;
+    font-weight:600;
+    color:var(--accent);
+    width:22px;
+    text-align:right;
+  }
+  ol.apa em{ font-style:italic; }
+  ol.apa a{ font-weight:500; word-break:break-word; }
+
+  /* ---------- Footer ---------- */
+  footer{
+    margin-top:70px;
+    padding-top:26px;
+    border-top:2px solid var(--line);
+    font-family:var(--sans);
+    font-size:13.5px;
+    color:var(--muted);
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+  }
+  footer .lab{ font-weight:600; color:var(--ink-soft); letter-spacing:.01em; }
+  footer a{ font-weight:600; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:640px){
+    body{ font-size:16.5px; }
+    h1{ font-size:1.85rem; }
+    .masthead-inner{ padding:44px 20px 32px; }
+    .card{ padding:20px 18px; }
+    .card h3{ margin-right:0; padding-right:0; }
+    .card .cnum{ position:static; display:block; margin-bottom:8px; }
+    h2{ font-size:1.4rem; }
+    .callout{ padding:24px 18px 8px; }
+    ol.directions > li{ padding-left:48px; }
+    ol.directions > li::before{ width:34px; height:34px; }
+    ol.directions > li:not(:last-child)::after{ left:16px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="eyebrow">Alfaro Lab · Literature Digest</p>
+    <h1>Cleaner Wrasse Coloration &amp; Reef-Fish Color Signaling</h1>
+    <p class="subtitle">Key literature &amp; hyperspectral research directions — Alfaro Lab, UCLA</p>
+    <span class="compiled">Compiled July 2026 following discussion with <strong>Jesse Freeze</strong> (Mehta Lab, UC Santa Cruz).</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <p class="intro lead-cap">
+    This page collects the key literature on cleaner-wrasse coloration and reef-fish color signaling, assembled following a lab visit and discussion with Jesse Freeze (PhD student, Mehta Lab, UC Santa Cruz), and frames how snapshot hyperspectral imaging — a Cubert H5 camera used with live cleaner fish in the Alfaro Lab — could push these questions forward. The unifying theme is color as an <em>honest signal</em>: how receivers such as client fish perceive it, and how both the signal and its perception shift with depth and light underwater. A shared methodological gap runs through this work — these studies relied on point spectrophotometry, RGB photography, or purely qualitative color description, none of which capture the full spectral signal spatially across a whole, behaving fish.
+  </p>
+
+  <!-- ===================== CORE PAPERS ===================== -->
+  <section id="core">
+    <div class="section-head">
+      <span class="num">01</span>
+      <h2>Core Papers</h2>
+    </div>
+    <p class="section-lede">The four studies that anchor this collection — spanning behavioral preference, the origin of the reef "blue guild," the perceptual limits of mimicry, and the systematics of the cleaners themselves.</p>
+
+    <article class="card">
+      <span class="cnum">C1</span>
+      <h3>Client reef fish prefer more blue-saturated cleaner wrasses <em>Labroides dimidiatus</em></h3>
+      <p class="meta">Cacela-Rodrigues, I., Trigo, S., Araújo-Silva, H., Saraiva, J. L., &amp; Soares, M. C. (2025). <span class="venue"><em>Journal of Experimental Biology</em>, 228(6), jeb249694.</span></p>
+      <p class="summary">This experimental study tested whether client reef fish perceive and act on differences in the blue saturation of bluestreak cleaner wrasse coloration, given prior evidence that higher blue saturation is associated with better cleaning service. The authors presented client threadfin butterflyfish (<em>Chaetodon auriga</em>) with three video sequences of cleaners manipulated to minimum, control, and maximum blue saturation. Clients actively preferred the more blue-saturated cleaners — spending more time in the preference zone, orienting toward them more frequently and for longer, and entering the preference area more often. The authors conclude that blue coloration likely functions as an honest signal of individual cleaner quality that clients use to choose better service providers.</p>
+      <a class="viewlink" href="https://doi.org/10.1242/jeb.249694" target="_blank" rel="noopener">View paper <span class="arw">↗</span></a>
+    </article>
+
+    <article class="card">
+      <span class="cnum">C2</span>
+      <h3>Blue and yellow signal cleaning behavior in coral reef fishes</h3>
+      <p class="meta">Cheney, K. L., Grutter, A. S., Blomberg, S. P., &amp; Marshall, N. J. (2009). <span class="venue"><em>Current Biology</em>, 19(15), 1283–1287.</span></p>
+      <p class="summary">Combining colour analysis, phylogenetic comparison, theoretical vision modeling, and field behavioural experiments, this foundational paper tested the idea that cleaner fish share a "blue guild" coloration. Cleaners were more likely than non-cleaners to display blue (plus yellow) coloration. Vision models showed blue is the most spectrally contrasting colour against coral-reef backgrounds, while yellow contrasts most against blue water or against black lateral stripes. Behavioural trials confirmed that the blue component of the pattern attracts more client fish to cleaning stations, supporting the role of conspicuous colour in advertising cleaning services.</p>
+      <a class="viewlink" href="https://doi.org/10.1016/j.cub.2009.06.028" target="_blank" rel="noopener">View paper <span class="arw">↗</span></a>
+    </article>
+
+    <article class="card">
+      <span class="cnum">C3</span>
+      <h3>Mimicry in coral reef fish: How accurate is this deception in terms of color and luminance?</h3>
+      <p class="meta">Cheney, K. L., &amp; Marshall, N. J. (2009). <span class="venue"><em>Behavioral Ecology</em>, 20(3), 459–468.</span></p>
+      <p class="summary">This paper quantitatively assesses how accurately coral-reef mimic fish match their models in both the chromatic (colour) and achromatic (luminance) channels, as perceived through reef-fish visual systems rather than the human eye. It is a foundational methodological treatment of mimicry accuracy in the reef context, showing that the efficacy of mimicry is not fixed but depends on viewing conditions — mimics can be more easily mistaken for their models at greater depths, where the light environment degrades the chromatic distinctions between them. It is frequently cited alongside the bluestreak-cleaner-wrasse / bluestriped-fangblenny aggressive-mimicry system.</p>
+      <a class="viewlink" href="https://doi.org/10.1093/beheco/arp017" target="_blank" rel="noopener">View paper <span class="arw">↗</span></a>
+    </article>
+
+    <article class="card">
+      <span class="cnum">C4</span>
+      <h3>Cleaning up the cleaner wrasses: Revision of the <em>Labroides phthirophagus</em> and <em>Labroides bicolor</em> species complexes, with rediagnosis of <em>Labroides quadrilineatus</em> and descriptions of two new species (Teleostei: Labridae)</h3>
+      <p class="meta">Tea, Y.-K., Baraf, L., Menkara, Y., Ludt, W. B., Allen, G. R., Hobbs, J.-P. A., &amp; Cowman, P. F. (2026). <span class="venue"><em>Raffles Bulletin of Zoology</em>, 74, 403–443.</span></p>
+      <p class="summary">This revision uses genome-wide ultraconserved elements (1,019 UCE loci) combined with mitochondrial DNA and fine-scale morphometrics to overhaul two <em>Labroides</em> cleaner-wrasse species complexes, rediagnose <em>Labroides quadrilineatus</em>, and describe two new species: the Goldenrod Cleaner Wrasse (<em>Labroides inopinatus</em>) and the Cinnabar Cleaner Wrasse (<em>Labroides flammulatus</em>). Coloration and depth are central to the story — the Goldenrod Cleaner Wrasse is a mesophotic-zone specialist occurring at roughly 40–145 m, while the Cinnabar species carries distinctive orange-brown markings — illustrating depth-related colour differentiation within the genus. Notably, the colour differences are described qualitatively; no quantitative spectral measurements are reported.</p>
+      <a class="viewlink" href="https://lkcnhm.nus.edu.sg/wp-content/uploads/sites/11/2026/05/RBZ-2026-0027.pdf" target="_blank" rel="noopener">View PDF <span class="arw">↗</span></a>
+      <span class="nodoi">No DOI — publisher PDF</span>
+    </article>
+  </section>
+
+  <!-- ===================== RELATED WORK ===================== -->
+  <section id="related">
+    <div class="section-head">
+      <span class="num">02</span>
+      <h2>Related Work</h2>
+    </div>
+    <p class="section-lede">Twelve supporting studies, grouped by theme — from the evolution of cleaner advertising stripes to the visual ecology that determines how those signals read at depth.</p>
+
+    <div class="group">
+      <h4>Cleaner-fish colour signalling &amp; honest signals</h4>
+      <ul class="reflist">
+        <li>
+          <p class="rl-cite">Lettieri, L., Cheney, K. L., Mazel, C. H., Boothe, D., Marshall, N. J., &amp; Streelman, J. T. (2009). <span class="rl-title">Cleaner gobies evolve advertising stripes of higher contrast.</span> <em>Journal of Experimental Biology</em>, 212(14), 2194–2203.</p>
+          <p class="rl-rel">Spectrophotometry plus reef-fish vision models show blue stripes in Caribbean <em>Elacatinus</em> cleaner gobies provide higher chromatic contrast than ancestral yellow/green stripes, arguing that client sensory biases drove the evolution of blue advertising coloration — a convergent parallel to the <em>Labroides</em> blue-signal story.</p>
+          <p class="rl-doi"><a href="https://doi.org/10.1242/jeb.025478" target="_blank" rel="noopener">doi.org/10.1242/jeb.025478 ↗</a></p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="group">
+      <h4>Aggressive mimicry of cleaner wrasse</h4>
+      <ul class="reflist">
+        <li>
+          <p class="rl-cite">Côté, I. M., &amp; Cheney, K. L. (2005). <span class="rl-title">Animal mimicry: choosing when to be a cleaner-fish mimic.</span> <em>Nature</em>, 433(7023), 211–212.</p>
+          <p class="rl-rel">Documents facultative aggressive mimicry: the bluestriped fangblenny (<em>Plagiotremus rhinorhynchos</em>) can switch its cleaner-wrasse-mimicking colours on and off, blending into reef-fish shoals or lurking at cleaning stations.</p>
+          <p class="rl-doi"><a href="https://doi.org/10.1038/433211a" target="_blank" rel="noopener">doi.org/10.1038/433211a ↗</a></p>
+        </li>
+        <li>
+          <p class="rl-cite">Cheney, K. L., &amp; Côté, I. M. (2005). <span class="rl-title">Frequency-dependent success of aggressive mimics in a cleaning symbiosis.</span> <em>Proceedings of the Royal Society B</em>, 272(1581), 2635–2639.</p>
+          <p class="rl-rel">Shows fangblenny attack success is frequency-dependent (higher when mimics are rarer than their <em>Labroides</em> model), the classic mechanism maintaining aggressive/Batesian mimicry.</p>
+          <p class="rl-doi"><a href="https://doi.org/10.1098/rspb.2005.3256" target="_blank" rel="noopener">doi.org/10.1098/rspb.2005.3256 ↗</a></p>
+        </li>
+        <li>
+          <p class="rl-cite">Cheney, K. L., Grutter, A. S., &amp; Marshall, N. J. (2008). <span class="rl-title">Facultative mimicry: cues for colour change and colour accuracy in a coral reef fish.</span> <em>Proceedings of the Royal Society B</em>, 275(1631), 117–122.</p>
+          <p class="rl-rel">Uses spectral reflectance to show fangblennies adopt mimic colours in the presence of juvenile cleaner wrasse and accurately match the model's colour, tying mimicry accuracy to model availability.</p>
+          <p class="rl-doi"><a href="https://doi.org/10.1098/rspb.2007.0966" target="_blank" rel="noopener">doi.org/10.1098/rspb.2007.0966 ↗</a></p>
+        </li>
+        <li>
+          <p class="rl-cite">Cheney, K. L. (2011). <span class="rl-title">Cleaner wrasse mimics inflict higher costs on their models when they are more aggressive towards signal receivers.</span> <em>Biology Letters</em>, 8(1), 10–12.</p>
+          <p class="rl-rel">Field study quantifying how aggressive mimics reduce the cleaning activity of the model <em>Labroides dimidiatus</em>, linking mimic behaviour to the costs that shape the mimicry system.</p>
+          <p class="rl-doi"><a href="https://doi.org/10.1098/rsbl.2011.0687" target="_blank" rel="noopener">doi.org/10.1098/rsbl.2011.0687 ↗</a></p>
+        </li>
+        <li>
+          <p class="rl-cite">Kuwamura, T., Sato, H., &amp; Sakai, Y. (2022). <span class="rl-title">Comparison of mortality and feeding behavior of the false cleanerfish and the lance blenny regarding the effects of mimicry.</span> <em>Journal of Ethology</em>, 41(1), 73–77.</p>
+          <p class="rl-rel">Focuses on the classic "false cleanerfish" <em>Aspidontus taeniatus</em>, comparing its survival and fin-biting feeding behaviour against a non-mimic blenny to test protective versus aggressive mimicry benefits.</p>
+          <p class="rl-doi"><a href="https://doi.org/10.1007/s10164-022-00769-8" target="_blank" rel="noopener">doi.org/10.1007/s10164-022-00769-8 ↗</a></p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="group">
+      <h4>Reef-fish visual ecology, colour vision &amp; change with depth</h4>
+      <ul class="reflist">
+        <li>
+          <p class="rl-cite">Wilkins, L., Marshall, N. J., Johnsen, S., &amp; Osorio, D. (2016). <span class="rl-title">Modelling colour constancy in fish: implications for vision and signalling in water.</span> <em>Journal of Experimental Biology</em>, 219(12), 1884–1892.</p>
+          <p class="rl-rel">Models how water scattering and absorption distort fish colours with viewing distance and depth (0–30 m) and how photoreceptor sensitivities and body colours should co-evolve — directly relevant to how blue signals behave underwater.</p>
+          <p class="rl-doi"><a href="https://doi.org/10.1242/jeb.139147" target="_blank" rel="noopener">doi.org/10.1242/jeb.139147 ↗</a></p>
+        </li>
+        <li>
+          <p class="rl-cite">Luehrmann, M., Stieb, S. M., Carleton, K. L., Pietzker, A., Cheney, K. L., &amp; Marshall, N. J. (2018). <span class="rl-title">Short-term colour vision plasticity on the reef: changes in opsin expression under varying light conditions differ between ecologically distinct fish species.</span> <em>Journal of Experimental Biology</em>, 221(22), jeb175281.</p>
+          <p class="rl-rel">Shows reef fish can retune opsin gene expression within weeks in response to the light environment, informing how visual sensitivity — and thus colour-signal perception — varies with habitat and depth.</p>
+          <p class="rl-doi"><a href="https://doi.org/10.1242/jeb.175281" target="_blank" rel="noopener">doi.org/10.1242/jeb.175281 ↗</a></p>
+        </li>
+        <li>
+          <p class="rl-cite">Siebeck, U. E., &amp; Marshall, N. J. (2000). <span class="rl-title">Transmission of ocular media in labrid fishes.</span> <em>Philosophical Transactions of the Royal Society B</em>, 355(1401), 1257–1261.</p>
+          <p class="rl-rel">Measures UV-to-far-red transmission of the eye media across 36 wrasse (Labridae) species spanning shallow-to-deep reef zones, establishing which wrasses can even perceive UV — foundational for <em>Labroides</em> visual-signalling questions.</p>
+          <p class="rl-doi"><a href="https://doi.org/10.1098/rstb.2000.0679" target="_blank" rel="noopener">doi.org/10.1098/rstb.2000.0679 ↗</a></p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="group">
+      <h4>UV signalling &amp; photoreceptor-based modelling</h4>
+      <ul class="reflist">
+        <li>
+          <p class="rl-cite">Siebeck, U. E., Parker, A. N., Sprenger, D., Mäthger, L. M., &amp; Wallis, G. (2010). <span class="rl-title">A species of reef fish that uses ultraviolet patterns for covert face recognition.</span> <em>Current Biology</em>, 20(5), 407–410.</p>
+          <p class="rl-rel">Demonstrates that Ambon damselfish use fine UV facial patterns — invisible to many predators — for species discrimination, the key evidence for a UV "secret communication channel" in reef fish.</p>
+          <p class="rl-doi"><a href="https://doi.org/10.1016/j.cub.2009.12.047" target="_blank" rel="noopener">doi.org/10.1016/j.cub.2009.12.047 ↗</a></p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="group">
+      <h4>Hyperspectral &amp; spectral imaging methods</h4>
+      <ul class="reflist">
+        <li>
+          <p class="rl-cite">Hogan, B. G., &amp; Stoddard, M. C. (2024). <span class="rl-title">Hyperspectral imaging in animal coloration research: A user-friendly pipeline for image generation, analysis, and integration with 3D modeling.</span> <em>PLOS Biology</em>, 22(12), e3002867.</p>
+          <p class="rl-rel">A methods gold-standard: an end-to-end pipeline for capturing and analyzing hyperspectral (325–700 nm, including UV) reflectance across an entire specimen and merging it with 3D models, using both visual-system-independent and receptor-based analyses — the closest published template for Cubert-based cleaner-fish work.</p>
+          <p class="rl-doi"><a href="https://doi.org/10.1371/journal.pbio.3002867" target="_blank" rel="noopener">doi.org/10.1371/journal.pbio.3002867 ↗</a></p>
+        </li>
+        <li>
+          <p class="rl-cite">Chiao, C.-C., Wickiser, J. K., Allen, J. J., Genter, B., &amp; Hanlon, R. T. (2011). <span class="rl-title">Hyperspectral imaging of cuttlefish camouflage indicates good color match in the eyes of fish predators.</span> <em>Proceedings of the National Academy of Sciences</em>, 108(22), 9148–9153.</p>
+          <p class="rl-rel">An early, influential application of hyperspectral imaging to quantify animal colour in the spectral and spatial domains simultaneously, then feed it through fish visual models — a direct template for hyperspectral-plus-receptor-modelling of reef coloration.</p>
+          <p class="rl-doi"><a href="https://doi.org/10.1073/pnas.1019090108" target="_blank" rel="noopener">doi.org/10.1073/pnas.1019090108 ↗</a></p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="group">
+      <h4>Cleaning symbiosis &amp; market dynamics</h4>
+      <ul class="reflist">
+        <li>
+          <p class="rl-cite">Triki, Z., Li Richter, X.-Y., Demairé, C., Kurokawa, S., &amp; Bshary, R. (2022). <span class="rl-title">Marine cleaning mutualism defies standard logic of supply and demand.</span> <em>The American Naturalist</em>, 199(4), 455–467.</p>
+          <p class="rl-rel">A field experiment plus game-theoretic model on the <em>Labroides</em> cleaning market: removing cleaners from a reef patch altered client interactions in ways not predicted by simple supply-and-demand, refining biological-market theory for cleaning mutualism.</p>
+          <p class="rl-doi"><a href="https://doi.org/10.1086/718315" target="_blank" rel="noopener">doi.org/10.1086/718315 ↗</a></p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== RESEARCH DIRECTIONS ===================== -->
+  <section id="directions">
+    <div class="section-head">
+      <span class="num">03</span>
+      <h2>Hyperspectral Research Directions</h2>
+    </div>
+    <p class="section-lede">Cubert H5 snapshot imaging + live cleaners — five concrete directions where whole-fish spectral data can move past the point-spectrometry and RGB limits of the work above.</p>
+
+    <div class="callout">
+      <p class="callout-intro">Snapshot hyperspectral imaging captures a full spectral cube per frame — no line-scanning — so it can measure the entire body of a moving fish at once. Each direction below turns a specific gap in the literature into a testable, whole-fish spectral experiment.</p>
+      <ol class="directions">
+        <li>
+          <span class="d-title">Spatially resolved honesty test</span>
+          <p class="d-body">Use the Cubert H5 snapshot camera to map blue-saturation across the whole body of individual <em>L. dimidiatus</em> under standardized light, then test whether the spectral blue signal correlates with condition, size, or measured cleaning performance — turning Cacela-Rodrigues et al.'s behavioral preference into a quantitative, whole-body test of signal honesty that point spectrometry (single spots) cannot deliver.</p>
+        </li>
+        <li>
+          <span class="d-title">Hyperspectral video of live interactions</span>
+          <p class="d-body">Because snapshot HSI captures a full spectral cube per frame with no scanning, it can record cleaning interactions as spectral video — quantifying real-time colour change during client encounters and testing the coloration plasticity that the honest-signal hypothesis implies.</p>
+        </li>
+        <li>
+          <span class="d-title">Reconstructing the receiver's view at depth</span>
+          <p class="d-body">Feed hyperspectral cubes through published reef-fish photoreceptor sensitivities (and eye-media transmission from Siebeck &amp; Marshall 2000) to reconstruct client-perceived chromatic and luminance contrast, then re-render it under depth-simulated light spectra — a modern, quantitative test of Cheney &amp; Marshall's (2009) prediction that model–mimic discrimination collapses with depth.</p>
+        </li>
+        <li>
+          <span class="d-title">Putting spectra on the new species and the depth cline</span>
+          <p class="d-body">Tea et al. (2026) describe the mesophotic Goldenrod (<em>Labroides inopinatus</em>, ~40–145 m) and Cinnabar (<em>L. flammulatus</em>) wrasses only qualitatively; hyperspectral imaging of <em>Labroides</em> across the genus would test whether colour differences track depth spectrally — and, paired with the paper's UCE phylogeny, enable a phylogenetic comparative analysis of cleaner-signal evolution (an Alfaro Lab strength).</p>
+        </li>
+        <li>
+          <span class="d-title">The invisible channel</span>
+          <p class="d-body">Snapshot systems reaching toward the violet/UV edge can quantify short-wavelength signal components that many reef fish see but humans (and standard RGB cameras) miss, opening the UV dimension of cleaner signalling (cf. Siebeck et al. 2010) and connecting to the lab's broader program on reef-fish colour-pattern evolution.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===================== REFERENCES ===================== -->
+  <section id="references">
+    <div class="section-head">
+      <span class="num">04</span>
+      <h2>References</h2>
+    </div>
+    <p class="section-lede">All sixteen papers in APA style, alphabetized by first author.</p>
+
+    <ol class="apa">
+      <li><span class="apa-inner">Cacela-Rodrigues, I., Trigo, S., Araújo-Silva, H., Saraiva, J. L., &amp; Soares, M. C. (2025). Client reef fish prefer more blue-saturated cleaner wrasses <em>Labroides dimidiatus</em>. <em>Journal of Experimental Biology</em>, 228(6), jeb249694. <a href="https://doi.org/10.1242/jeb.249694" target="_blank" rel="noopener">https://doi.org/10.1242/jeb.249694</a></span></li>
+
+      <li><span class="apa-inner">Cheney, K. L. (2011). Cleaner wrasse mimics inflict higher costs on their models when they are more aggressive towards signal receivers. <em>Biology Letters</em>, 8(1), 10–12. <a href="https://doi.org/10.1098/rsbl.2011.0687" target="_blank" rel="noopener">https://doi.org/10.1098/rsbl.2011.0687</a></span></li>
+
+      <li><span class="apa-inner">Cheney, K. L., &amp; Côté, I. M. (2005). Frequency-dependent success of aggressive mimics in a cleaning symbiosis. <em>Proceedings of the Royal Society B</em>, 272(1581), 2635–2639. <a href="https://doi.org/10.1098/rspb.2005.3256" target="_blank" rel="noopener">https://doi.org/10.1098/rspb.2005.3256</a></span></li>
+
+      <li><span class="apa-inner">Cheney, K. L., Grutter, A. S., Blomberg, S. P., &amp; Marshall, N. J. (2009). Blue and yellow signal cleaning behavior in coral reef fishes. <em>Current Biology</em>, 19(15), 1283–1287. <a href="https://doi.org/10.1016/j.cub.2009.06.028" target="_blank" rel="noopener">https://doi.org/10.1016/j.cub.2009.06.028</a></span></li>
+
+      <li><span class="apa-inner">Cheney, K. L., Grutter, A. S., &amp; Marshall, N. J. (2008). Facultative mimicry: cues for colour change and colour accuracy in a coral reef fish. <em>Proceedings of the Royal Society B</em>, 275(1631), 117–122. <a href="https://doi.org/10.1098/rspb.2007.0966" target="_blank" rel="noopener">https://doi.org/10.1098/rspb.2007.0966</a></span></li>
+
+      <li><span class="apa-inner">Cheney, K. L., &amp; Marshall, N. J. (2009). Mimicry in coral reef fish: How accurate is this deception in terms of color and luminance? <em>Behavioral Ecology</em>, 20(3), 459–468. <a href="https://doi.org/10.1093/beheco/arp017" target="_blank" rel="noopener">https://doi.org/10.1093/beheco/arp017</a></span></li>
+
+      <li><span class="apa-inner">Chiao, C.-C., Wickiser, J. K., Allen, J. J., Genter, B., &amp; Hanlon, R. T. (2011). Hyperspectral imaging of cuttlefish camouflage indicates good color match in the eyes of fish predators. <em>Proceedings of the National Academy of Sciences</em>, 108(22), 9148–9153. <a href="https://doi.org/10.1073/pnas.1019090108" target="_blank" rel="noopener">https://doi.org/10.1073/pnas.1019090108</a></span></li>
+
+      <li><span class="apa-inner">Côté, I. M., &amp; Cheney, K. L. (2005). Animal mimicry: choosing when to be a cleaner-fish mimic. <em>Nature</em>, 433(7023), 211–212. <a href="https://doi.org/10.1038/433211a" target="_blank" rel="noopener">https://doi.org/10.1038/433211a</a></span></li>
+
+      <li><span class="apa-inner">Hogan, B. G., &amp; Stoddard, M. C. (2024). Hyperspectral imaging in animal coloration research: A user-friendly pipeline for image generation, analysis, and integration with 3D modeling. <em>PLOS Biology</em>, 22(12), e3002867. <a href="https://doi.org/10.1371/journal.pbio.3002867" target="_blank" rel="noopener">https://doi.org/10.1371/journal.pbio.3002867</a></span></li>
+
+      <li><span class="apa-inner">Kuwamura, T., Sato, H., &amp; Sakai, Y. (2022). Comparison of mortality and feeding behavior of the false cleanerfish and the lance blenny regarding the effects of mimicry. <em>Journal of Ethology</em>, 41(1), 73–77. <a href="https://doi.org/10.1007/s10164-022-00769-8" target="_blank" rel="noopener">https://doi.org/10.1007/s10164-022-00769-8</a></span></li>
+
+      <li><span class="apa-inner">Lettieri, L., Cheney, K. L., Mazel, C. H., Boothe, D., Marshall, N. J., &amp; Streelman, J. T. (2009). Cleaner gobies evolve advertising stripes of higher contrast. <em>Journal of Experimental Biology</em>, 212(14), 2194–2203. <a href="https://doi.org/10.1242/jeb.025478" target="_blank" rel="noopener">https://doi.org/10.1242/jeb.025478</a></span></li>
+
+      <li><span class="apa-inner">Luehrmann, M., Stieb, S. M., Carleton, K. L., Pietzker, A., Cheney, K. L., &amp; Marshall, N. J. (2018). Short-term colour vision plasticity on the reef: changes in opsin expression under varying light conditions differ between ecologically distinct fish species. <em>Journal of Experimental Biology</em>, 221(22), jeb175281. <a href="https://doi.org/10.1242/jeb.175281" target="_blank" rel="noopener">https://doi.org/10.1242/jeb.175281</a></span></li>
+
+      <li><span class="apa-inner">Siebeck, U. E., &amp; Marshall, N. J. (2000). Transmission of ocular media in labrid fishes. <em>Philosophical Transactions of the Royal Society B</em>, 355(1401), 1257–1261. <a href="https://doi.org/10.1098/rstb.2000.0679" target="_blank" rel="noopener">https://doi.org/10.1098/rstb.2000.0679</a></span></li>
+
+      <li><span class="apa-inner">Siebeck, U. E., Parker, A. N., Sprenger, D., Mäthger, L. M., &amp; Wallis, G. (2010). A species of reef fish that uses ultraviolet patterns for covert face recognition. <em>Current Biology</em>, 20(5), 407–410. <a href="https://doi.org/10.1016/j.cub.2009.12.047" target="_blank" rel="noopener">https://doi.org/10.1016/j.cub.2009.12.047</a></span></li>
+
+      <li><span class="apa-inner">Tea, Y.-K., Baraf, L., Menkara, Y., Ludt, W. B., Allen, G. R., Hobbs, J.-P. A., &amp; Cowman, P. F. (2026). Cleaning up the cleaner wrasses: Revision of the <em>Labroides phthirophagus</em> and <em>Labroides bicolor</em> species complexes, with rediagnosis of <em>Labroides quadrilineatus</em> and descriptions of two new species (Teleostei: Labridae). <em>Raffles Bulletin of Zoology</em>, 74, 403–443. <a href="https://lkcnhm.nus.edu.sg/wp-content/uploads/sites/11/2026/05/RBZ-2026-0027.pdf" target="_blank" rel="noopener">https://lkcnhm.nus.edu.sg/wp-content/uploads/sites/11/2026/05/RBZ-2026-0027.pdf</a></span></li>
+
+      <li><span class="apa-inner">Triki, Z., Li Richter, X.-Y., Demairé, C., Kurokawa, S., &amp; Bshary, R. (2022). Marine cleaning mutualism defies standard logic of supply and demand. <em>The American Naturalist</em>, 199(4), 455–467. <a href="https://doi.org/10.1086/718315" target="_blank" rel="noopener">https://doi.org/10.1086/718315</a></span></li>
+
+      <li><span class="apa-inner">Wilkins, L., Marshall, N. J., Johnsen, S., &amp; Osorio, D. (2016). Modelling colour constancy in fish: implications for vision and signalling in water. <em>Journal of Experimental Biology</em>, 219(12), 1884–1892. <a href="https://doi.org/10.1242/jeb.139147" target="_blank" rel="noopener">https://doi.org/10.1242/jeb.139147</a></span></li>
+    </ol>
+  </section>
+
+  <footer>
+    <span class="lab">Alfaro Lab · UCLA Ecology &amp; Evolutionary Biology</span>
+    <a href="https://michaelalfaro.github.io/alfaro-lab/" target="_blank" rel="noopener">michaelalfaro.github.io/alfaro-lab ↗</a>
+  </footer>
+
+</div>
+</body>
+</html>
