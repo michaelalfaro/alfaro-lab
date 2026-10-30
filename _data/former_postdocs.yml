@@ -1,0 +1,14 @@
+# Former postdocs shown as cards on the Team page (loop in _pages/team.md).
+# photo lives in images/teampic/, cv lives in assets/. Leave a field blank to omit it.
+- name: Renata Magalhães Pirani
+  photo: pirani.jpg
+  info: UCLA Chancellor's Postdoctoral Fellow, 2023–2025
+  now: Postdoctoral Researcher, Vale Institute of Technology, Brazil
+  website: https://renatapirani.com
+  cv: PiraniCV.pdf
+  blurb: >
+    Renata studies how historical and ecological processes generated the diversity of
+    Neotropical amphibians and reptiles, combining genomics, phylogeography, and comparative
+    methods. In the lab she asked how microhabitat and body size shape amphibian speciation
+    rates across biogeographic scales, and used genomic tools to predict climate adaptation
+    and vulnerability in the Atlantic Forest treefrog <em>Dendropsophus elegans</em>.

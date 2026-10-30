@@ -37,7 +37,7 @@ permalink: /team/
 <div class="col-sm-6 clearfix">
   <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
   <h4>{{ member.name }}</h4>
-  <i markdown="1">{{ member.info }}{% if member.email != "" %}<br>email: <{{ member.email }}>{% endif %}{% if member.website != "" %}<br>[website]({{member.website}}){% endif %}
+  <i markdown="1">{{ member.info }}{% if member.email != "" %}<br>email: <{{ member.email }}>{% endif %}{% if member.website %}<br>[website]({{member.website}}){% endif %}
   </i>
 
 
@@ -82,6 +82,23 @@ permalink: /team/
 {% endif %}
 
 
+## Former Postdocs
+{% for member in site.data.former_postdocs %}
+<div class="row">
+<div class="col-sm-6 clearfix">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" alt="{{ member.name }}" />
+  <h4>{{ member.name }}</h4>
+  <i markdown="1">{{ member.info }}{% if member.now %}<br>Now {{ member.now }}{% endif %}{% if member.website %}<br>[website]({{ member.website }}){% endif %}</i>
+  <br>
+  {% if member.cv %}<a href="{{ site.url }}{{ site.baseurl }}/assets/{{ member.cv }}" class="btn btn-primary btn-sm" style="background-color: #004B87; border-color: #004B87; margin-top: 8px;"><i class="glyphicon glyphicon-download-alt"></i> Download CV</a>{% endif %}
+</div>
+<div class="col-sm-6">
+  <p style="margin-top: 6px;">{{ member.blurb }}</p>
+</div>
+</div>
+{% endfor %}
+
+
 ## Alumni
 <table align="center" style="width:100%">
 <tr><th>Graduate Students</th>
@@ -90,7 +107,7 @@ permalink: /team/
   </tr>
   <tr>
     <td>Tyler McCraney, PhD 2025</td>
-    <td>Janet Buckner</td>
+    <td>Renata Pirani, 2023–2025</td>
     <td>David Cerny</td>
   </tr>
   <tr>
@@ -114,7 +131,12 @@ permalink: /team/
     <td></td>
   </tr>
   <tr>
-    <td>Jonathan Chang, PhD</td>
+    <td>Jonathan Chang, PhD 2017</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Janet Buckner, PhD 2017</td>
     <td></td>
     <td></td>
   </tr>
