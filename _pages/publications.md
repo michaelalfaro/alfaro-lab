@@ -1,8 +1,8 @@
 ---
 title: "Alfaro Lab - Publications"
 layout: gridlay
+description: "Publications and preprints from the Alfaro Lab at UCLA on fish phylogenetics, macroevolution, diversification, and color evolution."
 excerpt: "Alfaro Lab -- Publications."
-sitemap: false
 permalink: /publications/
 ---
 
@@ -10,15 +10,39 @@ permalink: /publications/
 
 My publications are also listed on [Google Scholar <i class="fas fa-external-link-alt"></i>](https://scholar.google.com/citations?user=_wlHRTUAAAAJ&hl=en){:target="_blank" onclick="trackCV()"} and [ORCID <i class="fas fa-external-link-alt"></i>](https://orcid.org/0000-0002-8898-8230){:target="_blank" onclick="trackCV()"}.
 
-[<i class="fas fa-search"></i> Search Publications]({{ site.url }}{{ site.baseurl }}/search/?query=publication){:.btn .btn-primary .float-right}
+<div class="form-group" style="max-width: 460px;">
+  <label for="pub-filter" class="sr-only">Filter publications</label>
+  <input type="search" id="pub-filter" class="form-control" placeholder="Filter by author, title, journal, or year" autocomplete="off">
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var box = document.getElementById('pub-filter');
+  if (!box) { return; }
+  var items = Array.prototype.slice.call(document.querySelectorAll('ol.bibliography > li'));
+  var headings = Array.prototype.slice.call(document.querySelectorAll('#gridid h2'));
+  box.addEventListener('input', function () {
+    var q = box.value.trim().toLowerCase();
+    items.forEach(function (li) {
+      li.style.display = (!q || li.textContent.toLowerCase().indexOf(q) !== -1) ? '' : 'none';
+    });
+    headings.forEach(function (h) {
+      var list = h.nextElementSibling;
+      while (list && list.tagName !== 'OL') { list = list.nextElementSibling; }
+      if (!list) { return; }
+      var anyVisible = Array.prototype.some.call(list.children, function (li) { return li.style.display !== 'none'; });
+      h.style.display = anyVisible ? '' : 'none';
+    });
+  });
+});
+</script>
 
-## Recent Publications
+## Preprints
 
-{% bibliography --max 10 %}
+{% bibliography --query @unpublished %}
 
-## All Publications
+## Publications
 
-{% bibliography %}
+{% bibliography --query @article %}
 
 <!-- Altmetric badges are loaded dynamically by publications-enhanced.js -->
 <!-- {% assign number_printed = 0 %}

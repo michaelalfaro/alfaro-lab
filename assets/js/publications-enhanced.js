@@ -23,7 +23,8 @@ function enhancePublications() {
         var listSize = items.length;
         // For the "All" list, start = totalPubs. For "Recent" (subset), also
         // start at totalPubs so the newest paper always gets the highest number.
-        var startNum = totalPubs;
+        // The largest list (Publications) counts down from the total; smaller lists (Preprints) count down from their own size.
+        var startNum = (listSize === totalPubs) ? totalPubs : listSize;
 
         items.forEach(function(pub, index) {
             pub.classList.add('publication-item');
@@ -59,7 +60,10 @@ function enhancePublications() {
     });
 
     // Add publication count badge
-    var bibliographyContainer = document.querySelector('.bibliography');
+    var bibliographyContainer = null;
+    allLists.forEach(function(ol) {
+        if (ol.querySelectorAll('li').length === totalPubs) bibliographyContainer = ol;
+    });
     if (bibliographyContainer && totalPubs > 0) {
         var countBadge = document.createElement('div');
         countBadge.className = 'publication-count';
