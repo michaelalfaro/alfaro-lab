@@ -1,3 +1,6 @@
 _site
 .sass-cache
 .jekyll-metadata
+.playwright-mcp/
+*.backup
+/*.png

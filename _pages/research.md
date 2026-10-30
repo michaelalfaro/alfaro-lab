@@ -1,8 +1,8 @@
 ---
 title: "Alfaro Lab - Research"
 layout: textlay
+description: "Research in the Alfaro Lab at UCLA: color pattern evolution, phylogenomics, and the macroevolution of fishes and other organisms."
 excerpt: "Alfaro Lab -- Research"
-sitemap: false
 permalink: /research/
 ---
 

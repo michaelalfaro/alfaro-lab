@@ -4,7 +4,7 @@
 // Modern Color Palette
 :root {
   --primary-blue: #1e3a8a;
-  --secondary-blue: #3b82f6;
+  --secondary-blue: #1d4ed8;
   --accent-gold: #f59e0b;
   --text-dark: #1f2937;
   --text-light: #6b7280;
@@ -349,17 +349,6 @@ textarea:focus {
 
 .fade-in-up {
   animation: fadeInUp 0.6s ease-out;
-}
-
-// Dark mode support (basic)
-@media (prefers-color-scheme: dark) {
-  // This would be expanded for full dark mode support
-  // For now, just ensure readability
-  
-  body {
-    background-color: #1a202c;
-    color: #e2e8f0;
-  }
 }
 
 // Enhanced Publications Styling

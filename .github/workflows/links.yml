@@ -1,0 +1,33 @@
+name: Check links
+
+on:
+  schedule:
+    - cron: "0 14 1 * *"   # 1st of every month, 14:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  linkcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check links on the live site
+        uses: lycheeverse/lychee-action@v2
+        with:
+          fail: true
+          args: >-
+            --no-progress
+            --max-concurrency 4
+            --accept 200..299,403,429
+            --exclude "scholar\\.google\\.com"
+            --exclude "doi\\.org"
+            --exclude "lsa\\.umich\\.edu"
+            --exclude "^mailto:"
+            https://michaelalfaro.github.io/alfaro-lab/
+            https://michaelalfaro.github.io/alfaro-lab/team/
+            https://michaelalfaro.github.io/alfaro-lab/research/
+            https://michaelalfaro.github.io/alfaro-lab/publications/
+            https://michaelalfaro.github.io/alfaro-lab/vacancies/
+            https://michaelalfaro.github.io/alfaro-lab/cv/
+            https://michaelalfaro.github.io/alfaro-lab/allnews.html

@@ -4,8 +4,10 @@
 	  <div class="row">
 		<div class="col-sm-4">
 			
-		  <p>&copy 2026 Alfaro Lab. Site made with <a href="https://jekyllrb.com">Jekyll</a>;  <a href="{{ site.url }}{{ site.baseurl }}/aboutwebsite.html">copy and  modify it for your own research group.</a></p>
+		  <p>&copy; 2026 Alfaro Lab. Site built with <a href="https://jekyllrb.com">Jekyll</a>; <a href="https://github.com/michaelalfaro/alfaro-lab">source on GitHub</a>.</p>
               <p>We are part of the <a href="https://www.eeb.ucla.edu/">Department of Ecology and Evolutionary Biology</a> at <a href="https://www.ucla.edu">UCLA</a>.</p>
+              <p>Email: <a href="mailto:michaelalfaro@ucla.edu">michaelalfaro@ucla.edu</a><br />
+              <a href="https://scholar.google.com/citations?user=_wlHRTUAAAAJ&amp;hl=en">Google Scholar</a> &middot; <a href="https://orcid.org/0000-0002-8898-8230">ORCID</a> &middot; <a href="https://github.com/michaelalfaro">GitHub</a></p>
             
 
 		   <p>  </p><p>
@@ -30,13 +32,13 @@
   </div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="{{ site.url }}{{ site.baseurl }}/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
+<script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
 
-<!-- Modern enhancements JavaScript -->
-<script src="{{ site.url }}{{ site.baseurl }}/assets/js/interactive-features.js"></script>
-<script src="{{ site.url }}{{ site.baseurl }}/assets/js/search.js"></script>
-<script src="{{ site.url }}{{ site.baseurl }}/assets/js/publications-enhanced.js"></script>
+<!-- Lunr.js must load before search.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha384-203J0SNzyqHby3iU6hzvzltrWi/M41wOP5Gu+BiJMz5nwKykbkUx8Kp7iti0Lpli" crossorigin="anonymous"></script>
 
-<!-- Lunr.js for search functionality -->
-<script src="https://unpkg.com/lunr/lunr.js"></script>
+<!-- Site JavaScript -->
+<script src="{{ site.baseurl }}/assets/js/interactive-features.js"></script>
+<script src="{{ site.baseurl }}/assets/js/search.js"></script>
+<script src="{{ site.baseurl }}/assets/js/publications-enhanced.js"></script>

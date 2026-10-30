@@ -1,8 +1,8 @@
 ---
 title: "CV"
 layout: gridlay
+description: "Curriculum vitae of Michael Alfaro, Professor and Chair of Ecology and Evolutionary Biology at UCLA."
 excerpt: "Alfaro Lab — CV"
-sitemap: false
 permalink: /cv/
 ---
 

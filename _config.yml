@@ -11,11 +11,31 @@ email: michaelalfaro@ucla.edu
 description: > # this means to ignore newlines until "baseurl:"
   phylogeny, macroevolution, diversification, phylogenomics, phenoscaping, fishes
 baseurl: "/alfaro-lab"
-url: "https://michaelalfaro.github.io/"
+url: "https://michaelalfaro.github.io"
 
 
 # Load plugins
-plugins: ['jekyll-scholar']
+plugins: ['jekyll-scholar', 'jekyll-seo-tag', 'jekyll-sitemap']
+
+# Default social-preview image for every page (jekyll-seo-tag)
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /images/slider7001400/alfaro2018_fish_phylo.jpg
+  # Keep PDFs and the unlinked standalone pages in the repo root out of the sitemap
+  - scope:
+      path: "assets"
+    values:
+      sitemap: false
+  - scope:
+      path: "*.html"
+    values:
+      sitemap: false
+  - scope:
+      path: "*.pdf"
+    values:
+      sitemap: false
 
 # Google analytics - Migrating from UA-82472331-1 to GA4
 google_analytics: "UA-82472331-1"  # Keep existing for transition
@@ -61,6 +81,9 @@ scholar:
   bibliography: references.bib
   bibliography_template: >
     {{reference}}
+    {% if entry.note %}
+    <span class="pub-note">{{ entry.note }}.</span>
+    {% endif %}
     {% if entry.doi %}
     <a href="https://doi.org/{{entry.doi}}" class="doi-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a>
     {% endif %}
@@ -74,8 +97,6 @@ scholar:
 
   query: "@*"
 
-# plugins
-plugins_dir: [jekyll-scholar]
 
 #jekyll-orcid https://github.com/mfenner/jekyll-orcid
 author:
