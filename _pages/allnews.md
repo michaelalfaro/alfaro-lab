@@ -1,8 +1,8 @@
 ---
-title: "Home"
+title: "Alfaro Lab - News"
 layout: textlay
-excerpt: "Alfaro Lab at UCLA."
-sitemap: false
+excerpt: "News from the Alfaro Lab at UCLA"
+description: "News from the Alfaro Lab at UCLA: new papers, degrees, awards, and lab members."
 permalink: /allnews.html
 ---
 
