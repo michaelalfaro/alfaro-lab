@@ -1,37 +1,31 @@
 ---
-title: "Alfaro Lab - Vacancies"
+title: "Alfaro Lab - Join the Lab"
 layout: textlay
-excerpt: "Openings"
-sitemap: false
-permalink: /vacancies
+excerpt: "Openings for graduate students, postdoctoral fellows, and undergraduates in the Alfaro Lab at UCLA"
+description: "How to join the Alfaro Lab at UCLA: PhD and Masters admissions in Ecology and Evolutionary Biology, postdoctoral fellowship sponsorship, and undergraduate research on fish macroevolution and color evolution."
+permalink: /vacancies/
 ---
 
-# Open positions
+# Join the lab
 
-If you have strong interests in macroevolution, biodiversity, and phylogenomics and would like to join our team please send me an [email](mailto:michaelalfaro@ucla.edu). 
+*Updated October 2026*
 
-## Postdoctoral Researchers
-We currently have no funded postdoctoral positions but I am happy to act as a sponsor NSF or other postdoctoral programs. 
+We study macroevolution and biodiversity: how fishes and other organisms diversified, how color patterns evolve, and how to build and use large phylogenies to answer these questions. If these problems excite you, send Michael an [email](mailto:michaelalfaro@ucla.edu) with a short description of your interests and a CV.
 
-## Graduate Researchers
-Please contact my by email if you are interested in applying for graduate study in the lab. Information about the graduate program is available [here](https://www.eeb.ucla.edu/graduate.php).
+## Graduate students
+
+We welcome applications from prospective PhD and Masters students through UCLA's [Department of Ecology and Evolutionary Biology](https://www.eeb.ucla.edu/graduate/). Please email Michael before you apply so we can talk about fit and possible projects. Deadlines, requirements, and funding information are on the [department's graduate pages](https://www.eeb.ucla.edu/graduate/).
+
+## Postdoctoral researchers
+
+We do not currently have funded postdoctoral positions. Michael is glad to sponsor strong candidates for fellowship applications, such as the UC President's and Chancellor's Postdoctoral Fellowships and the NSF Postdoctoral Research Fellowships in Biology. Get in touch well before the fellowship deadline so there is time to develop a proposal together.
 
 ## Undergraduates
-We are looking for new team members to help us with ongoing projects in these areas....
 
-1. An analysis of speciation and extinction in apes. Desired skills: interest/familiarity with ape and hominid evolution, interest/experience with scripting and command line operations.
-2. An examination of fish and cepahlopod macroevolution. Desired skills: interest/familiarity with cephalopds, interest/experience with scripting, command line operations, python programming.
-3. A study of evolutionary dynamics in complex biomechanical traits.  Desired skills: interest/familiarity in evolutionary dynamics, interest/experience with scripting, command line operations, python programming, C++ programming.
-4. Macroevolutionary dynamics of fishes. Desired skills: interst/familiarity with tensorflow and machine learning, interest/experience with python programming, command line operations, scripting, phylogenetics.
+UCLA undergraduates can join ongoing projects in these areas:
 
-In your email please identify which of these projects you are interested in pursuing as well as any relevant experience you might have. Please also include a CV. 
+1. **Color pattern evolution.** Measuring and comparing color patterns of fishes and birds from digital and hyperspectral images, and testing how those patterns evolve across the tree of life. Useful skills: R or Python, image analysis, and an interest in reef fishes or birds.
+2. **Phylogenomics and diversification of fishes.** Building phylogenies from sequence data and asking why some lineages are so much more diverse than others. Useful skills: the command line, R or Python, and phylogenetics.
+3. **Methods for trait evolution.** Developing and testing statistical models of how traits evolve on phylogenies. Useful skills: statistics, R, and programming.
 
-
-
-
-
-
-
-<figure>
-<img src="{{ site.url }}{{ site.baseurl }}/images/picpic/Gallery/DSC_0696.jpg" width="95%">
-</figure>
+In your email, say which area interests you, describe any relevant coursework or experience, and attach a CV.
