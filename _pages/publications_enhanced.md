@@ -1,6 +1,7 @@
 ---
 title: "Alfaro Lab - Publications"
 layout: gridlay
+search: false
 excerpt: "Alfaro Lab -- Publications."
 sitemap: false
 permalink: /publications-enhanced/

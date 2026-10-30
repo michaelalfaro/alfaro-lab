@@ -1,6 +1,8 @@
 ---
 title: "Alfaro Lab - Pictures"
 layout: piclay
+search: false
+sitemap: false
 excerpt: "Alfaro Lab -- Pictures"
 permalink: /pictures/
 ---

@@ -2,6 +2,8 @@
 layout: default
 title: "Search"
 permalink: /search/
+search: false
+sitemap: false
 ---
 
 # Search
@@ -29,7 +31,6 @@ permalink: /search/
     </div>
 </div>
 
-<script src="https://unpkg.com/lunr/lunr.js"></script>
 <script>
   window.store = {
     {% for post in site.posts %}
@@ -38,22 +39,21 @@ permalink: /search/
         "author": "{{ post.author | xml_escape }}",
         "category": "{{ post.category | xml_escape }}",
         "content": {{ post.content | strip_html | strip_newlines | jsonify }},
-        "url": "{{ post.url | xml_escape }}",
+        "url": "{{ site.baseurl }}{{ post.url | xml_escape }}",
         "tags": "{{ post.tags | join: ', ' }}"
       }
       {% unless forloop.last %},{% endunless %}
     {% endfor %}
-    {% assign pages_list = site.pages | where_exp: "item", "item.title != nil" %}
+    {% assign pages_list = site.pages | where_exp: "item", "item.title != nil and item.search != false" %}
     {% for page in pages_list %}
       ,"{{ page.url | slugify }}": {
         "title": "{{ page.title | xml_escape }}",
         "author": "",
         "category": "page",
         "content": {{ page.content | strip_html | strip_newlines | jsonify }},
-        "url": "{{ page.url | xml_escape }}",
+        "url": "{{ site.baseurl }}{{ page.url | xml_escape }}",
         "tags": ""
       }
     {% endfor %}
   };
 </script>
-<script src="{{ site.baseurl }}/assets/js/search.js"></script>
