@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why corallivory tracks depth</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* layout: one reading column, evidence as stacked cards, one depth diagram */
+  --bg:#f7f9fa; --surface:#ffffff; --ink:#15232b; --muted:#5a6b75;
+  --line:#d3dde3; --accent:#0d5c78; --coral:#d9633b; --coral-soft:#fbe9e1;
+  --quote-bg:#eef4f7;
+  --display:"IBM Plex Serif",Georgia,"Times New Roman",serif;
+  --body:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f181e; --surface:#16232b; --ink:#e6edf1; --muted:#9fb0ba;
+    --line:#2b3b45; --accent:#6cc1e3; --coral:#f08a63; --coral-soft:#3a2520;
+    --quote-bg:#1c2b34; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f181e; --surface:#16232b; --ink:#e6edf1; --muted:#9fb0ba;
+  --line:#2b3b45; --accent:#6cc1e3; --coral:#f08a63; --coral-soft:#3a2520;
+  --quote-bg:#1c2b34; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;padding:32px 16px 64px}
+main{max-width:860px;margin:0 auto}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.2;text-wrap:balance;margin:0}
+h1{font-size:2.1rem}
+h2{font-size:1.45rem;margin-top:2.6rem;padding-top:1.2rem;border-top:1px solid var(--line)}
+h3{font-size:1.1rem}
+p{max-width:68ch;margin:0.8rem 0}
+.lede{font-size:1.15rem;color:var(--muted);max-width:68ch;margin-top:0.6rem}
+.byline{color:var(--muted);font-size:0.9rem;margin-top:0.4rem}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.claim{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--coral);padding:16px 20px;margin:1.4rem 0;border-radius:6px}
+.claim p{margin:0.4rem 0}
+.chain{list-style:none;padding:0;margin:1rem 0;display:grid;gap:10px}
+.chain li{display:grid;grid-template-columns:38px 1fr;gap:12px;align-items:start}
+.chain .n{font-family:var(--mono);color:var(--coral);font-size:0.95rem;padding-top:3px}
+.chain li p{margin:0}
+figure{margin:1.6rem 0;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px;overflow-x:auto}
+figure svg{max-width:100%;height:auto;display:block;min-width:640px}
+figcaption{font-size:0.92rem;color:var(--muted);margin-top:10px;max-width:72ch}
+.cards{display:grid;gap:18px;margin-top:1rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:18px 20px}
+.card header{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:baseline;margin-bottom:6px}
+.card header h3{flex:1 1 320px}
+.tag{font-family:var(--mono);font-size:0.78rem;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 9px;white-space:nowrap}
+.tag.oa{color:var(--accent);border-color:var(--accent)}
+.card .summary{margin:0.4rem 0 0.6rem;max-width:72ch}
+.supports{font-size:0.95rem;margin:0.4rem 0;max-width:72ch}
+.supports b{color:var(--coral)}
+blockquote{margin:0.7rem 0;padding:10px 14px;background:var(--quote-bg);border-left:3px solid var(--accent);border-radius:4px;font-family:var(--display);font-size:0.98rem;max-width:72ch}
+blockquote cite{display:block;font-family:var(--mono);font-style:normal;font-size:0.78rem;color:var(--muted);margin-top:6px}
+.links{font-size:0.9rem;color:var(--muted);margin-top:0.6rem}
+.links code{font-family:var(--mono);font-size:0.8rem;background:var(--quote-bg);padding:1px 5px;border-radius:3px;word-break:break-all}
+table{border-collapse:collapse;width:100%;font-size:0.95rem;margin:1rem 0}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600;color:var(--muted);font-size:0.85rem;letter-spacing:0.02em}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.rec{display:grid;gap:10px;padding-left:1.3rem;margin:0.8rem 0}
+.rec li{max-width:68ch}
+.refs{font-size:0.92rem;padding-left:1.2rem;display:grid;gap:8px;margin:1rem 0}
+.refs li{max-width:80ch}
+.note{font-size:0.9rem;color:var(--muted);max-width:72ch}
+@media (max-width:480px){body{font-size:16px;padding:20px 16px 48px}h1{font-size:1.7rem}}
+@media (prefers-reduced-motion: reduce){*{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<main>
+<h1>Why corallivory tracks depth in butterflyfishes</h1>
+<p class="lede">The negative relationship between corallivory and depth in the Andriotis et al. butterflyfish manuscript is the expected outcome of light limiting where reef-building corals can live. It is a resource constraint, not an evolutionary association that needs explaining.</p>
+<p class="byline">Michael Alfaro, 2 November 2026. Page numbers refer to the open-access PDFs linked under each paper.</p>
+
+<h2>What the manuscript reports</h2>
+<div class="claim">
+<p><b>Test.</b> A phylogenetic logistic regression of corallivory (facultative plus obligate, versus non-coral feeding) on mean depth from FishBase, with no other predictor.</p>
+<p><b>Result.</b> &beta; = &minus;0.0137 &plusmn; 0.0059, z = &minus;2.335, P = 0.020: the probability of corallivory declines with depth.</p>
+<p><b>Categorical version.</b> Depth binned as shallow (&le;20 m), mid (21&ndash;50 m) and extreme (&gt;50 m). Obligate corallivores fall mostly in the shallow bin (16 of 23). Non-coral feeders are described as concentrated in deep environments (26 of 53, under half).</p>
+<p><b>Diet.</b> Obligate corallivores take nearly 100% of bites from scleractinian corals, and Acropora is taken at a higher rate than Montipora (manuscript Fig. 4b).</p>
+</div>
+
+<h2>The argument in five steps</h2>
+<ol class="chain">
+<li><span class="n">1</span><p>Reef-building corals are photosymbiotic. Their depth distribution is set by light, and the shallow-to-mesophotic community transition sits near 40 m in clear water and shallower elsewhere (Tamir et al. 2019; Laverick et al. 2017).</p></li>
+<li><span class="n">2</span><p>The branching corals that obligate butterflyfishes eat are shallow specialists. Acropora and Stylophora colonies drop by 67% and 96% between 40 and 50 m in Eilat and are absent below 60 m; staghorn corals on the Great Barrier Reef become scarce below 50 m (Tamir et al. 2019; Muir et al. 2015).</p></li>
+<li><span class="n">3</span><p>What coral persists deeper is a different resource. Lower mesophotic communities are sparse, and below 100 m they are almost entirely plating Leptoseris (Englebert et al. 2017). Total cover can stay high locally at 40&ndash;60 m, but composition shifts away from the genera obligates prefer (P&eacute;rez-Rosales et al. 2022).</p></li>
+<li><span class="n">4</span><p>Fish assemblages follow the resource. Corallivores are more common in the shallows and decline with depth across a 2&ndash;85 m gradient in Raja Ampat (Andradi-Brown et al. 2021). Within a single reef, obligate hard-coral feeders track live coral cover (Pratchett &amp; Berumen 2008). Mesophotic assemblages are dominated by planktivores and invertivores (Fukunaga et al. 2016).</p></li>
+<li><span class="n">5</span><p>The manuscript's extreme bin (&gt;50 m) therefore begins where the obligates' prey runs out, and its deep lineages (Prognathodes, Roa) live on rubble and walls at 45&ndash;216 m (Pyle &amp; Kosaki 2016; Copus et al. 2019; Baldwin et al. 2018). A negative depth coefficient is close to guaranteed by resource distribution, with no coral-availability covariate in the model to say otherwise.</p></li>
+</ol>
+
+<figure>
+<svg viewBox="0 0 780 560" role="img" aria-label="Depth profile from 0 to 150 metres showing the manuscript's three depth bins beside the depth range of branching corals, the mesophotic transition, and where corallivorous and non-corallivorous butterflyfishes occur. Branching coral availability collapses between 40 and 60 metres, which is where the manuscript's extreme bin begins." font-family="IBM Plex Sans, Helvetica, Arial, sans-serif" font-size="12" fill="currentColor" stroke="none">
+  <!-- depth scale: y = 40 + 3*depth -->
+  <text x="20" y="22" font-size="11" fill="currentColor" opacity="0.7">depth</text>
+  <line x1="70" y1="40" x2="70" y2="490" stroke="currentColor" stroke-width="1"/>
+  <g stroke="currentColor" stroke-width="1">
+    <line x1="64" y1="40" x2="70" y2="40"/><line x1="64" y1="100" x2="70" y2="100"/><line x1="64" y1="190" x2="70" y2="190"/><line x1="64" y1="340" x2="70" y2="340"/><line x1="64" y1="490" x2="70" y2="490"/>
+  </g>
+  <g text-anchor="end" font-size="11">
+    <text x="58" y="44">0 m</text><text x="58" y="104">20</text><text x="58" y="194">50</text><text x="58" y="344">100</text><text x="58" y="494">150 m</text>
+  </g>
+  <g stroke="currentColor" stroke-width="0.5" opacity="0.18">
+    <line x1="70" y1="100" x2="770" y2="100"/><line x1="70" y1="190" x2="770" y2="190"/><line x1="70" y1="340" x2="770" y2="340"/>
+  </g>
+
+  <!-- column A: manuscript bins -->
+  <text x="90" y="22" font-size="12" font-weight="600">Manuscript depth bins</text>
+  <g fill="none" stroke="currentColor" stroke-width="1.2">
+    <rect x="90" y="40" width="120" height="60"/>
+    <rect x="90" y="100" width="120" height="90"/>
+    <rect x="90" y="190" width="120" height="300"/>
+  </g>
+  <text x="150" y="74" text-anchor="middle">shallow &#8804;20 m</text>
+  <text x="150" y="149" text-anchor="middle">mid 21&#8211;50 m</text>
+  <text x="150" y="330" text-anchor="middle">extreme &gt;50 m</text>
+  <text x="150" y="348" text-anchor="middle" font-size="11" opacity="0.7">(upper mesophotic)</text>
+
+  <!-- column B: coral availability -->
+  <text x="240" y="22" font-size="12" font-weight="600">Branching-coral availability</text>
+  <g fill="#d9633b">
+    <rect x="240" y="40" width="60" height="120" opacity="0.85"/>
+    <rect x="240" y="160" width="60" height="30" opacity="0.5"/>
+    <rect x="240" y="190" width="60" height="30" opacity="0.28"/>
+    <rect x="240" y="220" width="60" height="120" opacity="0.14"/>
+    <rect x="240" y="340" width="60" height="150" opacity="0.06"/>
+  </g>
+  <line x1="240" y1="160" x2="300" y2="160" stroke="#d9633b" stroke-width="2"/>
+  <g font-size="11">
+    <text x="310" y="58">Acropora, Pocillopora, Stylophora dominant</text>
+    <text x="310" y="74" opacity="0.75">branching corals mainly above 36&#8211;40 m (Eilat)</text>
+    <text x="310" y="156" font-weight="600">40 m: shallow-to-mesophotic transition</text>
+    <text x="310" y="182">Acropora &#8722;67%, Stylophora &#8722;96% (40&#8594;50 m, Eilat)</text>
+    <text x="310" y="212">staghorns scarce below 50 m (GBR)</text>
+    <text x="310" y="226" opacity="0.75">none of the branching genera below 60 m (Eilat)</text>
+    <text x="310" y="262">sparse; plating Leptoseris, Montipora, Porites</text>
+    <text x="310" y="278" opacity="0.75">most diverse lower-mesophotic zone 60&#8211;80 m (GBR)</text>
+    <text x="310" y="372">almost exclusively Leptoseris below 100 m</text>
+    <text x="310" y="388" opacity="0.75">last photosymbiotic corals near 125&#8211;150 m</text>
+  </g>
+
+  <!-- column C: butterflyfishes -->
+  <text x="590" y="22" font-size="12" font-weight="600">Butterflyfishes</text>
+  <rect x="590" y="40" width="170" height="60" fill="none" stroke="#d9633b" stroke-width="1.5"/>
+  <text x="675" y="66" text-anchor="middle" font-size="11">16 of 23 obligate corallivores</text>
+  <text x="675" y="82" text-anchor="middle" font-size="11" opacity="0.75">in the shallow bin</text>
+  <defs><marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker></defs>
+  <line x1="605" y1="112" x2="605" y2="290" stroke="currentColor" stroke-width="1.2" marker-end="url(#arrowhead)"/>
+  <text x="615" y="150" font-size="11">corallivore abundance</text>
+  <text x="615" y="165" font-size="11">declines with depth</text>
+  <text x="615" y="180" font-size="11" opacity="0.75">(BRUVs 2&#8211;85 m, Raja Ampat)</text>
+  <text x="615" y="215" font-size="11">obligates track live</text>
+  <text x="615" y="230" font-size="11">coral cover within a reef</text>
+  <rect x="590" y="175" width="170" height="315" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="675" y="330" text-anchor="middle" font-size="11">deep Prognathodes and Roa</text>
+  <text x="675" y="346" text-anchor="middle" font-size="11" opacity="0.75">rubble and walls, 45&#8211;216 m</text>
+  <text x="675" y="362" text-anchor="middle" font-size="11" opacity="0.75">non-coral feeders</text>
+
+  <text x="70" y="530" font-size="11" opacity="0.7">Coral band darkness is a qualitative summary of the sources cited below, not measured cover.</text>
+</svg>
+<figcaption>Where the manuscript's depth bins fall against the depth range of branching corals and the distribution of butterflyfishes. The extreme bin starts at the depth where Acropora and Stylophora have already collapsed, so the deep lineages had no hard-coral resource to be corallivores on.</figcaption>
+</figure>
+
+<h2>Primary evidence, with the supporting passages</h2>
+<div class="cards">
+
+<article class="card" id="tamir">
+<header><h3>Tamir, Eyal, Kramer, Laverick &amp; Loya (2019). Light environment drives the shallow-to-mesophotic coral community transition. <i>Ecosphere</i> 10(9): e02839.</h3><span class="tag oa">open access</span><span class="tag">Gulf of Eilat, 0&ndash;100 m</span></header>
+<p class="summary">Technical-diving and drop-camera surveys at five sites with a year of spectral light measurements. Two coral assemblages separate at 40 m, and genus depth ranges are predicted better by light than by depth.</p>
+<p class="supports"><b>Supports:</b> steps 1 and 2. Coral distribution is light-limited and the branching genera that obligate corallivores eat are shallow specialists.</p>
+<blockquote>We quantify two distinct coral assemblages: shallow (&lt;40 m) and MCEs (40&ndash;100 m), exhibiting markedly different relationships with light. The depth ranges and morphology of 47 coral genera were better explained by light than depth, mainly, due to photosynthetically active radiation (PAR) and ultraviolet radiation (UVR) (1% at 76 and 36 m, respectively). Branching coral species were found mainly at shallower depths, that is, down to 36 m.<cite>Abstract, PDF p. 1</cite></blockquote>
+<blockquote>Branching coral species are shallow-specialists, found mainly above 40 m (Figs. 2, 3). Acropora spp. and Stylophora pistillata, the most common branching corals at the GoE/A (Fig. 3), were found in limited abundance deeper than this line, with a reduction of 67% (Acropora spp.) and 96% (S. pistillata) in the number of colonies between 40 and 50 m. None of those genera were found deeper than 60 m.<cite>Results, PDF p. 5; see Figs. 2 and 3 for genus depth ranges</cite></blockquote>
+<blockquote>We suggest that shallow coral genera are light-limited below a level of 1.25% surface PAR and that the optimal PAR for mesophotic communities is at 7.5%.<cite>Abstract, PDF p. 1; fitted on p. 8</cite></blockquote>
+<p class="links"><a href="https://doi.org/10.1002/ecs2.2839">doi:10.1002/ecs2.2839</a> &middot; <a href="https://zenodo.org/record/3712831">PDF on Zenodo</a> &middot; has a published erratum (not a retraction)</p>
+</article>
+
+<article class="card" id="muir">
+<header><h3>Muir, Wallace, Bridge &amp; Bongaerts (2015). Diverse staghorn coral fauna on the mesophotic reefs of north-east Australia. <i>PLOS ONE</i> 10(2): e0117933.</h3><span class="tag oa">open access</span><span class="tag">GBR and Coral Sea, 30&ndash;150 m</span></header>
+<p class="summary">Specimen-based survey of Acropora and Isopora below 30 m using SCUBA to 40 m and ROV to 150 m. Staghorns are diverse in the upper mesophotic but thin out quickly below 50 m.</p>
+<p class="supports"><b>Supports:</b> step 2. The manuscript's extreme bin begins where staghorn corals become scarce.</p>
+<blockquote>Staghorn corals became scarce at depths below 50 m but were found growing in-situ to 73 m depth. Of the 76 staghorn coral species recorded for shallow waters (depth &le; 30 m) in north-east Australia, 21% extended to mesophotic depths with a further 22% recorded only rarely to 40 m depth.<cite>Abstract, PDF p. 1</cite></blockquote>
+<blockquote>Deepest recorded Acropora for the region. Acropora colonies became scare [sic] and reduced in size beyond 50 m depth but extended to 73 m at some sites.<cite>Fig. 5 caption, PDF p. 7</cite></blockquote>
+<blockquote>We identify some overlap in shallow reef and mesophotic staghorn faunas, with 21% of shallow reef species also recorded in the mesophotic zone (depth generalists) and a further 22% recorded on only one or two occasions from 30 to 40 m depth (marginal depth generalists, Tables 1 and 2).<cite>Discussion, PDF p. 12</cite></blockquote>
+<p class="links"><a href="https://doi.org/10.1371/journal.pone.0117933">doi:10.1371/journal.pone.0117933</a></p>
+</article>
+
+<article class="card" id="englebert">
+<header><h3>Englebert, Bongaerts, Muir, Hay, Pichon &amp; Hoegh-Guldberg (2017). Lower mesophotic coral communities (60&ndash;125 m depth) of the northern Great Barrier Reef and Coral Sea. <i>PLOS ONE</i> 12(2): e0170336.</h3><span class="tag oa">open access</span><span class="tag">GBR and Coral Sea, 60&ndash;125 m</span></header>
+<p class="summary">ROV assessment at ten locations. Zooxanthellate corals reach about 100 m on walls and 125 m on slopes, but the deep community is sparse and taxonomically narrow.</p>
+<p class="supports"><b>Supports:</b> step 3. Coral that persists below the transition is a different, plating resource, not the branching corals obligates feed on.</p>
+<blockquote>Lower mesophotic coral communities were present at all 10 locations, with zooxanthellate scleractinian corals extending down to ~100 metres on walls and ~125 m on steep slopes. Lower mesophotic coral communities were most diverse in the 60&ndash;80 m zone, while at depths of &ge;100 m the coral community consisted almost exclusively of the genus Leptoseris.<cite>Abstract, PDF p. 1</cite></blockquote>
+<blockquote>Across the lower mesophotic zone (60&ndash;120 m), the most abundant and diverse zooxanthellate scleractinian coral communities were observed in the shallowest depth range of 60&ndash;80 m.<cite>Results, Coral community structure, PDF p. 8</cite></blockquote>
+<blockquote>Light availability is one of the key factors determining the vertical distribution of zooxanthellate scleractinian corals and is, to a large extent, predictable over depth due to the light attenuation characteristics of the water column.<cite>Introduction</cite></blockquote>
+<p class="links"><a href="https://doi.org/10.1371/journal.pone.0170336">doi:10.1371/journal.pone.0170336</a></p>
+</article>
+
+<article class="card" id="laverick">
+<header><h3>Laverick, Andradi-Brown &amp; Rogers (2017). Using light-dependent scleractinia to define the upper boundary of mesophotic coral ecosystems on the reefs of Utila, Honduras. <i>PLOS ONE</i> 12(8): e0183075.</h3><span class="tag oa">open access</span><span class="tag">Caribbean, to 85 m</span></header>
+<p class="summary">Rebreather transects across shallow-to-mesophotic gradients. The shallow and mesophotic coral assemblages are distinct, and the boundary between them moves with local conditions rather than sitting at a fixed 30 m.</p>
+<p class="supports"><b>Supports:</b> step 1. The coral resource changes abruptly with depth, and a fixed depth bin is a crude proxy for that change.</p>
+<blockquote>The switch between these two communities occurred across bathymetric gradients as small as 10m and as large as 50m in depth. The difference between communities appears to be a loss of shallow specialists and increase in depth-generalist taxa.<cite>Abstract, PDF p. 1</cite></blockquote>
+<blockquote>However, on transects for Rocky Point and Raggedy Cay, communities identified as shallow or MCE were on one occasion each separated by 10m of water vertically, demonstrating remarkable changes in community structure with small changes in depth (Fig 5).<cite>Discussion, PDF p. 11</cite></blockquote>
+<blockquote>The changes in scleractinian community structure indicate a loss of shallow specialists and rising dominance of depth-generalists with increasing depth.<cite>Discussion, PDF p. 11</cite></blockquote>
+<p class="links"><a href="https://doi.org/10.1371/journal.pone.0183075">doi:10.1371/journal.pone.0183075</a></p>
+</article>
+
+<article class="card" id="andradi">
+<header><h3>Andradi-Brown, Beer, Colin, Hastuti, Head, Hidayat, Lindfield, Mitchell, Pada, Piesinger, Purwanto &amp; Ahmadia (2021). Highly diverse mesophotic reef fish communities in Raja Ampat, West Papua. <i>Coral Reefs</i> 40: 111&ndash;130.</h3><span class="tag oa">open access</span><span class="tag">Coral Triangle, 2&ndash;85 m</span></header>
+<p class="summary">Baited remote underwater video across three depth bands: shallow 2&ndash;12 m, mid 15&ndash;30 m, mesophotic 40&ndash;85 m. Fish community structure is strongly depth-driven, and corallivores are a shallow group.</p>
+<p class="supports"><b>Supports:</b> step 4. Corallivorous fishes as a guild are concentrated where the coral is, in the shallows, and decline with depth.</p>
+<blockquote>We found that MCE fish communities shifted toward increased mobile invertebrate feeders and piscivores at deeper depths and away from omnivores, corallivores, and planktivores which were more common in the shallows (Fig. 3A). Increases in piscivore abundance on MCEs compared to shallow reefs is consistent with other studies, as are declines in omnivores and corallivores (Abesamis et al. 2018; Quimpo et al. 2019).<cite>Discussion, Fish abundance and community structure across the depth gradient; preprint PDF p. 19</cite></blockquote>
+<blockquote>We tested for differences in overall abundance of each trophic group across the depth gradient, finding that abundance of herbivores, planktivores, corallivores, and piscivores and mobile invertebrate feeders declined at increased depth (Table 3).<cite>Results, Fish trophic structure; preprint PDF p. 13 (preprint wording lists herbivores, planktivores, omnivores and corallivores)</cite></blockquote>
+<blockquote>Six corallivores with significant depth effects were more abundant on shallow reefs than MCEs.<cite>Results, Fish trophic structure; trophic abundance by depth in Fig. 4a and Table 3</cite></blockquote>
+<blockquote>Habitat complexity declined as depth increased.<cite>Results, Benthic habitat complexity; preprint PDF p. 11; Fig. 2a</cite></blockquote>
+<p class="links"><a href="https://doi.org/10.1007/s00338-020-02020-7">doi:10.1007/s00338-020-02020-7</a> (CC BY, published PDF downloadable from the article page) &middot; <a href="https://www.biorxiv.org/content/10.1101/640490v2">bioRxiv preprint</a></p>
+</article>
+
+<article class="card" id="pratchett">
+<header><h3>Pratchett &amp; Berumen (2008). Interspecific variation in distributions and diets of coral reef butterflyfishes (Teleostei: Chaetodontidae). <i>Journal of Fish Biology</i> 73: 1730&ndash;1747.</h3><span class="tag">subscription (UCLA access)</span><span class="tag">Lizard Island, within-reef zones</span></header>
+<p class="summary">Within-reef distributions of 19 butterflyfish species across physiognomic reef zones, compared against diet. Obligate hard-coral feeders go where the coral is.</p>
+<p class="supports"><b>Supports:</b> step 4, at the within-reef scale. If obligates track coral cover across zones on one reef, they will track it across depth as well.</p>
+<blockquote>Distributions of obligate hard-coral feeders were closely associated with spatial variation in percentage cover of scleractinian corals, but no more restricted compared with facultative hard-coral feeders or non-coral feeders. Species with highest dietary specialization (C. trifascialis and C. baronessa), however, exhibited the most pronounced zonation patterns and were restricted to habitats with greatest abundance of their preferred prey.<cite>Abstract (full text not open access; verified from the abstract only)</cite></blockquote>
+<p class="links"><a href="https://doi.org/10.1111/j.1095-8649.2008.02062.x">doi:10.1111/j.1095-8649.2008.02062.x</a></p>
+</article>
+
+</div>
+
+<h2>Secondary support, verified from abstracts</h2>
+<table>
+<thead><tr><th>Paper</th><th>What it adds</th><th>Passage</th></tr></thead>
+<tbody>
+<tr><td><a href="https://doi.org/10.1890/09-0313.1">Lesser et al. 2010, <i>Ecology</i> 91: 990&ndash;1003</a></td><td>Light restricts most corals to 60 m or less; even a depth-generalist coral switches to heterotrophy at mid-mesophotic depths.</td><td>&ldquo;it restricts the distribution of most species of coral to depths of 60 m or less&rdquo; and &ldquo;a sharp transition to heterotrophy between 45 and 61 m&rdquo; (Abstract).</td></tr>
+<tr><td><a href="https://doi.org/10.1111/ddi.13549">P&eacute;rez-Rosales et al. 2022, <i>Diversity and Distributions</i> 28: 1391&ndash;1403</a></td><td>The honest caveat: cover is not monotonic and generic richness peaks near 40 m. Composition, not cover, is what removes the obligates' prey.</td><td>&ldquo;higher alpha and beta generic diversity than shallow reefs despite decreasing coral cover with depth ... a mid-domain effect with a peak at 40 m depth&rdquo; (Abstract); &ldquo;at some sites, it was as high or even higher in the 40 and 60 m zone than on the shallows (e.g. 81% at 40 m or 70% at 60 m)&rdquo; (Results).</td></tr>
+<tr><td><a href="https://doi.org/10.1371/journal.pone.0157861">Fukunaga et al. 2016, <i>PLOS ONE</i> 11: e0157861</a></td><td>Mesophotic fish assemblages are built from planktivores and invertivores, the diets of the deep chaetodontids.</td><td>&ldquo;characterized by relatively high densities of planktivores and invertivores and relatively low densities of herbivores&rdquo; (Abstract).</td></tr>
+<tr><td><a href="https://doi.org/10.3897/zookeys.614.10200">Pyle &amp; Kosaki 2016, <i>ZooKeys</i> 614: 137&ndash;152</a></td><td>Prognathodes basabei, one of the manuscript's deep lineages, is a mesophotic fish.</td><td>&ldquo;observed by mixed-gas divers and from submersibles at depths ranging from 45&ndash;187 m throughout the Hawaiian Archipelago&rdquo; (Abstract).</td></tr>
+<tr><td><a href="https://doi.org/10.3897/zookeys.835.32562">Copus et al. 2019, <i>ZooKeys</i> 835: 125&ndash;137</a></td><td>Prognathodes geminus lives on bare limestone, not coral.</td><td>&ldquo;collected at a depth of 116 m&rdquo; (Abstract); &ldquo;encountered among a patch of limestone rubble at the base of a prominent limestone outcropping&rdquo; and &ldquo;in association with limestone outcroppings on steep slopes at depths of 110&ndash;150 m&rdquo; (Introduction and Remarks).</td></tr>
+<tr><td><a href="https://doi.org/10.1038/s41598-018-23067-1">Baldwin et al. 2018, <i>Scientific Reports</i> 8: 4920</a></td><td>Prognathodes guyanensis is a rariphotic fish, below the last zooxanthellate corals.</td><td>Table: <i>Prognathodes guyanensis</i>, depth range off Cura&ccedil;ao 97&ndash;216 m, global 60&ndash;250 m.</td></tr>
+</tbody>
+</table>
+
+<h2>What this means for the manuscript</h2>
+<p>Nothing in the depth analyses controls for coral availability, and in practice nothing could: for these fishes, coral availability is the main thing depth measures. So the regression cannot distinguish an evolutionary association from a resource constraint, and the resource constraint alone predicts the sign.</p>
+<ol class="rec">
+<li><b>Keep the depth thread, reframed.</b> State that corallivory is confined to the photic zone where branching corals occur, so the depth&ndash;diet coupling is expected. The content worth keeping is the ordering of transitions: no direct shallow-to-extreme moves, and obligate corallivory entered only through facultative corallivory.</li>
+<li><b>Move the phyloglm to the SI or drop it.</b> The PLS and pGLS already carry the depth signal with far better support, and the regression is never discussed.</li>
+<li><b>If a depth&ndash;diet test is wanted, make it one resource availability cannot explain.</b> Either fit Pagel's correlated-evolution model on diet and depth as binaries and read the transition order (lose corallivory then go deep, or go deep then lose it), or refit the regression on species with mean depth of 50 m or less. A decline within the zone where coral exists would be a result.</li>
+<li><b>Soften the wording.</b> Non-coral feeders in the deep bin are 26 of 53, under half, so &ldquo;concentrated&rdquo; overstates it.</li>
+</ol>
+
+<h2>References</h2>
+<ol class="refs">
+<li>Andradi-Brown, D. A., Beer, A. J. E., Colin, L., et al. (2021). Highly diverse mesophotic reef fish communities in Raja Ampat, West Papua. <i>Coral Reefs</i>, 40(1), 111&ndash;130. <a href="https://doi.org/10.1007/s00338-020-02020-7">https://doi.org/10.1007/s00338-020-02020-7</a></li>
+<li>Baldwin, C. C., Tornabene, L., &amp; Robertson, D. R. (2018). Below the mesophotic. <i>Scientific Reports</i>, 8, 4920. <a href="https://doi.org/10.1038/s41598-018-23067-1">https://doi.org/10.1038/s41598-018-23067-1</a></li>
+<li>Copus, J. M., Pyle, R. L., Greene, B. D., &amp; Randall, J. E. (2019). <i>Prognathodes geminus</i>, a new species of butterflyfish (Teleostei, Chaetodontidae) from Palau. <i>ZooKeys</i>, 835, 125&ndash;137. <a href="https://doi.org/10.3897/zookeys.835.32562">https://doi.org/10.3897/zookeys.835.32562</a></li>
+<li>Englebert, N., Bongaerts, P., Muir, P. R., Hay, K. B., Pichon, M., &amp; Hoegh-Guldberg, O. (2017). Lower mesophotic coral communities (60&ndash;125 m depth) of the northern Great Barrier Reef and Coral Sea. <i>PLOS ONE</i>, 12(2), e0170336. <a href="https://doi.org/10.1371/journal.pone.0170336">https://doi.org/10.1371/journal.pone.0170336</a></li>
+<li>Fukunaga, A., Kosaki, R. K., Wagner, D., &amp; Kane, C. (2016). Structure of mesophotic reef fish assemblages in the Northwestern Hawaiian Islands. <i>PLOS ONE</i>, 11(7), e0157861. <a href="https://doi.org/10.1371/journal.pone.0157861">https://doi.org/10.1371/journal.pone.0157861</a></li>
+<li>Laverick, J. H., Andradi-Brown, D. A., &amp; Rogers, A. D. (2017). Using light-dependent scleractinia to define the upper boundary of mesophotic coral ecosystems on the reefs of Utila, Honduras. <i>PLOS ONE</i>, 12(8), e0183075. <a href="https://doi.org/10.1371/journal.pone.0183075">https://doi.org/10.1371/journal.pone.0183075</a></li>
+<li>Lesser, M. P., Slattery, M., Stat, M., Ojimi, M., Gates, R. D., &amp; Grottoli, A. (2010). Photoacclimatization by the coral <i>Montastraea cavernosa</i> in the mesophotic zone: light, food, and genetics. <i>Ecology</i>, 91(4), 990&ndash;1003. <a href="https://doi.org/10.1890/09-0313.1">https://doi.org/10.1890/09-0313.1</a></li>
+<li>Muir, P., Wallace, C., Bridge, T. C. L., &amp; Bongaerts, P. (2015). Diverse staghorn coral fauna on the mesophotic reefs of north-east Australia. <i>PLOS ONE</i>, 10(2), e0117933. <a href="https://doi.org/10.1371/journal.pone.0117933">https://doi.org/10.1371/journal.pone.0117933</a></li>
+<li>P&eacute;rez-Rosales, G., Pichon, M., Rouz&eacute;, H., et al. (2022). Mesophotic coral ecosystems of French Polynesia are hotspots of alpha and beta generic diversity for scleractinian assemblages. <i>Diversity and Distributions</i>, 28(7), 1391&ndash;1403. <a href="https://doi.org/10.1111/ddi.13549">https://doi.org/10.1111/ddi.13549</a></li>
+<li>Pratchett, M. S., &amp; Berumen, M. L. (2008). Interspecific variation in distributions and diets of coral reef butterflyfishes (Teleostei: Chaetodontidae). <i>Journal of Fish Biology</i>, 73(7), 1730&ndash;1747. <a href="https://doi.org/10.1111/j.1095-8649.2008.02062.x">https://doi.org/10.1111/j.1095-8649.2008.02062.x</a></li>
+<li>Pyle, R. L., &amp; Kosaki, R. K. (2016). <i>Prognathodes basabei</i>, a new species of butterflyfish (Perciformes, Chaetodontidae) from the Hawaiian Archipelago. <i>ZooKeys</i>, 614, 137&ndash;152. <a href="https://doi.org/10.3897/zookeys.614.10200">https://doi.org/10.3897/zookeys.614.10200</a></li>
+<li>Tamir, R., Eyal, G., Kramer, N., Laverick, J. H., &amp; Loya, Y. (2019). Light environment drives the shallow-to-mesophotic coral community transition. <i>Ecosphere</i>, 10(9), e02839. <a href="https://doi.org/10.1002/ecs2.2839">https://doi.org/10.1002/ecs2.2839</a></li>
+</ol>
+<p class="note">Passages were extracted from the open-access PDFs on 2 November 2026 and checked against the Scite index.</p>
+</main>
+</body>
+</html>
